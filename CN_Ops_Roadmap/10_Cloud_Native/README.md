@@ -1,7 +1,7 @@
 # 10 · 云原生实践
 
 > 云原生不只是"上云"，是一套架构思想和工程实践。
-> 这个模块涵盖国内主流云厂商实战、Terraform、Ansible、Service Mesh。
+> 这个模块涵盖国内主流云厂商实战、Terraform、Ansible、Service Mesh、等保合规与基线核查。
 
 ---
 
@@ -16,497 +16,733 @@
 - [ ] 理解并部署 Service Mesh（Istio）
 - [ ] 配置多集群管理（Rancher / KubeFed）
 - [ ] 了解 FinOps（云成本优化）
-- [ ] 能设计云原生架构方案
-
-**学完这个模块，你能做云架构师方向。**
-
----
-
-## 📺 推荐视频教程
-
-| 教程 | 讲师 | 链接 | 播放量 | 推荐度 |
-|------|------|------|--------|---------|
-| 阿里云 ACE 认证课程 | 阿里云 | [阿里云开发者社区](https://developer.aliyun.com/) | 官方 | ⭐⭐⭐⭐⭐ |
-| 腾讯云 TCP 认证 | 腾讯云 | [腾讯云学堂](https://cloud.tencent.com/edu) | 官方 | ⭐⭐⭐⭐⭐ |
-| Terraform 从入门到实战 | 阳阳羊 | [B站](https://space.bilibili.com/391793870) | 15万+ | ⭐⭐⭐⭐ |
-| Istio 服务网格 | 马哥 | [B站](https://space.bilibili.com/387633139) | 10万+ | ⭐⭐⭐⭐ |
-| 多云管理 Rancher | 狂神说 | [B站](https://www.bilibili.com/video/BV1Sv411r7vd) | 20万+ | ⭐⭐⭐⭐ |
+- [ ] **掌握等保2.0合规要点和基线扫描方法**
+- [ ] **了解国产化替代方案（OceanBase / TiDB / OpenGauss）**
+- [ ] 能设计符合国内合规要求的云架构方案
 
 ---
 
-## 📖 推荐书籍
+## 第一部分：国内主流云产品实战
 
-| 书名 | 作者 | 适合阶段 | 一句话评价 |
-|------|------|---------|-------------|
-| 《云原生应用架构实践》 | 程序员DD | 高级 | Spring Cloud 和 K8s 结合，微服务方向 |
-| 《Terraform 实战（第2版）》 | O'Reilly | 高级 | IaC 圣经，有中文版 |
-| 《Istio 实战》 | 机械工业出版社 | 专家 | Service Mesh 入门，中文案例多 |
-| 《Cloud Native Patterns》 | Cornelia Davis | 高级 | 云原生设计模式，英文原版更好 |
-| 《FinOps 云成本管理》 | J.R. Storment | 专家 | 降本增效，大厂都在做 |
+### 云产品对照表
+
+| 产品类型 | 阿里云 | 腾讯云 | 华为云 | AWS | 适用场景 |
+|-----------|--------|--------|--------|-----|---------|
+| 云服务器 | ECS | CVM | ECS | EC2 | 计算资源 |
+| 对象存储 | OSS | COS | OBS | S3 | 静态文件 / 备份 |
+| 关系型数据库 | RDS MySQL | TencentDB | RDS GaussDB | RDS MySQL | 业务数据 |
+| 负载均衡 | SLB | CLB | ELB | ALB | 流量分发 |
+| 容器服务 | ACK | TKE | CCE | EKS | K8s 托管 |
+| 函数计算 | FC | SCF | FunctionGraph | Lambda | Serverless |
+| 专有云 | Apsara Stack | TStack | HCS | Outposts | 私有化部署 |
+| 政务云 | 政务云 | 政务云 | 华为政务云 | GovCloud | 政府 / 国企 |
+
+### 阿里云 ECS 实战：从购买到生产就绪
+
+```bash
+# 1. 创建 ECS 实例（通过 CLI 或控制台）
+# 关键选型参数：
+#   实例规格：ecs.c6.large（2C4G）适合中小 Web 服务
+#   镜像：CentOS 7.9 / Alibaba Cloud Linux 3（推荐，阿里优化过内核）
+#   存储：系统盘 SSD 40GB + 数据盘 ESSD PL1 100GB
+#   网络：VPC + 交换机 + 安全组
+
+# 2. 登录后的初始化脚本（必须执行）
+# 更新系统
+yum update -y
+
+# 安装基础工具
+yum install -y vim wget curl net-tools telnet git htop jq lsof strace tcpdump
+
+# 时区设置
+timedatectl set-timezone Asia/Shanghai
+
+# 内核参数调优（生产环境必须）
+cat >> /etc/sysctl.conf << 'EOF'
+# 网络调优
+net.core.somaxconn = 65535
+net.core.netdev_max_backlog = 65535
+net.ipv4.tcp_max_syn_backlog = 65535
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.ip_local_port_range = 1024 65535
+# 文件描述符
+fs.file-max = 1048576
+EOF
+sysctl -p
+
+# 文件描述符限制
+cat >> /etc/security/limits.conf << 'EOF'
+* soft nofile 65535
+* hard nofile 65535
+* soft nproc 65535
+* hard nproc 65535
+EOF
+
+# 3. 安全加固（基线要求）
+# 禁用 root 远程登录
+sed -i 's/^PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
+# 修改默认 SSH 端口（建议）
+sed -i 's/#Port 22/Port 22022/' /etc/ssh/sshd_config
+systemctl restart sshd
+
+# 4. 安装 Docker
+yum install -y yum-utils
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum install -y docker-ce docker-ce-cli containerd.io
+mkdir -p /etc/docker
+cat > /etc/docker/daemon.json << 'EOF'
+{
+  "registry-mirrors": ["https://registry.cn-hangzhou.aliyuncs.com"],
+  "log-driver": "json-file",
+  "log-opts": {"max-size": "100m", "max-file": "3"},
+  "storage-driver": "overlay2",
+  "exec-opts": ["native.cgroupdriver=systemd"]
+}
+EOF
+systemctl enable --now docker
+```
+
+### 腾讯云实战差异点
+
+腾讯云和阿里云在以下方面有明显差异，切换时注意：
+
+| 差异项 | 阿里云 | 腾讯云 |
+|--------|--------|--------|
+| 内网域名 | `.internal` 结尾 | 不支持内网 DNS 解析 |
+| 安全组规则 | 支持 IP 组引用 | 仅支持 CIDR |
+| RDS 备份 | 自动备份免费（7天） | 基础备份收费 |
+| COS SDK | `cos-sdk-python-v5` | 同 |
+| K8s 版本 | ACK 支持到 1.30+ | TKE 通常滞后 1-2 个小版本 |
+| 监控集成 | CloudMonitor 默认集成 | 需要单独安装 agent |
+
+### 多云架构设计思路
+
+国内企业常见场景：**主用阿里云 + 腾讯云灾备**
+
+```
+                    ┌─────────────────┐
+                    │   用户请求       │
+                    └───────┬─────────┘
+                            │
+                   ┌────────▼────────┐
+                   │  DNS 智能解析     │
+                   │  （阿里 DNS）     │
+                   └───────┬────────┘
+                           │
+              ┌────────────┼────────────┐
+              │                         │
+    ┌─────────▼──────┐      ┌───────────▼────────┐
+    │   阿里云主集群    │      │   腾讯云灾备集群     │
+    │   · ECS × N     │      │   · CVM × N/2      │
+    │   · RDS 主从    │      │   · TencentDB 只读  │
+    │   · OSS 存储桶   │◄────►│   · COS 数据同步    │
+    │   · SLB 负载    │      │   · CLB 待命         │
+    └────────────────┘      └────────────────────┘
+```
+
+关键实现：
+- **数据同步**：RDS 通过 DTS（Data Transmission Service）做实时同步
+- **静态文件**：OSS ↔ COS 通过跨区域复制或自定义同步任务
+- **流量切换**：DNS 切换 TTL 设为 60s，故障时手动/自动切流
 
 ---
 
-## 🌐 在线参考资源
+## 第二部分：Terraform IaC 实战
 
-| 资源 | 链接 | 特点 |
-|------|------|------|
-| 阿里云文档中心 | https://help.aliyun.com/ | 中文最全，实战案例多 |
-| 腾讯云文档中心 | https://cloud.tencent.com/document/ | 国内第二大云厂商文档 |
-| Terraform 官方文档（中文） | https://www.terraform.io/language | HasiCorp 官方 |
-| Istio 官方文档（中文） | https://istio.io/latest/docs/ | Service Mesh 权威指南 |
-| Rancher 文档 | https://docs.rancher.cn/ | 多集群管理平台 |
-| CNCF Landscape | https://landscape.cncf.io/ | 云原生全家桶，选型参考 |
-
----
-
-## 📝 核心知识点清单
-
-### 第一阶段：云原生基础（1 周）
-
-#### 什么是云原生？
-
-CNCF（云原生计算基金会）定义：
-
-1. **容器化**：所有服务跑在容器中
-2. **微服务**：把单体应用拆成小服务
-3. **DevOps**：开发和运维协作，自动化交付
-4. **持续交付**：代码提交后自动发布
-
-#### 国内主流云产品对照
-
-| 产品类型 | 阿里云 | 腾讯云 | 华为云 | AWS |
-|-----------|--------|--------|--------|-----|
-| 云服务器 | ECS | CVM | ECS | EC2 |
-| 对象存储 | OSS | COS | OBS | S3 |
-| 关系型数据库 | RDS | TencentDB | RDS | RDS |
-| 负载均衡 | SLB | CLB | ELB | ALB |
-| 容器服务 | ACK | TKE | CCE | EKS |
-| 函数计算 | FC | SCF | FunctionGraph | Lambda |
-
-### 第二阶段：Terraform IaC（2 周）
-
-#### 为什么需要 IaC？
-
-- **可重现**：代码定义基础设施，随时重建
-- **版本控制**：Infra 代码提交到 Git，可追溯
-- **自动化**：`terraform apply` 一条命令部署全套环境
-
-#### Terraform 基础
+### Terraform 管理阿里云基础设施
 
 ```hcl
-# main.tf — 在阿里云创建一台 ECS
+# ====== 生产环境 VPC 架构 ======
 
-terraform {
-  required_providers {
-    aliyun = {
-      source  = "aliyun/aliyun"
-      version = "~> 1.200.0"
-    }
-  }
+# VPC（172.16.0.0/16）
+resource "aliyun_vpc" "prod" {
+  vpc_name   = "prod-vpc"
+  cidr_block = "172.16.0.0/16"
 }
 
-provider "aliyun" {
-  region = "cn-hangzhou"
+# 交换机划分
+resource "aliyun_vswitch" "web" {
+  vpc_id       = aliyun_vpc.prod.id
+  cidr_block   = "172.16.1.0/24"
+  zone_id      = data.aliyun_zones.default.zones[0].id
 }
 
-resource "aliyun_instance" "web" {
-  instance_name = "web-server"
-  image_id      = "centos_7_9_x64_20G_alibase_20230601.vhd"
-  instance_type = "ecs.t5-lc1m1.small"
-  security_groups = [aliyun_security_group.default.id]
-  vswitch_id     = aliyun_vswitch.default.id
+resource "aliyun_vswitch" "app" {
+  vpc_id       = aliyun_vpc.prod.id
+  cidr_block   = "172.16.2.0/24"
+  zone_id      = data.aliyun_zones.default.zones[0].id
+}
+
+resource "aliyun_vswitch" "db" {
+  vpc_id       = aliyun_vpc.prod.id
+  cidr_block   =172.16.10.0/24
+  zone_id      = data.aliyun_zones.default.zones[0].id
+}
+
+# NAT 网关（ECS 出外网用）
+resource "aliyun_nat_gateway" "prod" {
+  vpc_id          = aliyun_vpc.prod.id
+  nat_gateway_name = "prod-nat"
+  specification   = "Small"
+  # 绑定 EIP
+  allocation_ids  = [aliyun_eip_nat.id]
+}
+
+# EIP
+resource "alicloud_eip" "nat" {
+  bandwidth            = "10"
+  internet_charge_type = "PayByBandwidth"
+}
+
+# 安全组 — 最小权限原则
+resource "aliyun_security_group" "web_sg" {
+  name   = "web-servers"
+  vpc_id = aliyun_vpc.prod.id
+  # 仅允许入站 HTTP/HTTPS
+  ingress = [
+    { protocol = "tcp", port_range = "80/80", priority = 1, cidr_ip = "0.0.0.0/0", policy = "accept" },
+    { protocol = "tcp", port_range = "443/443", priority = 2, cidr_ip = "0.0.0.0/0", policy = "accept" }
+  ]
+  # 出站全部允许
+  egress = [
+    { protocol = "all", port_range = "-1/-1", priority = 1, cidr_ip = "0.0.0.0/0", policy = "accept" }
+  ]
+}
+
+# ECS 实例
+resource "aliyun_instance" "web_01" {
+  instance_name        = "web-01"
+  image_id             = "ubuntu_22_04_x64_20G_alibase_20230601.vhd"
+  instance_type        = "ecs.c6.xlarge"
+  security_groups      = [aliyun_security_group.web_sg.id]
+  vswitch_id           = aliyun_vswitch.web.id
+  system_disk_category = "cloud_essd"
+
+  user_data = base64encode(<<EOF
+#!/bin/bash
+# 自动安装 Docker 和基础工具
+apt-get update && apt-get install -y docker.io curl
+systemctl enable --now docker
+EOF
+)
 
   tags = {
-    Name    = "web-server"
-    Env     = "prod"
+    Name      = "web-01"
+    Env       = "prod"
     ManagedBy = "terraform"
   }
 }
 
-resource "aliyun_security_group" "default" {
-  name = "web-sg"
+# SLB（应用型负载均衡 ALB）
+resource "alb_load_balancer" "frontend" {
+  vpc_id           = aliyun_vpc.prod.id
+  address_type     = "Intranet"
+  load_balancer_name = "alb-frontend"
 }
 
-resource "aliyun_security_group_rule" "ssh" {
-  type              = "ingress"
-  ip_protocol       = "tcp"
-  nic_type          = "intranet"
-  policy            = "accept"
-  port_range        = "22/22"
-  security_group_id = aliyun_security_group.default.id
-  cidr_ip           = "0.0.0.0/0"
+resource "alb_server_group" "web_pool" {
+  load_balancer_id = alb_load_balancer.frontend.id
+  # 关联后端 ECS...
 }
 ```
 
-```bash
-# 初始化（下载 Provider 插件）
-terraform init
+### State 管理最佳实践
 
-# 检查配置是否有语法错误
-terraform validate
-
-# 预览要创建的资源（不实际执行）
-terraform plan
-
-# 应用配置（创建资源）
-terraform apply
-
-# 销毁资源
-terraform destroy
-```
-
-#### 模块化 Terraform
+**千万不要把 `.tfstate` 提交到 Git！**
 
 ```hcl
-# modules/ecs/main.tf
-variable "instance_name" {}
-variable "instance_type" { default = "ecs.t5-lc1m1.small" }
+# 方案一：OSS 后端（推荐阿里云用户）
+terraform {
+  backend "oss" {
+    bucket   = "your-tf-state-bucket"
+    key      = "prod/terraform.tfstate"
+    endpoint = "oss-cn-hangzhou.aliyuncs.com"
+    acl      = "private"
 
-resource "aliyun_instance" "this" {
-  instance_name = var.instance_name
-  instance_type = var.instance_type
-  # ...
+    # 加密存储
+    encrypt = true
+  }
 }
 
-output "private_ip" {
-  value = aliyun_instance.this.private_ip
-}
-
-# 使用模块
-module "web" {
-  source         = "./modules/ecs"
-  instance_name = "web-server"
-  instance_type = "ecs.c6.large"
-}
+# 方案二：远程 state 锁定（团队协作必开）
+# 用 DynamoDB（AWS）或 TableStore（阿里云）做状态锁定
+# 防止两人同时 apply 冲突
 ```
 
-### 第三阶段：Ansible 配置管理（1-2 周）
-
-#### Ansible vs Terraform
-
-| | Terraform | Ansible |
-|--|------------|----------|
-| 定位 | 基础设施编排（创建资源） | 配置管理（软件安装、配置） |
-| 状态 | 有状态文件（记录已创建资源） | 无状态（每次都重新执行） |
-| 语言 | HCL | YAML |
-| Agent | 不需要 | 不需要（用 SSH） |
-
-#### Ansible Playbook 示例
-
-```yaml
-# deploy-web.yml — 部署 Nginx
-
-- name: Deploy Nginx on web servers
-  hosts: webservers
-  become: yes  # sudo
-  vars:
-    nginx_port: 80
-
-  tasks:
-    - name: Install Nginx
-      yum:
-        name: nginx
-        state: present
-
-    - name: Copy Nginx config
-      template:
-        src: nginx.conf.j2
-        dest: /etc/nginx/nginx.conf
-      notify: Restart Nginx  # 配置文件变了就重启
-
-    - name: Start Nginx
-      service:
-        name: nginx
-        state: started
-        enabled: yes
-
-  handlers:
-    - name: Restart Nginx
-      service:
-        name: nginx
-        state: restarted
-```
+### Workspace 管理多环境
 
 ```bash
-# 执行 Playbook
-ansible-playbook -i inventory.ini deploy-web.yml
+# 创建环境
+terraform workspace new prod
+terraform workspace new staging
+terraform workspace new dev
 
-# inventory.ini 示例
-[webservers]
-192.168.56.101
-192.168.56.102
-192.168.56.103
-```
+# 每个 workspace 使用不同的变量文件
+# variables.tfvars.prod  — 生产环境配置
+# variables.tfvars.staging — 测试环境配置
 
-### 第四阶段：Service Mesh（2 周）
-
-#### 为什么需要 Service Mesh？
-
-K8s 原生的服务通信能力有限：
-- 没有流量管理（熔断、限流、超时）
-- 没有安全策略（mTLS、服务间认证）
-- 没有可观测性（调用链追踪、指标）
-
-Istio 解决这些问题，且对业务代码无侵入。
-
-#### Istio 核心概念
-
-```
-Istio 架构：
-┌─────────────────────────────────────────────┐
-│              Control Plane（istiod）          │
-│  - 服务发现                                        │
-│  - 配置分发                                       │
-│  - 证书管理                                       │
-└─────────────────────────────────────────────┘
-                      ↓
-┌─────────────────────────────────────────────┐
-│           Data Plane（Envoy Sidecar）         │
-│  每个 Pod 注入一个 Envoy 代理              │
-│  所有流量都经过 Sidecar                │
-└─────────────────────────────────────────────┘
-```
-
-#### Istio 安装和实战
-
-```bash
-# 安装 Istio
-curl -L https://istio.io/downloadIstio | sh -
-cd istio-*.* && export PATH=$PWD/bin:$PATH
-istioctl install --set profile=demo -y
-
-# 注入 Sidecar（两种方式）
-# 方式 1：命名空间级别自动注入
-kubectl label namespace default istio-injection=enabled
-
-# 方式 2：Pod 级别手动注入
-istioctl kube-inject -f deployment.yaml | kubectl apply -f -
-```
-
-```yaml
-# 配置流量规则：熔断
-apiVersion: networking.istio.io/v1beta1
-kind: DestinationRule
-metadata:
-  name: web-circuit-breaker
-spec:
-  host: web-svc
-  trafficPolicy:
-    connectionPool:
-      tcp:
-        maxConnections: 10
-      consecutiveErrors: 3
-```
-
-### 第五阶段：FinOps 云成本优化（1 周）
-
-#### 常见的浪费
-
-1. **资源闲置**：服务器上周利用率 < 10%
-2. ** over-provisioning**：申请 8 核 16GB，实际只用 2 核 4GB
-3. **未删除的测试环境**：开发测试完忘了删
-4. **存储浪费**：OSS/COS 里有很多不再访问的文件
-
-#### 优化策略
-
-```bash
-# 1. 查看资源利用率（Prometheus + Grafana）
-# 找出 CPU 利用率 < 10% 的 Pod
-
-# 2. 用 K8s VPA（Vertical Pod Autoscaler）自动调整资源
-kubectl apply -f - <<EOF
-apiVersion: autoscaling.k8s.io/v1
-kind: VerticalPodAutoscaler
-metadata:
-  name: web-vpa
-spec:
-  targetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: web
-  updatePolicy:
-    updateMode: "Auto"
-EOF
-
-# 3. 用 HPA（Horizontal Pod Autoscaler）自动扩缩容
-kubectl autoscale deployment web --min=2 --max=10 --cpu-percent=50
-
-# 4. 定时扩缩容（CronHPA）
-# 白天扩容、晚上缩容，节省成本
+terraform plan -var-file="variables.tfvars.prod"
+terraform apply -var-file="variables.tfvars.prod"
 ```
 
 ---
 
-## 💻 实战命令/配置示例
+## 第三部分：Ansible 配置管理
 
-### Terraform 管理 K8s 集群（阿里云 ACK）
+### Ansible Playbook — 批量基线加固
 
-```hcl
-resource "aliyun_cs_kubernetes" "ack" {
-  name               = "my-ack-cluster"
-  cluster_spec       = "ack.standard"
-  version            = "1.28.0-aliyun.1"
-  worker_instance_types = ["ecs.c6.large"]
-  worker_number      = 3
-  pod_cidr             = "172.20.0.0/16"
-  service_cidr         = "172.21.0.0/20"
-  enable_ssh          = true
-  load_balancer_spec = "slb.s1.small"
-
-  tags = {
-    Environment = "prod"
-  }
-}
-
-output "cluster_endpoint" {
-  value = aliyun_cs_kubernetes.ack.connections[0].api_server_endpoint
-}
-```
-
-### Ansible 批量部署 K8s 集群
+这是国内运维最常见的场景之一：**批量对服务器做等保合规加固**
 
 ```yaml
-# 用 Ansible 初始化 K8s Master 节点
-- name: Initialize K8s Master
-  hosts: masters
+# === basline_hardening.yml ===
+# 等保2.0 基线加固 Playbook
+# 适用场景：新购入的 ECS/CVM 需要统一做安全加固
+
+- name: Security Baseline Hardening (等保2.0 基线)
+  hosts: all
   become: yes
   tasks:
-    - name: Disable swap
-      shell: swapoff -a
 
-    - name: Add Kubernetes repository
-      yum_repository:
-        name: kubernetes
-        description: Kubernetes repo
-        baseurl: https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/
-        enabled: yes
+  # ---- 账号安全 ----
+  - name: Remove unused accounts
+    user:
+      name: "{{ item }}"
+      state: absent
+    loop:
+      - games
+      - ftp
+      - operator
 
-    - name: Install K8s components
-      yum:
-        name:
-          - kubelet-1.28.0
-          - kubeadm-1.28.0
-          - kubectl-1.28.0
-        state: present
+  - name: Set password policy
+    lineinfile:
+      path: /etc/security/pwquality.conf
+      regexp: "^minlen"
+      line: "minlen = 12"
+      create: yes
 
-    - name: Initialize K8s cluster
-      shell: kubeadm init --pod-network-cidr=10.244.0.0/16
-      args:
-        creates: /etc/kubernetes/admin.conf
+  # ---- SSH 加固 ----
+  - name: Disable root SSH login
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: "^PermitRootLogin"
+      line: "PermitRootLogin no"
+    notify: Restart SSH
+
+  - name: Set max auth tries
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: "^MaxAuthTries"
+      line: "MaxAuthTries 3"
+    notify: Restart SSH
+
+  # ---- 权限控制 ----
+  - name: Set umask 027
+    lineinfile:
+      path: /etc/profile
+      regexp: "^umask"
+      line: "umask 027"
+
+  - name: Restrict su to wheel group only
+    replace:
+      path: /etc/pam.d/su
+      regexp: '^#auth.*required.*pam_wheel.so'
+      replace: 'auth required pam_wheel.so use_uid'
+
+  # ---- 审计开启 ----
+  - name: Enable auditd service
+    service:
+      name: auditd
+      state: started
+      enabled: yes
+
+  - name: Configure audit rules for critical files
+    blockinfile:
+      path: /etc/rules.d/baseline.rules
+      create: yes
+      block: |
+        -w /etc/passwd -p wa -k identity_modification
+        -w /etc/shadow -p wa -k identity_modification
+        -w /etc/group -p wa -k identity_modification
+        -w /etc/sudoers -p wa - privilege_modification
+        -w /etc/ssh/sshd_config -p wa -k ssh_config_change
+        -w /var/log/audit/ -p rwxa -k audit_log_access
+
+  # ---- 防火墙 ----
+  - name: Install firewalld
+    yum:
+      name: firewalld
+      state: present
+
+  - name: Enable firewalld
+    service:
+      name: firewalld
+      state: started
+      enabled: yes
+
+  # ---- 日志集中 ----
+  - name: Configure rsyslog remote forwarding
+    blockinfile:
+      path: /etc/rsyslog.d/remote.conf
+      create: yes
+      block: |
+        *.* @{{ log_server_ip }}:514
+
+  handlers:
+    - name: Restart SSH
+      service:
+        name: sshd
+        state: restarted
+```
+
+---
+
+## 第四部分：等保2.0 合规要点
+
+> **重要背景**：国内企业（尤其是金融、政府、医疗、教育）必须通过等级保护测评。
+> 作为运维工程师，你需要知道哪些是系统层面要做的。
+
+### 等保2.0 二级/三级 — 运维相关检查项
+
+| 等级 | 类别 | 检查项 | 运维操作 | 自动化方案 |
+|------|------|--------|---------|-----------|
+| 二级 | 身份鉴别 | 强密码策略 + 失效处理 | 修改 `/etc/login.defs` | Ansible 批量下发 |
+| 二级 | 访问控制 | 最小权限原则 | 收敛 sudo / 文件权限 | Ansible Role |
+| 二级 | 安全审计 | 操作日志保留 ≥ 6 个月 | auditd + rsyslog 远传 | ELK / Splunk |
+| 三级 | 入侵防范 | 补丁更新 + 漏洞扫描 | 定期 yum update + OpenVAS | OpenSCAP 自动扫描 |
+| 三级 | 恶意代码 | 防病毒软件 | 安装 ClamAV / 企业杀软 | YUM 自动更新病毒库 |
+| 三级 | 数据完整性 | 备份恢复策略 | 每日全量备份 + 异地 | Cron + Rsync / DTS |
+| 三级 | 数据保密性 | 传输加密 + 存储加密 | TLS 1.2+ / LUKS 加密盘 | Certbot 自动续签 |
+
+### 基线扫描实操
+
+国内常用的基线扫描工具：
+
+```bash
+# === 方案一：Lynis（开源，推荐）===
+# 安装
+yum install -y lynis || (cd /opt && git clone https://github.com/CISOFy/Lynis.git)
+
+# 执行扫描
+lynis audit system
+
+# 输出报告到 /var/log/lynis-report.dat
+# 关注 WARN 和 SUGGEST 级别的问题
+
+# === 方案二：OpenSCAP（红帽体系，CentOS/RHEL 推荐）===
+yum install -y openscap-scanner scap-security-guide
+
+# 扫描 CIS CentOS 7 Benchmark
+oscap xccdf eval \
+  --profile xccdf_org.ssgproject.content_profile_stig-rhel7-server-upstream \
+  --report scan_report.html \
+  /usr/share/xml/scap/ssg-centos7-ds.xml
+
+# 报告在当前目录 scan_report.html
+
+# === 方案三：自行编写基线扫描 Shell 脚本 ===
+# 这是最常见的做法——根据等保要求逐项检查：
+#!/bin/bash
+# baseline_scan.sh — Linux 等保基线快速检查
+
+echo "=== 等保2.0 Linux 基线检查 ==="
+echo "时间: $(date '+%Y-%m-%d %H:%M:%S')"
+echo ""
+
+PASS=0; FAIL=0; WARN=0
+
+check() {
+  if [ "$1" == "$2" ]; then
+    echo "[PASS] $3"
+    ((PASS++))
+  else
+    echo "[FAIL] $3  (期望: $2, 实际: $1)"
+    ((FAIL++))
+  fi
+}
+
+# 1. 密码复杂度
+PW_MINLEN=$(grep -E "^minlen" /etc/security/pwquality.conf 2>/dev/null | awk '{print $3}')
+check "${PW_MINLEN:-0}" "12" "密码最小长度 >= 12 位"
+
+# 2. Root 远程登录
+ROOT_LOGIN=$(grep -E "^PermitRootLogin" /etc/ssh/sshd_config 2>/dev/null | awk '{print $2}')
+check "$ROOT_LOGIN" "no" "禁止 Root 远程登录"
+
+# 3. 空口令用户
+EMPTY_PW=$(awk -F: '$2=="" || $2=="!" || $2=="*"' /etc/shadow | wc -l)
+check "$EMPTY_PW" "0" "不存在空口令账号"
+
+# 4. 文件权限 777
+WORLD_WRITABLE=$(find / -perm -0002 -type f 2>/dev/null | wc -l)
+if [ "$WORLD_WRITABLE" -eq 0 ]; then
+  check "0" "0" "无全局可写文件"
+else
+  echo "[WARN] 发现 $WORLD_WRITABLE 个全局可写文件"
+  ((WARN++))
+fi
+
+# 5. auditd 运行状态
+AUDIT_STATUS=$(systemctl is-active auditd 2>/dev/null)
+check "$AUDIT_STATUS" "active" "审计服务 auditd 已启用"
+
+# 6. 防火墙状态
+FW_STATUS=$(systemctl is-active firewalld 2>/dev/null)
+check "$FW_STATUS" "active" "防火墙已启用"
+
+# 7. SELinux（等保三级要求）
+SELINUX=$(getenforce 2>/dev/null)
+if [ "$SELINUX" == "Enforcing" ]; then
+  check "$SELINUX" "Enforcing" "SELinux 处于强制模式"
+elif [ "$SELINUX" == "Disabled" ]; then
+  echo "[WARN] SELinux 未启用（等保三级可能扣分）"
+  ((WARN++))
+fi
+
+# 8. SSH 协议版本
+SSH_PROTO=$(grep -E "^Protocol" /etc/ssh/sshd_config 2>/dev/null | awk '{print $2}')
+check "${SSH_PROTO:-2}" "2" "SSH 仅使用 Protocol 2"
+
+# 结果汇总
+echo ""
+echo "=== 检查结果 ==="
+echo "PASS: $PASS  |  FAIL: $FAIL  |  WARN: $WARN"
+echo ""
+if [ $FAIL -gt 0 ]; then
+  echo "⚠️  有 $FAIL 项不合规，请处理后重新扫描"
+  exit 1
+else
+  echo "✅ 基本合规（$WARN 项建议关注）"
+  exit 0
+fi
+```
+
+---
+
+## 第五部分：国产化替代方案
+
+### 为什么需要了解国产化？
+
+- **信创政策驱动**：党政军企逐步替换国外技术栈
+- **数据主权**：金融、电信等行业要求数据不出境
+- **供应链安全**：避免被"卡脖子"
+- **实际岗位需求**：越来越多运维岗要求有国产化经验
+
+### 国产技术栈对照
+
+| 领域 | 国际通用 | 国内替代 | 成熟度 | 代表用户 |
+|------|---------|---------|-------|---------|
+| 操作系统 | CentOS / RHEL | Anolis OS / openEuler / Kylin | 高（阿里/华为/麒麟） | 阿里云默认、华为云、政府 |
+| 容器编排 | Kubernetes（上游） | KubeEdge / Kindling | 高（CNCF项目） | 边缘计算场景 |
+| 数据库 | MySQL / PostgreSQL | OceanBase / TiDB / OpenGauss / 达梦 | 高 | 支付宝、字节、银行 |
+| 中间件 | Redis | Codis / KVStore | 中 | 大厂自研多 |
+| 消息队列 | Kafka / RabbitMQ | RocketMQ | 高 | 阿里系、大量互联网公司 |
+| API 网关 | Kong / Nginx | Apache APISIX / Soul | 高 | 国内大量使用 |
+| 监控 | Prometheus + Grafana | Open-Falcon / Cat（点评） | 中 | 美团早期、部分大厂 |
+| 服务网格 | Istio | MOSN / Envoy（参与贡献） | 高 | MOSN 是蚂蚁金服开源 |
+| 堡垒机 | JumpServer | JumpServer（本身就是国产）| 高 | 金融行业标配 |
+
+### OceanBase vs TiDB vs OpenGauss
+
+| 维度 | OceanBase（蚂蚁） | TiDB（PingCAP） | OpenGauss（华为） |
+|------|-------------------|------------------|-------------------|
+| 架构 | 共享 nothing + Paxos | Raft + HTAP | 主备 + LSM-tree |
+| 兼容性 | MySQL 协议兼容 | MySQL 协议兼容 | PostgreSQL / Oracle 兼容 |
+| 部署形态 | 商业版为主 | 开源社区版可用 | 开源高斯 |
+| 优势场景 | 金融交易（强一致） | HTAP 混合负载 | 分析型查询 |
+| 学习曲线 | 中等（文档完善） | 低（MySQL 体验） | 中等（PG 生态） |
+| 运维工具 | OCP 平台 | TiUP / TiDB Dashboard | OM 平台 |
+
+### 在 K8s 上运行 TiDB 的实战示例
+
+```yaml
+# tidb-cluster.yaml — 在 K8s 上部署 TiDB
+apiVersion: pingcap.com/v1alpha1
+kind: TidbCluster
+metadata:
+  name: basic
+spec:
+  version: "v7.5.0"
+  timezone: Asia/Shanghai
+  pvReclaimPolicy: Retain
+  
+  pd:
+    replicas: 3
+    requests:
+      cpu: "1"
+      memory: "2Gi"
+    
+  tikv:
+    replicas: 3
+    requests:
+      cpu: "2"
+      memory: "4Gi"
+    storageClassName: local-storage
+    
+  tidb:
+    replicas: 2
+    service:
+      type: NodePort
+    requests:
+      cpu: "2"
+      memory: "4Gi"
+---
+# 暴露给外部访问
+apiVersion: v1
+kind: Service
+metadata:
+  name: tidb-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 4000
+    targetPort: 4000
+  selector:
+    app.kubernetes.io/name: basic
+    app.kubernetes.io/component: tidb
+```
+
+---
+
+## 第六部分：堡垒机与日志审计
+
+### 堡垒机（JumpServer）
+
+国内等保合规**强制要求**：所有运维操作必须经过堡垒机审计。
+
+```bash
+# JumpServer Docker 快速部署（测试环境）
+# 生产环境请参考官方文档做高可用部署
+docker run -d \
+  --name jms_all \
+  -p 8080:80 \
+  -p 2222:2222 \
+  -e SECRET_KEY=aabbccddeeff \
+  -e BOOTSTRAP_TOKEN=aabbccddeeff \
+  jumpserver/jms_all:v3.7.0
+
+# 访问 http://<你的IP>:8080
+# 默认账号: admin / admin
+```
+
+JumpServer 核心功能：
+
+| 功能 | 说明 | 等保对应 |
+|------|------|---------|
+| 集中认证 | LDAP / AD / 飞书对接 | 身份鉴别 |
+| 资产管理 | 纳管所有服务器资产清单 | 资产台账 |
+| 命令审计 | 记录每一条操作命令 | 安全审计（≥6个月） |
+| 会话录像 | 录屏回放，可追溯 | 安全审计 |
+| 工单审批 | 临时授权需审批 | 访问控制 |
+
+### 日志审计方案（ELK）
+
+等保要求**操作日志至少保留 6 个月**：
+
+```bash
+# Filebeat 配置 — 收集各服务器日志
+cat > /etc/filebeat/filebeat.yml << 'EOF'
+filebeat.inputs:
+- type: log
+  paths:
+    - /var/log/secure
+    - /var/log/messages
+    - /var/log/audit/audit.log
+  fields:
+    env: production
+    host_type: ecs
+  fields_under_root: true
+
+output.elasticsearch:
+  hosts: ["https://es-node1:9200"]
+  ssl.certificate_authorities: ["/etc/ca.crt"]
+  username: "elastic"
+  password: "changeme"
+  index: "ops-audit-%{+yyyy.MM}"
+EOF
+```
+
+---
+
+## 第七部分：FinOps 与成本优化
+
+### 国内云成本常见浪费
+
+| 浪费类型 | 占比估算 | 解决方案 | 年省预估 |
+|---------|---------|---------|---------|
+| 闲置 ECS | ~25% | 定时巡检释放 | ¥数万~数十万 |
+| 未优化的 RDS 规格 | ~20% | VPA + 压测验证真实需求 | ¥数万 |
+| OSS 无生命周期策略 | ~15% | 设置自动转低频/归档 | 数千元 |
+| SLB / EIP 闲置 | ~10% | 资源标签化管理 | 数千元 |
+| 按量转包年/包月 | — | 长期运行的资源转预付费 | 30%~60% |
+
+### 阿里云费用分析命令
+
+```bash
+# 通过 Aliyun CLI 查询本月费用
+# 安装: pip3 install aliyun-python-sdk-core aliyun-python-sdk-bssopenapi
+
+python3 << 'PYEOF'
+from aliyunsdkcore.client import AcsClient
+from aliyunsdkbssopenapi.request.v20171214.QueryBillOverviewRequest import QueryBillOverviewRequest
+
+client = AcsClient("<AccessKeyID>", "<AccessKeySecret>", "cn-hangzhou")
+req = QueryBillOverviewRequest()
+req.set_BillingDate("2026-06-20")
+resp = client.do_action_with_exception(req)
+print(resp.decode())
+PYEOF
 ```
 
 ---
 
 ## 🧪 实战项目
 
-### 项目 1：用 Terraform + Ansible 部署完整 Web 架构
+### 项目 1：从零搭建符合等保要求的云架构
 
-**目标**：代码化整个基础设施和应用部署。
+**目标**：用 Terraform 在阿里云上创建一套通过等保三级预审的架构
 
-**步骤**：
-1. Terraform 创建 VPC、交换机、安全组、ECS（3 台）
-2. Terraform 输出 ECS IP 到 Ansible Inventory
-3. Ansible 在 ECS 上安装 Docker、K8s
-4. Ansible 部署 Nginx（K8s Deployment）
-5. Terraform 创建 SLB（负载均衡），绑定 ECS
-6. 验证：访问 SLB IP，看到 Nginx 欢迎页
+**交付物**：
+1. VPC 三层隔离（DMZ / APP / DB）
+2. 安全组最小权限规则
+3. 所有 ECS 通过 JumpServer 管控
+4. 操作日志统一收集到 ES（≥ 6 个月）
+5. RDS 每日自动备份 + 异地容灾
+6. WAF + DDoS 防护
 
-**成果**：一条命令重建整个架构 `terraform destroy && terraform apply`
+### 项目 2：国产数据库迁移（MySQL → TiDB）
 
-### 项目 2：灰度发布系统（Istio）
-
-**目标**：实现基于权重的灰度发布。
+**目标**：将现有 MySQL 业务平滑迁移到 TiDB
 
 **步骤**：
-1. 部署 v1 和 v2 两个版本的应用
-2. 配置 VirtualService，v1 权重 90%，v2 权重 10%
-3. 观察 v2 的错误率和延迟
-4. 如果正常，逐步调整权重到 100%
-5. 如果异常，立即回滚（权重改回 100%/0%）
-
----
-
-## 🔧 常见故障排查
-
-### 故障 1：Terraform state 文件冲突
-
-**场景**：团队多人协作，state 文件被覆盖。
-
-**解决**：用远程 Backend（OSS/COS/S3）存储 state
-```hcl
-terraform {
-  backend "oss" {
-    bucket = "my-terraform-state"
-    key    = "prod/terraform.tfstate"
-    endpoint = "oss-cn-hangzhou.aliyuncs.com"
-    acl    = "private"
-  }
-}
-```
-
-### 故障 2：Istio Sidecar 注入失败
-
-**排查**：
-```bash
-# 检查命名空间是否启用了注入
-kubectl get namespace default -o yaml | grep istio-injection
-
-# 检查 Pod 是否有 istio-proxy 容器
-kubectl describe pod <pod-name>
-# 看 Containers 部分，应该有 2 个容器（业务容器 + istio-proxy）
-
-# 查看 Sidecar 注入日志
-kubectl logs -l app=web -c istio-proxy
-```
-
-### 故障 3：云服务器费用超标
-
-**排查**：
-```bash
-# 用阿里云费用中心 API 拉取账单
-# 找出费用最高的资源类型
-
-# 常见原因：
-# 1. 按量付费的 ECS 没有释放
-# 2. OSS 存储了大量不再访问的文件
-# 3. SLB（负载均衡）闲置
-
-# 设置费用告警（阿里云支持）
-# 费用 > ¥500/月 → 发短信告警
-```
+1. 搭建 TiDB Cluster（K8s 上或裸金属）
+2. 用 DM（Data Migration）做全量 + 增量同步
+3. 双写验证（MySQL 写入同时同步到 TiDB）
+4. 读流量逐步切换到 TiDB
+5. 验证一致性后停掉 MySQL
 
 ---
 
 ## 💼 面试高频题
 
-1. **Terraform 的 state 文件是做什么的？**
-   - 记录当前基础设施的实际状态
-   - Terraform 用 state 和实际资源对比，决定要创建/修改/删除什么
-   - **不能删除 state 文件**，删了 Terraform 就"失忆"了
+1. **等保二级和三级的区别？**
+   - 三级要求更多：入侵防范、恶意代码防范、数据完整性和保密性
+   - 三级要求每年做一次测评，二级每两年一次
+   - 三级需要专职安全管理员
 
-2. **Istio 和 Nginx Ingress 的区别？**
-   - Nginx Ingress：L7 路由，适合简单的入口流量管理
-   - Istio：服务网格，管理服务间所有通信（东西向 + 南北向），功能强得多
+2. **基线扫描怎么自动化？**
+   - Lynis / OpenSCAP 定期跑 + Ansible Playbook 自动修复
+   - 扫描结果推送到钉钉/飞书告警
+   - 不合规项自动生成整改工单
 
-3. **云原生和传统架构的核心区别？**
-   - 传统：单体应用、手动部署、垂直扩容
-   - 云原生：微服务、自动部署、水平扩容、容器化
+3. **Terraform 和 Ansible 的分工？**
+   - Terraform 管「有什么」（资源创建/销毁）
+   - Ansible 管「里面装什么」（软件/配置/应用部署）
+   - 两者配合：Terraform 创建 ECS → 输出 IP → Ansible 配置
 
-4. **如何设计一个高可用云架构？**
-   - 多可用区部署（防单机房故障）
-   - 负载均衡（SLB/ALB）
-   - 数据库主从 + 自动故障切换
-   - 对象存储（OSS/COS）存静态文件
-   - CDN 加速静态资源
-
----
-
-## 📈 进阶学习路径
-
-- **Certification**：考阿里云 ACE / 腾讯云 TCP 高级认证
-- **多云管理**：学 Crossplane（Terraform 的 K8s 原生替代）
-- **平台工程**：学 Backstage（开发者自助平台）
-- **FinOps**：深入分析云账单，做成本优化项目
+4. **国产数据库怎么选？**
+   - 金融交易类：OceanBase（支付宝验证过的强一致）
+   - HTAP 混合负载：TiDB（兼容 MySQL，迁移成本低）
+   - Oracle 替代：OpenGauss 或达梦（PG/Oracle 兼容性好）
 
 ---
 
@@ -515,11 +751,4 @@ kubectl logs -l app=web -c istio-proxy
 - [← 返回中文版首页](../README.md)
 - [CN 05 Kubernetes](../05_Kubernetes/)
 - [CN 06 CI/CD](../06_CI_CD/)
-- [CN 11 DevOps 实践](../11_DevOps_Practice/)
-- [实时发现：云原生相关热门仓库](../../resources/trending.md)
-
----
-
-<p align="right">
-  <sub>vinson-lee · 云原生的核心是"可观测 + 可控制"，不是"上云"</sub>
-</p>
+- [CN 08 监控体系](../08_Monitoring/)
