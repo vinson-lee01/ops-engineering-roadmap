@@ -72,7 +72,6 @@ def load_readme_desc():
     try:
         with open(README_FILE, "r", encoding="utf-8") as f:
             content = f.read()
-        # Extract first paragraph after badges
         lines = [l.strip() for l in content.split("\n") if l.strip()]
         for line in lines:
             if len(line) > 30 and not line.startswith("#") and not line.startswith("["):
@@ -85,9 +84,9 @@ def load_readme_desc():
 def generate_twitter(trending):
     """Twitter / X share text."""
     lines = []
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("🐦 Twitter / X")
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("")
     lines.append(f"🗺️ DevOps/SRE Learning Roadmap — updated {TODAY}")
     lines.append("")
@@ -107,9 +106,9 @@ def generate_twitter(trending):
 def generate_reddit(trending):
     """Reddit share text (r/devops, r/sysadmin)."""
     lines = []
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("🤖 Reddit (r/devops / r/sysadmin)")
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("")
     lines.append("**Title:** DevOps/SRE Learning Roadmap — 500+ resources, CN + EN (updated daily)")
     lines.append("")
@@ -126,7 +125,7 @@ def generate_reddit(trending):
     lines.append("Two versions: Chinese (CN market) + English (global).")
     lines.append("Trending DevOps repos auto-updated daily via GitHub Actions.")
     if trending["top_en"]:
-        lines.append(f"")
+        lines.append("")
         lines.append(f"Today's top pick: [{trending['top_en']}]({trending['top_en_url']})")
     lines.append("")
     lines.append("🔗 https://github.com/vinson-lee01/ops-engineering-roadmap")
@@ -139,9 +138,9 @@ def generate_reddit(trending):
 def generate_zhihu(trending):
     """Zhihu (知乎) share text."""
     lines = []
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("📝 知乎（中文）")
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("")
     lines.append(f"**标题：** 运维工程师学习路线（2026）— 从零基础到架构师")
     lines.append("")
@@ -165,9 +164,8 @@ def generate_zhihu(trending):
     lines.append("")
     lines.append("📦 500+ 精选资源，中英双语，每日更新热门发现。")
     if trending["top_zh"]:
-        lines.append(f"")
-        lines.append(f"今日推荐：[{
-            trending['top_zh']}]({trending['top_zh_url']})")
+        lines.append("")
+        lines.append(f"今日推荐：[{trending['top_zh']}]({trending['top_zh_url']})")
     lines.append("")
     lines.append("🔗 https://github.com/vinson-lee01/ops-engineering-roadmap")
     lines.append("")
@@ -179,9 +177,9 @@ def generate_zhihu(trending):
 def generate_csdn(trending):
     """CSDN share text."""
     lines = []
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("💼 CSDN（中文）")
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("")
     lines.append(f"**标题：** 运维学习路线开源（500+ 资源，中英双语，每日更新）")
     lines.append("")
@@ -206,9 +204,9 @@ def generate_csdn(trending):
 def generate_linkedin(trending):
     """LinkedIn share text."""
     lines = []
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("💼 LinkedIn")
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("")
     lines.append("Sharing something I've been building — a complete DevOps/SRE learning roadmap. 🛠️")
     lines.append("")
@@ -232,9 +230,9 @@ def generate_linkedin(trending):
 def generate_hackernews(trending):
     """Hacker News share text."""
     lines = []
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("🗞️ Hacker News")
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("")
     lines.append(f"**Title:** DevOps/SRE Learning Roadmap (500+ resources, daily updated)")
     lines.append("")
@@ -257,9 +255,9 @@ def generate_hackernews(trending):
 def generate_devto(trending):
     """Dev.to article outline."""
     lines = []
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("📝 Dev.to (article outline)")
-    lines.append("═" * 50)
+    lines.append("=" * 50)
     lines.append("")
     lines.append(f"**Title:** The Complete DevOps/SRE Roadmap — 2026 Edition")
     lines.append("")
@@ -296,7 +294,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(f"# 📢 Share Text Generator — {TODAY}\n\n")
         f.write(f"> {desc}\n\n")
-        f.write("─" * 50 + "\n\n")
+        f.write("-" * 50 + "\n\n")
 
         f.write(generate_twitter(trending))
         f.write("\n\n")
