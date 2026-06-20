@@ -299,11 +299,10 @@ Found an issue or have a great resource to share?
 
 ### ⭐ If this roadmap helps you, please consider giving it a Star
 
-你也可以请我喝一杯咖啡 ☕
+如果这份路线图对你有帮助，欢迎点个 Star 支持一下
 
 <br>
 
-**Maintained by [vinson-lee](https://github.com/vinson-lee01)**
-*CSDN 博客：[云域A](https://blog.csdn.net/weixin_49256755)*
+[![Star this repo](https://img.shields.io/github/stars/vinson-lee01/ops-engineering-roadmap?style=social)](https://github.com/vinson-lee01/ops-engineering-roadmap/stargazers)
 
 </div>
