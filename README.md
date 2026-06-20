@@ -29,18 +29,35 @@
 
 ### 🌍 English Introduction
 
-Most online learning paths for operations engineers share a common problem: **they list tools without explaining the order, depth, or how they connect in real production environments.**
+Most online learning paths share a common problem: **they list tools without explaining the order, depth, or how they connect in real production environments.**
 
 This roadmap is built differently — from hands-on experience at cloud vendors and large-scale internet companies, structured around three progressive stages. **Every module explicitly marks the depth needed in real work**, not a textbook table of contents.
 
-```
-┌────────────────────┐      ┌────────────────────┐      ┌────────────────────┐
-│     Stage 1        │      │     Stage 2        │      │     Stage 3        │
-│                    │      │                    │      │                    │
-│   Can work         │ ──▶  │   Can design        │ ──▶  │   Can define        │
-│   independently    │      │   architecture      │      │   team standards    │
-└────────────────────┘      └────────────────────┘      └────────────────────┘
-```
+<table>
+<tr align="center">
+<td width="30%" valign="top">
+<strong>Stage 1</strong><br><br>
+<b>Can work<br>independently</b><br><br>
+<i>独立胜任日常工作</i>
+</td>
+<td width="5%" valign="middle" style="font-size:24px;">
+➜
+</td>
+<td width="30%" valign="top">
+<strong>Stage 2</strong><br><br>
+<b>Can design<br>architecture</b><br><br>
+<i>能够设计系统架构</i>
+</td>
+<td width="5%" valign="middle" style="font-size:24px;">
+➜
+</td>
+<td width="30%" valign="top">
+<strong>Stage 3</strong><br><br>
+<b>Can define<br>team standards</b><br><br>
+<i>定义团队标准与规范</i>
+</td>
+</tr>
+</table>
 
 | | |
 |:--|:--|
@@ -53,12 +70,46 @@ This roadmap is built differently — from hands-on experience at cloud vendors 
 
 ## 🗺️ Learning Path Overview · 学习路径总览
 
-| **Phase 1 : Foundation (Month 1~3)** | **Phase 2 : Growth (Month 4~9)** | **Phase 3 : Advanced (Month 10~18+)** |
-|:---|:---|:---|
-| `Linux Basics` — 系统管理 / 权限 / 内核调优 / systemd | `Docker & K8s` — 容器化 / 编排 / Service Mesh | `Architecture` — 架构设计 / 多云 / FinOps |
-| `Shell Scripting` — Bash / 文本处理 / 自动化脚本 | `CI/CD Pipeline` — 流水线 / 制品管理 / 安全门禁 | `SLO & Error Budget` — 可用性目标 / 错误预算体系 |
-| `Networking` — TCP/IP / DNS / iptables / 抓包分析 | `Prometheus + Grafana` — 指标设计 / 告警规则 / 仪表盘 | `Multi-cloud` — 混合云架构 / 成本优化 |
-| `Nginx Deploy` — 反向代理 / 负载均衡 / HTTPS 调优 | `ELK Stack` — 日志采集 / 分析 / 可视化 | `Chaos Engineering` — 故障演练 / 弹性验证 |
+<table>
+<tr align="center" bgcolor="#1e293b">
+<th colspan="3" style="color:#e2e8f0;padding:12px;">Learning Timeline</th>
+</tr>
+<tr align="left" valign="top">
+<td width="33%">
+<details open><summary><b>📚 Phase 1 : Foundation</b></summary><small>(Month 1~3)</small>
+
+- **Linux Basics** — 系统管理 / 权限 / 内核调优
+- **Shell Scripting** — Bash / 文本处理 / 自动化脚本
+- **Networking** — TCP/IP / DNS / iptables / 抓包分析
+- **Nginx Deploy** — 反向代理 / 负载均衡 / HTTPS 调优
+
+*产出：独立管理 50+ 台服务器日常运维*
+</details>
+</td>
+<td width="33%">
+<details open><summary><b>🔧 Phase 2 : Growth</b></summary><small>(Month 4~9)</small>
+
+- **Docker & K8s** — 容器化 / 编排 / Service Mesh
+- **CI/CD Pipeline** — 流水线 / 制品管理 / 安全门禁
+- **Prometheus + Grafana** — 指标设计 / 告警规则 / 仪表盘
+- **ELK Stack** — 日志采集 / 分析 / 可视化
+
+*产出：代码提交到上线全自动化，耗时 <10 分钟*
+</details>
+</td>
+<td width="33%">
+<details open><summary><b>🚀 Phase 3 : Advanced</b></summary><small>(Month 10~18+)</small>
+
+- **Architecture** — 架构设计 / 多云 / FinOps
+- **SLO & Error Budget** — 可用性目标 / 错误预算体系
+- **Multi-cloud** — 混合云架构 / 成本优化
+- **Chaos Engineering** — 故障演练 / 弹性验证
+
+*产出：建立团队可用性目标体系与 SRE 文化*
+</details>
+</td>
+</tr>
+</table>
 
 > Each stage concludes with verifiable deliverables — not *studied*, but *can build*.
 > 每个阶段都有可验证的产出 —— 不是"学过了"，而是"能做出来"。
