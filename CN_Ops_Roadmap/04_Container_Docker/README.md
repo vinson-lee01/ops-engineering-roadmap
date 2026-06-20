@@ -1,7 +1,7 @@
 # 04 · Docker 容器化
 
-> Docker 是现代运维的必修课。不懂容器，K8s 也学不好。
-> 这个模块从安装到生产实践，一步一步来。
+> Docker 是容器化的事实标准。学会 Docker，你就掌握了现代化应用打包和分发的核心技能。
+> 这个模块是后续 Kubernetes 学习的基础，务必熟练掌握。
 
 ---
 
@@ -9,18 +9,20 @@
 
 完成本模块后，你应该能够：
 
-- [ ] 理解容器和虚拟机的区别
-- [ ] 安装和配置 Docker（ daemon.json 调优）
-- [ ] 熟练使用 Docker 基础命令（run/exec/logs/rm 等）
-- [ ] 编写生产级 Dockerfile（多阶段构建、安全最佳实践）
+- [ ] 理解容器和虚拟机的区别（为什么容器更轻量）
+- [ ] 熟练使用 Docker 基础命令（run/exec/ps/logs/rm）
+- [ ] 编写高质量 Dockerfile（多阶段构建、缓存优化、安全最佳实践）
 - [ ] 使用 Docker Compose 编排多容器应用
-- [ ] 配置 Docker 网络（bridge/host/overlay）
-- [ ] 配置 Docker 存储（volume/bind mount/tmpfs）
-- [ ] 搭建和使用私有镜像仓库（Harbor）
-- [ ] 掌握 Docker 安全加固（非 root 用户、镜像扫描）
-- [ ] 能排查容器常见故障
+- [ ] 理解 Docker 网络（bridge/host/none/overlay）
+- [ ] 掌握 Docker 数据卷（volume/bind mount/tmpfs）
+- [ ] 操作 Docker 镜像仓库（tag/push/pull/save/load）
+- [ ] 配置 Docker Daemon（镜像加速、日志限制、存储驱动）
+- [ ] 排查常见故障（容器起不来、磁盘爆满、网络不通）
+- [ ] 理解 Docker 安全（非 root 运行、镜像扫描、seccomp/AppArmor）
+- [ ] 会使用 docker scan 扫描镜像漏洞
+- [ ] 了解 containerd / Podman 等 Docker 替代方案
 
-**学完这个模块，你能把任何应用装进容器跑起来。**
+**学完这个模块，你能独立容器化任何应用。**
 
 ---
 
@@ -28,10 +30,13 @@
 
 | 教程 | 讲师 | 链接 | 播放量 | 推荐度 |
 |------|------|------|--------|---------|
-| Docker 从入门到实战 | 狂神说 | [B站 BV1og4y1q7M4](https://www.bilibili.com/video/BV1og4y1q7M4) | 300万+ | ⭐⭐⭐⭐⭐ |
-| Docker 容器化技术 | 尚硅谷 | [B站](https://www.bilibili.com/video/BV1sK4y1C7T5) | 80万+ | ⭐⭐⭐⭐ |
-| Docker Compose 实战 | IT 老齐 | [B站](https://space.bilibili.com/383016053) | 20万+ | ⭐⭐⭐⭐ |
-| Harbor 私有仓库 | 马哥 | [B站](https://space.bilibili.com/387633139) | 10万+ | ⭐⭐⭐⭐ |
+| Docker 基础教程 | 尚硅谷 | [B站 BV1Sv411r7vd](https://www.bilibili.com/video/BV1Sv411r7vd) | 80万+ | ⭐⭐⭐⭐⭐ |
+| Docker 实战 | 黑马程序员 | [B站 BV1xK4y1w7Vs](https://www.bilibili.com/video/BV1xK4y1w7Vs) | 40万+ | ⭐⭐⭐⭐ |
+| Dockerfile 最佳实践 | 狂神 | [B站 BV1gJ411p7tT](https://www.bilibili.com/video/BV1gJ411p7tT) | 150万+ | ⭐⭐⭐⭐⭐ |
+| Docker Compose 实战 | 阳阳羊 | [B站](https://www.bilibili.com/video/BV1Sb4y1p7SET) | 8万+ | ⭐⭐⭐⭐ |
+| 容器技术深入 | 阿里云 | [B站](https://www.bilibili.com/video/BV1F44y1m7LL) | 15万+ | ⭐⭐⭐⭐ |
+
+**学习顺序建议**：先看完「尚硅谷」打基础，再跟「狂神」学 Dockerfile，最后用「Docker Compose」学多容器编排。
 
 ---
 
@@ -39,10 +44,11 @@
 
 | 书名 | 作者 | 适合阶段 | 一句话评价 |
 |------|------|---------|-------------|
-| 《Docker 进阶与实战》 | 华为 Docker 团队 | 高级 | 华为团队写的，有内部实践经验 |
-| 《Docker 从入门到实践》 | 异步社区 | 入门 | 中文，跟着做一遍就能上手 |
-| 《Docker in Action（第2版）》 | O'Reilly | 中级 | 最好的 Docker 英文书，有中文版 |
-| 《Docker 全栈实践》 | 奇虎360 | 高级 | 360 内部实践，安全专题讲得好 |
+| 《Docker 深入浅出》 | Nigel Poulton | 中级 | 最好的 Docker 入门书，薄而精 |
+| 《Docker 实战（第2版）》 | Jeff Nickoloff | 中级 | 实战向，有完整项目示例 |
+| 《Docker 进阶与实战》 | 华为云 | 高级 | 国内团队出品，生产经验丰富 |
+| 《Docker 安全》 | Adrian Mouat | 高级 | 容器安全专题，必读 |
+| 《Container Security》 | Liz Rice | 专家 | 容器安全原理深度解析 |
 
 ---
 
@@ -50,415 +56,428 @@
 
 | 资源 | 链接 | 特点 |
 |------|------|------|
-| Docker 官方文档（中文） | https://docs.docker.com/ | 最权威，必看 |
-| Docker 中文社区 | https://www.docker8.com/ | 中文翻译，入门友好 |
-| Play with Docker | https://labs.play-with-docker.com/ | 在线实验，免费 |
-| harbor/harbor | https://github.com/goharbor/harbor | ⭐15k，企业级私有仓库 |
-| awesome-docker | https://github.com/veggiemonk/awesome-docker | Docker 资源合集 |
+| Docker 官方文档 | https://docs.docker.com/ | 最权威，必看 |
+| Docker 官方最佳实践 | https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ | Dockerfile 编写规范 |
+| docker/library | https://github.com/docker-library/official-images | 官方镜像源码 |
+| Awesome Docker | https://github.com/veggiemonk/awesome-docker | ⭐12k，精选资源合集 |
+| Docker Cheat Sheet | https://dockercheatsheet.com/ | 快速查阅命令 |
+| Play with Docker | https://labs.play-with-docker.com/ | 在线实验平台 |
+| hadolint | https://github.com/hadolint/hadolint | Dockerfile Linter |
+| trivy | https://github.com/aquasecurity/trivy | 镜像漏洞扫描工具 |
 
 ---
 
 ## 📝 核心知识点清单
 
-### 第一阶段：Docker 基础和安装（3-5 天）
+### 第一阶段：Docker 基础和命令（1周）
 
 #### 容器 vs 虚拟机
-
 ```
-虚拟机：
-  硬件 → Hypervisor → Guest OS × N → App × N
-  特点：隔离性好，但重（每个 VM 都有完整 OS）
-
-容器：
-  硬件 → Host OS → Docker Engine → Container × N
-  特点：轻量（共享 Host OS 内核），秒级启动
+虚拟机：Hypervisor → Guest OS → App  (重量级，GB 级)
+容器：  Docker Engine → Container → App  (轻量级，MB 级)
 ```
-
-#### 安装 Docker（CentOS 7/8）
-
-```bash
-# 1. 卸载旧版本
-yum remove -y docker docker-common docker-selinux docker-engine
-
-# 2. 安装依赖
-yum install -y yum-utils device-mapper-persistent-data lvm2
-
-# 3. 添加 Docker 仓库（用阿里云镜像加速）
-yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-
-# 4. 安装 Docker
-yum install -y docker-ce docker-ce-cli containerd.io
-
-# 5. 配置镜像加速（必做，不然拉镜像很慢）
-mkdir -p /etc/docker
-cat > /etc/docker/daemon.json << EOF
-{
-  "registry-mirrors": [
-    "https://mirror.ccs.tencentyun.com",
-    "https://registry.docker-cn.com"
-  ],
-  "log-driver": "json-file",
-  "log-opts": {
-    "max-size": "100m",
-    "max-file": "3"
-  },
-  "storage-driver": "overlay2"
-}
-EOF
-
-# 6. 启动 Docker
-systemctl enable docker
-systemctl start docker
-
-# 7. 验证
-docker version
-docker info
-```
+- 容器共享宿主机内核，隔离通过 Namespace + Cgroups 实现
+- 启动快（秒级 vs 分钟级），资源占用少
 
 #### Docker 基础命令
-
 ```bash
 # 镜像操作
-docker search nginx              # 搜索镜像
-docker pull nginx:1.25            # 拉取镜像
-docker images                      # 列出本地镜像
-docker rmi nginx:1.25            # 删除镜像
-docker build -t my-app:v1 .      # 构建镜像（当前目录的 Dockerfile）
+docker pull nginx:1.25                 # 拉取镜像
+docker images                              # 查看本地镜像
+docker rmi nginx:1.25                    # 删除镜像
+docker tag myapp:v1 myapp:v1.0          # 打标签
+docker push myregistry.com/myapp:v1        # 推送到仓库
+docker save myapp:v1 -o myapp.tar        # 导出镜像
+docker load -i myapp.tar                 # 导入镜像
 
 # 容器操作
-docker run -d --name my-nginx -p 8080:80 nginx:1.25
-                                # 启动容器（-d 后台运行，--name 指定名字，-p 端口映射）
-docker ps                          # 列出运行中的容器
-docker ps -a                       # 列出所有容器（包括停止的）
-docker exec -it my-nginx /bin/bash   # 进入容器
-docker logs my-nginx              # 查看容器日志
-docker logs -f --tail 100 my-nginx   # 实时查看最后 100 行日志
-docker stop my-nginx              # 停止容器
-docker start my-nginx             # 启动已停止的容器
-docker rm my-nginx               # 删除容器（需先停止）
-docker rm -f my-nginx             # 强制删除（不需先停止）
+docker run -d --name web -p 8080:80 nginx:1.25   # 启动容器
+docker ps                                     # 查看运行中的容器
+docker ps -a                                  # 查看所有容器
+docker exec -it web /bin/bash                 # 进入容器
+docker logs web                                # 查看日志
+docker logs -f --tail=100 web                 # 实时查看最后100行日志
+docker stop web                                # 停止容器
+docker start web                               # 启动已停止的容器
+docker restart web                             # 重启容器
+docker rm -f web                              # 强制删除容器
+docker inspect web                             # 查看容器详情
+docker stats web                               # 查看资源占用
 
-# 清理（慎用！）
-docker system prune -a               # 删除所有未使用的镜像、容器、网络
+# 清理
+docker system df                               # 查看磁盘占用
+docker system prune -a                         # 清理所有未使用资源（慎重！）
 ```
 
-### 第二阶段：Dockerfile 编写（1 周）
+### 第二阶段：Dockerfile 编写（1-2周）
 
-#### 最简单的 Dockerfile
-
+#### Dockerfile 核心指令
 ```dockerfile
-# Dockerfile
-FROM nginx:1.25
-LABEL maintainer="vinson-lee"
-COPY index.html /usr/share/nginx/html/
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# 1. FROM — 指定基础镜像（必须在第一行，除了 ARG）
+FROM node:18-alpine
+
+# 2. WORKDIR — 设置工作目录（会自动创建）
+WORKDIR /app
+
+# 3. COPY vs ADD
+COPY package*.json ./       # 推荐：简单复制
+ADD https://example.com/file.tar.gz /     # 慎用：会自动解压 URL
+
+# 4. RUN — 构建时执行命令
+RUN npm install
+RUN apk add --no-cache python3
+
+# 5. ENV — 环境变量
+ENV NODE_ENV=production \
+    PORT=3000
+
+# 6. EXPOSE — 声明端口（文档作用，实际映射靠 -p）
+EXPOSE 3000
+
+# 7. CMD vs ENTRYPOINT
+CMD ["node", "app.js"]              # 可被 docker run 覆盖
+ENTRYPOINT ["node", "app.js"]     # 不可被覆盖，但可追加参数
+
+# 8. USER — 非 root 运行（安全最佳实践）
+RUN addgroup -S app && adduser -S app -G app
+USER app
+
+# 9. HEALTHCHECK — 健康检查
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD curl -f http://localhost:3000/health || exit 1
+
+# 10. .dockerignore — 排除不需要的文件
+node_modules
+*.log
+.git
+.DS_Store
 ```
 
-#### 生产级 Dockerfile（多阶段构建）
-
+#### 多阶段构建（Multi-stage Build）— 减小镜像体积
 ```dockerfile
-# 阶段 1：构建
-FROM node:18-alpine AS builder
+# Stage 1: Build
+FROM node:18 AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
 
-# 阶段 2：运行（最终镜像只有构建产物，很小）
-FROM nginx:1.25-alpine
-COPY --from=builder /app/dist /usr/share/nginx/html/
+# Stage 2: Production
+FROM nginx:alpine
+COPY --from=builder /app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
+**效果**：构建产物只包含 Nginx + 静态文件，镜像从 1GB+ 降到 20MB。
 
-#### Dockerfile 最佳实践
-
+#### 缓存优化技巧
 ```dockerfile
-# ✅ 推荐
-FROM python:3.11-slim           # 用 slim/alpine 版本，镜像更小
-WORKDIR /app                    # 用 WORKDIR，不用 RUN cd
-COPY requirements.txt .          # 分开 COPY，利用缓存
-RUN pip install -r requirements.txt
-COPY . .                          # 最后 COPY 代码（改动频繁）
-RUN useradd -m app && chown -R app:app /app
-USER app                          # 用非 root 用户运行
-HEALTHCHECK --interval=30s --timeout=3s \
-  CMD curl -f http://localhost:8080/health || exit 1   # 健康检查
-EXPOSE 8080
-CMD ["python", "app.py"]
+# ❌ 错误：每次代码改动都会重新 npm install
+COPY . .
+RUN npm install
+
+# ✅ 正确：利用缓存，只有 package.json 变化才重新安装
+COPY package*.json ./
+RUN npm install
+COPY . .
 ```
 
-### 第三阶段：Docker Compose（1 周）
+### 第三阶段：Docker Compose 多容器编排（1周）
 
-#### 用 Compose 部署 LNMP
-
+#### docker-compose.yml 示例
 ```yaml
-# docker-compose.yml
-version: '3.8'
+version: "3.9"
 
 services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src       # 开发时热重载
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://db:5432/mydb
+    depends_on:
+      - db
+      - redis
+    networks:
+      - app-net
+
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydb
+    networks:
+      - app-net
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+    networks:
+      - app-net
+
   nginx:
-    image: nginx:1.25
-    container_name: lnmp-nginx
+    image: nginx:alpine
     ports:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./html:/usr/share/nginx/html
     depends_on:
-      - php
+      - web
     networks:
-      - lnmp-net
-
-  php:
-    image: php:8.2-fpm
-    container_name: lnmp-php
-    volumes:
-      - ./html:/var/www/html
-    networks:
-      - lnmp-net
-
-  mysql:
-    image: mysql:8.0
-    container_name: lnmp-mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: "Root@123456"
-      MYSQL_DATABASE: "wordpress"
-    volumes:
-      - mysql-data:/var/lib/mysql
-    networks:
-      - lnmp-net
-
-  redis:
-    image: redis:7-alpine
-    container_name: lnmp-redis
-    volumes:
-      - redis-data:/data
-    networks:
-      - lnmp-net
-
-networks:
-  lnmp-net:
-    driver: bridge
+      - app-net
 
 volumes:
-  mysql-data:
+  db-data:
   redis-data:
+
+networks:
+  app-net:
+    driver: bridge
 ```
 
+#### Compose 常用命令
 ```bash
-# 启动
-docker compose up -d
+docker-compose up -d                # 后台启动所有服务
+docker-compose ps                     # 查看服务状态
+docker-compose logs -f web           # 查看指定服务日志
+docker-compose exec web /bin/bash    # 进入容器
+docker-compose down                   # 停止并删除所有容器/网络
+docker-compose down -v               # 同时删除数据卷（慎用！）
+docker-compose pull                   # 拉取最新镜像
+docker-compose build                  # 重新构建
+```
 
-# 查看状态
-docker compose ps
+---
+
+## 🔧 实战：从零容器化一个 Node.js 应用
+
+### 项目结构
+```
+myapp/
+├── Dockerfile
+├── docker-compose.yml
+├── package.json
+├── app.js
+└── .dockerignore
+```
+
+### app.js
+```javascript
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello from Docker!');
+});
+
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+```
+
+### Dockerfile
+```dockerfile
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install --production
+
+COPY . .
+
+RUN addgroup -S nodejs && adduser -S nodejs -G nodejs
+USER nodejs
+
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD node -e "require('http').get('http://localhost:3000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})" || exit 1
+
+EXPOSE 3000
+CMD ["node", "app.js"]
+```
+
+### 构建和运行
+```bash
+# 构建镜像
+docker build -t myapp:v1 .
+
+# 运行容器
+docker run -d --name myapp -p 3000:3000 myapp:v1
 
 # 查看日志
-docker compose logs -f
+docker logs -f myapp
 
-# 停止并删除容器
-docker compose down
+# 查看健康状态
+docker inspect myapp | grep -A 10 Health
 
-# 停止并删除容器 + 删除卷（慎用！）
-docker compose down -v
-```
-
-### 第四阶段：Docker 网络（1 周）
-
-#### 四种网络模式
-
-| 模式 | 说明 | 适用场景 |
-|------|------|---------|
-| bridge（默认） | 容器连接到 docker0 网桥 | 单机容器通信 |
-| host | 容器共享宿主机网络栈 | 性能敏感场景（不用 NAT） |
-| none | 容器没有网络接口 | 安全敏感场景 |
-| overlay | 跨主机容器通信 | Swarm/K8s 集群 |
-
-```bash
-# 创建自定义网络（推荐，容器间用服务名通信）
-docker network create my-net
-docker run -d --name app1 --network my-net my-app
-docker run -d --name app2 --network my-net my-app
-# 现在 app1 可以直接 ping app2（Docker 内置 DNS）
-
-# 查看网络详情
-docker network inspect my-net
-```
-
-### 第五阶段：私有镜像仓库（3-5 天）
-
-#### 搭建 Harbor（企业级）
-
-```bash
-# 1. 下载 Harbor 安装包
-wget https://github.com/goharbor/harbor/releases/download/v2.9.0/harbor-offline-installer-v2.9.0.tgz
-tar -xf harbor-offline-installer-v2.9.0.tgz
-cd harbor
-
-# 2. 修改配置文件
-cp harbor.yml.tmpl harbor.yml
-# 编辑 harbor.yml：配置 hostname、https 证书、admin 密码
-
-# 3. 安装
-./install.sh
-
-# 4. 访问
-# https://your-harbor-domain.com
-# 默认账号：admin / 密码：见 harbor.yml 配置
-
-# 5. 推送镜像到 Harbor
-docker login your-harbor-domain.com
-docker tag my-app:1.0 your-harbor-domain.com/library/my-app:1.0
-docker push your-harbor-domain.com/library/my-app:1.0
+# 浏览器访问 localhost:3000
 ```
 
 ---
 
-## 💻 实战命令示例
+## 🚨 常见故障排查手册
 
-### 排查容器故障常用命令
+### 容器起不来（Exited immediately）
 
 ```bash
-# 1. 容器起不来，查看原因
+# 1. 查看退出码和日志
 docker logs <container-name>
-docker inspect <container-name>      # 查看容器详细配置
 
-# 2. 容器网络不通
-docker exec -it <container-name> ping 8.8.8.8
-docker exec -it <container-name> nslookup google.com
-docker network inspect <network-name>
+# 常见退出原因：
+# - 应用配置错误（端口被占、配置文件缺失）
+# - 权限问题（非 root 用户访问 root 文件）
+# - 依赖缺失（容器内没装所需软件）
 
-# 3. 容器磁盘占满
-docker exec -it <container-name> df -h
-# 找到大文件后清理，或者扩展 volume
-
-# 4. 查看容器资源占用
-docker stats <container-name>
-docker top <container-name>              # 查看容器内运行的进程
-
-# 5. 拷贝文件（容器 ↔ 宿主机）
-docker cp <container-name>:/var/log/app.log ./
-docker cp ./config.conf <container-name>:/etc/app/
+# 2. 交互式调试（覆盖 entrypoint）
+docker run -it --entrypoint /bin/sh myimage:tag
+# 然后手动运行命令，看哪里报错
 ```
 
-### 清理 Docker 资源（运维常用）
+### 磁盘爆满（No space left on device）
 
 ```bash
-# 清理停止的容器
-docker container prune -f
+# 1. 查看磁盘占用
+docker system df
 
-# 清理未被使用的镜像
-docker image prune -a -f
+# 2. 清理未使用资源
+docker system prune          # 删除停止的容器、未使用的网络、悬挂镜像
+docker system prune -a      # 删除所有未使用的镜像（不仅仅是悬挂镜像）
+docker volume prune         # 删除未使用的数据卷
 
-# 清理未被使用的 volume（⚠️ 会删除数据！）
-docker volume prune -f
+# 3. 查看哪个容器占用最多空间
+docker ps -s
 
-# 一键清理所有（⚠️ 慎用！）
-docker system prune -a --volumes -f
+# 4. 限制容器日志大小（在 daemon.json 或 docker-compose 中配置）
+# daemon.json:
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  }
+}
 ```
 
----
-
-## 🧪 实战项目
-
-### 项目 1：用 Docker Compose 部署 WordPress
-
-**目标**：不用手动装 LNMP，一条命令起来。
-
-**步骤**：
-1. 创建 `docker-compose.yml`（参考上面的 LNMP 示例，加上 WordPress）
-2. `docker compose up -d`
-3. 浏览器访问 `http://服务器IP`，完成 WordPress 初始化
-4. 验证 MySQL 数据持久化（删除容器，数据还在）
-
-### 项目 2：编写多阶段构建的 Dockerfile
-
-**目标**：把一个 Node.js 应用打包成最小镜像。
-
-**要求**：
-1. 用多阶段构建（构建阶段用 `node:18`，运行阶段用 `nginx:alpine`）
-2. 最终镜像不超过 50MB
-3. 用非 root 用户运行
-4. 加上健康检查
-5. 推送到阿里云镜像仓库
-
----
-
-## 🔧 常见故障排查
-
-### 故障 1：容器无法访问外网
-
-**排查步骤**：
-```bash
-# 1. 检查宿主机网络
-ping -c 3 8.8.8.8
-
-# 2. 检查 Docker DNS 配置
-cat /etc/docker/daemon.json
-# 如果没有配置 DNS，加上：
-# "dns": ["8.8.8.8", "114.114.114.114"]
-
-# 3. 重启 Docker
-systemctl restart docker
-```
-
-### 故障 2：端口被占用，容器起不来
+### 网络不通（容器无法访问外网 / 容器之间无法通信）
 
 ```bash
-# 查看端口占用
-netstat -tlnp | grep :8080
-# 或者
-lsof -i :8080
+# 1. 检查 Docker 网络
+docker network ls
+docker network inspect bridge
 
-# 杀掉占用进程，或者改容器的映射端口
-docker run -d -p 8081:80 nginx   # 改用 8081
+# 2. 进入容器测试网络
+docker exec -it <container> ping 8.8.8.8
+docker exec -it <container> nslookup google.com
+
+# 3. 检查宿主机防火墙
+sudo iptables -L -n | grep DOCKER
+
+# 4. 重启 Docker daemon
+sudo systemctl restart docker
 ```
 
-### 故障 3：镜像拉取很慢
+---
 
-**解决**：配置镜像加速器（见上面安装 Docker 时的 `daemon.json` 配置）
+## 🏭 生产环境最佳实践
+
+### 1. 使用非 root 用户运行容器
+```dockerfile
+FROM node:18-alpine
+
+RUN addgroup -S app && adduser -S app -G app
+
+WORKDIR /app
+COPY --chown=app:app . .
+
+USER app
+
+CMD ["node", "app.js"]
+```
+
+### 2. 镜像漏洞扫描
+```bash
+# 使用 docker scan（需要 Docker Hub 账号）
+docker scan myapp:v1
+
+# 或者使用 trivy
+trivy image myapp:v1
+```
+
+### 3. 限制容器资源
+```bash
+docker run -d \
+  --name web \
+  --memory="512m" \              # 内存上限
+  --cpus="1.5" \                 # CPU 上限（1.5 个核心）
+  --pids-limit=100 \              # 进程数上限
+  myapp:v1
+```
+
+### 4. 配置 Docker Daemon 镜像加速（国内必配）
+```json
+// /etc/docker/daemon.json
+{
+  "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://hub-mirror.c.163.com"
+  ],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  },
+  "storage-driver": "overlay2"
+}
+```
+重启：`sudo systemctl restart docker`
+
+### 5. 使用多阶段构建减小镜像体积
+（见上文「多阶段构建」章节）
 
 ---
 
-## 💼 面试高频题
+## 🌿 进阶：Docker 替代方案
 
-1. **Docker 和虚拟机的区别？**
-   - 虚拟机：硬件虚拟化，每个 VM 有独立 OS，重但隔离性好
-   - 容器：OS 级虚拟化，共享宿主机内核，轻量但隔离性弱
+| 工具 | 特点 | 适用场景 |
+|------|------|---------|
+| **containerd** | K8s 默认运行时，更轻量 | 生产环境 K8s 集群 |
+| **Podman** | 无 daemon，非 root 运行，兼容 Docker CLI | 安全敏感环境 |
+| **Buildah** | 构建容器镜像，无 daemon | CI/CD 流水线 |
+| **Kaniko** | 在无 Docker daemon 环境中构建镜像 | K8s 集群内构建 |
 
-2. **Dockerfile 中 COPY 和 ADD 的区别？**
-   - `COPY`：单纯复制文件
-   - `ADD`：复制文件 + 自动解压压缩包 + 支持 URL（不推荐用，行为不透明）
-
-3. **为什么推荐用非 root 用户运行容器？**
-   - 容器被突破后，攻击者获得的是容器内用户的权限，不是宿主机 root
-
-4. **Docker 网络模式中 bridge 和 host 的区别？**
-   - `bridge`：容器有独立 IP，通过 NAT 访问外网，安全性好
-   - `host`：容器共享宿主机网络，性能更好但失去网络隔离
+**趋势**：K8s 已弃用 Docker Shim，生产环境建议使用 containerd。
 
 ---
 
-## 📈 进阶学习路径
+## ✅ 自测清单
 
-- **Docker 安全**：学镜像扫描（Trivy）、签名（Docker Content Trust）
-- **容器编排**：学 Kubernetes（Docker 的单机能力有限，K8s 才是终点）
-- **容器运行时**：了解 containerd、CRI-O（K8s 1.24+ 不再用 Docker 作为运行时）
-- **Service Mesh**：学 Istio（容器网络的高级玩法）
+学完之后，试试能不能回答这些问题：
+
+- [ ] 容器和虚拟机的核心区别是什么？
+- [ ] COPY 和 ADD 指令有什么区别？
+- [ ] CMD 和 ENTRYPOINT 有什么区别？
+- [ ] 多阶段构建的好处是什么？如何编写？
+- [ ] Docker 的四种网络模式（bridge/host/none/overlay）分别适用于什么场景？
+- [ ] volume 和 bind mount 有什么区别？
+- [ ] 如何减小 Docker 镜像的体积？
+- [ ] 如何排查容器起不来的问题？
+- [ ] 生产环境中运行容器需要注意哪些安全问题？
+- [ ] Docker Compose 和 Kubernetes 的关系是什么？
 
 ---
 
-## 🔗 相关资源
-
-- [← 返回中文版首页](../README.md)
-- [CN 03 Shell 脚本](../03_Shell_Scripting/)
-- [CN 05 Kubernetes](../05_Kubernetes/)
-- [实时发现：Docker 相关热门仓库](../../resources/trending.md)
-
----
-
-<p align="right">
-  <sub>vinson-lee · 容器化是第一步，K8s 才是目的地</sub>
-</p>
+> 学完这个模块，你已经掌握了容器化的核心技能。
+> 下一步推荐：[05_Kubernetes](./05_Kubernetes/) — 学会容器编排，让容器在生产环境中自动化运行。
