@@ -12,7 +12,7 @@
 
 <br>
 
-[![🇨🇳 中文版](https://img.shields.io/badge/%F0%9F%87%A8%F0%9E%B3_%E4%B8%AD%E6%96%87%E7%89%88-%E8%BF%9B%E5%85%A5%E4%B8%AD%E6%96%87%E7%89%88-blue?style=for-the-badge)](./CN_Ops_Roadmap/)
+[![🇨🇳 中文版](https://img.shields.io/badge/%F0%9F%87%A8%F0%9F%87%B3_%E4%B8%AD%E6%96%87%E7%89%88-%E8%BF%9B%E5%85%A5%E4%B8%AD%E6%96%87%E7%89%88-blue?style=for-the-badge)](./CN_Ops_Roadmap/)
 [![🌍 English](https://img.shields.io/badge/%F0%9F%8C%8D_English-Enter_EN_Version-orange?style=for-the-badge)](./EN_Global_SRE/)
 
 </div>
@@ -58,6 +58,57 @@
 
 ---
 
+## 💡 Why This Roadmap · 为什么值得收藏
+
+> 市面上 90% 的运维学习路线，只告诉你「学什么」，却不说「学到什么程度」和「怎么用在生产上」。
+
+<table>
+<tr valign="top">
+<td width="33%">
+
+**🇨🇳 你在国内做运维**
+
+会遇到这些独特的场景：
+- 阿里云/腾讯云/华为云，各家产品逻辑不一样
+- 等保2.0 合规检查，有固定的核查项
+- 基线扫描（S3A3G3 规范），用 Linux 脚本落地
+- 国产化替代（TiDB / OceanBase / OpenGauss）
+
+**这份路线图为这些场景单独写了模块。**
+
+</td>
+<td width="33%">
+
+**🌍 你在海外做 SRE**
+
+需要掌握另一套方法论：
+- Google SRE Book 体系（SLO/Error Budget）
+- AWS/GCP/Azure 多云架构
+- Incident Command System（ICS）框架
+- Chaos Engineering 成熟度模型
+
+**英文版模块覆盖以上内容，不是翻译版。**
+
+</td>
+<td width="33%">
+
+**18 个月后，你能做到：**
+
+| Before | After |
+|:------|:------|
+| 故障靠猜 | MTTD < 5分钟，根因有据可查 |
+| 手动登服务器 | 全自动化，提交代码即上线 |
+| 不知道学什么 | 清晰的阶段目标 + 可验证的产出 |
+| 面试说不清楚 | 能用真实项目讲架构决策 |
+
+</td>
+</tr>
+</table>
+
+> 💬 *"不是教你考证书，而是让你在生产环境里真的能用。"*
+
+---
+
 ## 📖 About This Roadmap · 关于本路线图
 
 ### 🇨🇳 中文简介
@@ -70,7 +121,7 @@
 
 Most online learning paths share a common problem: **they list tools without explaining the order, depth, or how they connect in real production environments.**
 
-This roadmap is built differently — from hands-on experience at cloud vendors and large-scale internet companies, structured around three progressive stages. **Every module explicitly marks the depth needed in real work**, not a textbook table of contents.
+This roadmap is built differently — from hands-on experience at cloud vendors and large-scale internet companies, structured around three progressive stages. **Every module explicitly marks the depth needed in real work**, not a textbook table of contents.**
 
 <table>
 <tr align="center">
@@ -117,7 +168,7 @@ This roadmap is built differently — from hands-on experience at cloud vendors 
 <td width="33%">
 <details open><summary><b>📚 Phase 1 : Foundation</b></summary><small>(Month 1~3)</small>
 
-- **Linux Basics** — 系统管理 / 权限 / 内核调优
+- **Linux Basics** — 系统管理 / 权限 / 内核调优 / systemd
 - **Shell Scripting** — Bash / 文本处理 / 自动化脚本
 - **Networking** — TCP/IP / DNS / iptables / 抓包分析
 - **Nginx Deploy** — 反向代理 / 负载均衡 / HTTPS 调优
