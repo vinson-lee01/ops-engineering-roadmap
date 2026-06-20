@@ -1,47 +1,49 @@
 # 06 · CI/CD Pipelines
 
-> Automation is the heart of DevOps. If you're still deploying manually, you're not doing DevOps.
-> This module covers the full pipeline: from code commit to production deployment.
+> CI/CD is the bridge between code and production. Master it, and you master automated software delivery.
+> This module covers GitHub Actions, GitLab CI, Jenkins, and modern GitOps tools.
 
 ---
 
 ## 🎯 Learning Objectives
 
-By the end of this module, you should be able to:
+After completing this module, you should be able to:
 
-- [ ] Understand CI vs CD and why both matter
-- [ ] Set up a Jenkins pipeline from scratch
-- [ ] Configure GitLab CI with `.gitlab-ci.yml`
-- [ ] Use GitHub Actions for CI/CD
-- [ ] Write a multi-stage pipeline (build → test → deploy)
-- [ ] Implement environment promotion (dev → staging → production)
-- [ ] Use artifacts and caching to speed up builds
-- [ ] Implement deployment strategies: rolling, blue-green, canary
-- [ ] Secure your pipeline (secrets management, supply chain security)
-- [ ] Monitor pipeline health and failure rates
+- [ ] Understand CI/CD concepts (Continuous Integration / Continuous Delivery / Continuous Deployment)
+- [ ] Write GitHub Actions workflows (build/test/deploy)
+- [ ] Write GitLab CI pipelines (.gitlab-ci.yml)
+- [ ] Configure Jenkins pipelines (Jenkisfile)
+- [ ] Implement deployment strategies: Blue-Green / Canary / Rolling
+- [ ] Use Argo CD / Flux for GitOps
+- [ ] Secure CI/CD: secrets management, SBOM, vulnerability scanning
+- [ ] Optimize CI/CD: caching, artifact reuse, parallel jobs
+- [ ] Troubleshoot failed pipelines
+- [ ] Design a complete CI/CD system for microservices
+
+**After this module, you can automate any deployment workflow.**
 
 ---
 
-## 📺 Recommended Video Courses
+## 📺 Recommended Video Tutorials
 
-| Course | Instructor | Platform | Duration | Rating |
-|--------|-----------|----------|----------|--------|
-| **GitHub Actions Full Course** | TechWorld with Nana | YouTube | 2h | ⭐⭐⭐⭐⭐ |
-| **Jenkins Full Course** | FreeCodeCamp | YouTube | 4h | ⭐⭐⭐⭐⭐ |
-| **CI/CD with GitLab** | Sander van Vugt | O'Reilly | 3h | ⭐⭐⭐⭐ |
-| **ArgoCD Tutorial** | Codefresh | YouTube | 1.5h | ⭐⭐⭐⭐ |
+| Tutorial | Instructor | Link | Views | Rating |
+|----------|-------------|------|-------|--------|
+| GitHub Actions Full Course | TechWorld with Nana | [YouTube](https://www.youtube.com/watch?v=R8_veQiYBh) | 1.5M+ | ⭐⭐⭐⭐⭐ |
+| GitLab CI/CD Complete | GitLab | [YouTube](https://www.youtube.com/watch?v=8PmhCF0kxs) | 200K+ | ⭐⭐⭐⭐ |
+| Jenkins Pipeline | Kunal Kushwaha | [YouTube](https://www.youtube.com/watch?v=7KCS70sCoK0) | 300K+ | ⭐⭐⭐⭐ |
+| Argo CD & GitOps | Codefresh | [YouTube](https://www.youtube.com/watch?v=MeU5_kOTzaY) | 400K+ | ⭐⭐⭐⭐⭐ |
+| CI/CD Best Practices | AWS | [YouTube](https://www.youtube.com/watch?v=Qh9sS-Mjoy) | 100K+ | ⭐⭐⭐⭐ |
 
 ---
 
 ## 📖 Recommended Books
 
-| Book | Author | Stage | Comment |
+| Book | Author | Level | Comment |
 |------|--------|-------|---------|
-| **Continuous Delivery** | Jez Humble | Advanced | The foundation. Every concept here is still relevant. |
-| **Accelerate** | Nicole Forsgren | Advanced | Data-driven DevOps. DORA metrics explained. |
-| **CI/CD with Docker and Kubernetes** | O'Reilly | Advanced | Practical, hands-on. |
-| **GitHub Actions in Action** | Manning | Intermediate | If you use GitHub, this is the one. |
-| **Jenkins 2: Up and Running** | O'Reilly | Intermediate | Jenkinsfile, shared libraries, pipelines. |
+| *Continuous Delivery* | Jez Humble & David Farley | Advanced | The bible of CI/CD. |
+| *Effective DevOps* | Jennifer Davis | Intermediate | CI/CD in DevOps context. |
+| *Jenkins 2: Up & Running* | Brent Laster | Intermediate | Jenkins modern practices. |
+| *GitOps with Argo CD* | O'Reilly | Advanced | GitOps deep dive. |
 
 ---
 
@@ -49,148 +51,360 @@ By the end of this module, you should be able to:
 
 | Resource | Link | Features |
 |----------|------|----------|
-| **GitHub Actions Docs** | https://docs.github.com/en/actions | Official, comprehensive |
-| **GitLab CI/CD Docs** | https://docs.gitlab.com/ee/ci/ | Excellent examples |
-| **Jenkins User Documentation** | https://www.jenkins.io/doc/ | Huge, search for specifics |
-| **Awesome CI/CD** | https://github.com/ligurio/awesome-ci | Curated tools list |
-| **DORA Metrics** | https://cloud.google.com/blog/products/devops-sre/ | What to measure |
-| **ArgoCD Docs** | https://argo-cd.readthedocs.io/ | GitOps deployment |
+| GitHub Actions Docs | https://docs.github.com/actions/ | Official, comprehensive. |
+| GitLab CI/CD Docs | https://docs.gitlab.com/ee/ci/ | Excellent examples. |
+| Jenkins User Handbook | https://www.jenkins.io/doc/ | Complete reference. |
+| Argo CD Docs | https://argo-cd.readthedocs.io/ | GitOps practice. |
+| Awesome CI/CD | https://github.com/ligurio/awesome-ci | ⭐3k, curated tools list. |
+| CICD Dragon | https://github.com/cicd-dragon/cicd-dragon | ⭐2k, CI/CD patterns. |
 
 ---
 
 ## 📝 Core Knowledge Checklist
 
-### Phase 1: CI/CD Fundamentals (1 week)
+### Phase 1: CI/CD Concepts (3-5 days)
 
-- What CI/CD solves: manual errors, slow releases, no rollback
-- CI vs CD vs CD (Continuous Delivery vs Continuous Deployment)
-- The typical pipeline stages:
-  ```
-  code commit → build → test → package → deploy to staging → deploy to prod
-  ```
-- Key metrics: lead time, deployment frequency, MTTR, change failure rate
-- DORA metrics explained (Google research)
+#### What is CI/CD?
+```
+Traditional:  Code → Build (manual) → Test (manual) → Deploy (manual)
+CI/CD:     Code → Build (auto)    → Test (auto)   → Deploy (auto)
+```
 
-### Phase 2: Jenkins — The Classic Choice (2 weeks)
+- **CI (Continuous Integration)**: Merge code frequently, build & test automatically.
+- **CD (Continuous Delivery)**: Auto-deploy to staging, manual approval for production.
+- **CD (Continuous Deployment)**: Auto-deploy to production (no manual approval).
 
-#### Installing and configuring Jenkins
-- Run Jenkins in Docker (easiest way to start):
-  ```bash
-  docker run -d -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
-  ```
-- Unlock Jenkins (find initial admin password in logs)
-- Install suggested plugins
-- Create your first Freestyle job
+#### CI/CD Pipeline Stages
+```
+1. Code commit (trigger)
+2. Build (compile/package)
+3. Test (unit/integration/e2e)
+4. Static analysis (lin, sonarqube)
+5. Security scan (SAST/DAST/SCA)
+6. Package (Docker image / JAR)
+7. Push artifact (registry)
+8. Deploy (staging/production)
+9. Notify (Slack/Email)
+```
 
-#### Jenkinsfile — Declarative Pipeline
+---
+
+### Phase 2: GitHub Actions (1 week)
+
+#### Basic Workflow
+```yaml
+# .github/workflows/ci.yml
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pul_request:
+    branches: [main]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run linter
+        run: npm run lint
+      
+      - name: Run tests
+        run: npm test
+      
+      - name: Upload coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage/
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Build & push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+      
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy to production
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /app
+            docker compose pul
+            docker compose up -d
+```
+
+#### GitHub Actions Best Practices
+```yaml
+# 1. Use specific versions (not @main)
+uses: actions/checkout@v4   # ✅ Good
+uses: actions/checkout@main  # ❌ Risk: breaking changes
+
+# 2. Cache dependencies
+- uses: actions/setup-node@v4
+  with:
+    cache: 'npm'
+
+# 3. Use secrets for sensitive data
+env:
+  API_KEY: ${{ secrets.API_KEY }}   # ✅ Good
+  API_KEY: "hardcoded"             # ❌ NEVER
+
+# 4. Limit permissions
+permissions:
+  contents: read
+  packages: write
+
+# 5. Use concurrency groups (cancel duplicate runs)
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+```
+
+---
+
+### Phase 3: GitLab CI (1 week)
+
+#### Basic Pipeline
+```yaml
+# .gitlab-ci.yml
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+
+test:
+  stage: test
+  image: node:18-alpine
+  script:
+    - npm ci
+    - npm run lint
+    - npm test
+  cache:
+    paths:
+      - node_modules/
+  only:
+    - merge_requests
+    - main
+
+build:
+  stage: build
+  image: docker:24-cli
+  services:
+    - docker:24-dind
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+  only:
+    - main
+
+deploy_staging:
+  stage: deploy
+  script:
+    - ssh deploy@staging "cd /app && docker compose pul && docker compose up -d"
+  only:
+    - main
+  environment:
+    name: staging
+    url: https://staging.example.com
+
+deploy_production:
+  stage: deploy
+  script:
+    - ssh deploy@prod "cd /app && docker compose pul && docker compose up -d"
+  only:
+    - main
+  when: manual   # Requires manual approval
+  environment:
+    name: production
+    url: https://example.com
+```
+
+---
+
+### Phase 4: Jenkins Pipeline (3-5 days)
+
+#### Declarative Pipeline (Jenkisfile)
 ```groovy
 pipeline {
     agent any
+    
+    environment {
+        DOCKER_REGISTRY = 'myregistry.azurecr.io'
+        IMAGE_NAME = 'myapp'
+        DOCKER_CREDS = 'docker-registry-creds'
+    }
+    
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                git branch: 'main', url: 'https://github.com/myorg/myrepo.git'
             }
         }
+        
         stage('Test') {
             steps {
+                sh 'npm ci'
+                sh 'npm run lint'
                 sh 'npm test'
             }
+            post {
+                always {
+                    junit 'test-results/*.xml'
+                }
+            }
         }
-        stage('Deploy') {
+        
+        stage('Build & Push Docker') {
             steps {
-                sh 'kubectl apply -f k8s/'
+                script {
+                    docker.withRegistry("https://${DOCKER_REGISTRY}", DOCKER_CREDS) {
+                        def app = docker.build("${DOCKER_REGISTRY}/${IMAGE_NAME}:${BUILD_NUMBER}")
+                        app.push()
+                        app.push('latest')
+                    }
+                }
+            }
+        }
+        
+        stage('Deploy to Staging') {
+            steps {
+                sh "ssh deploy@staging 'cd /app && docker compose pul && docker compose up -d'"
+            }
+        }
+        
+        stage('Approve for Production') {
+            steps {
+                input message: 'Deploy to production?', ok: 'Yes'
+            }
+        }
+        
+        stage('Deploy to Production') {
+            steps {
+                sh "ssh deploy@prod 'cd /app && docker compose pul && docker compose up -d'"
             }
         }
     }
+    
     post {
+        success {
+            slackSend(channel: '#devops', message: 'Pipeline succeeded!')
+        }
         failure {
-            mail to: 'team@example.com', subject: 'Build Failed'
+            slackSend(channel: '#devops', message: 'Pipeline failed!')
         }
     }
 }
 ```
 
-#### Key Jenkins concepts
-- **agent**: where the pipeline runs (any, label, docker)
-- **stage**: logical division of work
-- **steps**: actual commands
-- **post**: actions after pipeline (always, success, failure)
-- **environment**: environment variables
-- **parameters**: user input at build time
-- **credentials**: storing secrets in Jenkins
+---
 
-#### Jenkins best practices
-- Store `Jenkinsfile` in the repo (versioned with code)
-- Use **shared libraries** for reusable logic
-- Use **agentless** pipelines when possible (offload to Kubernetes)
-- Set up **role-based access control** (RBAC)
-- Back up `JENKINS_HOME` regularly
+### Phase 5: GitOps with Argo CD (1 week)
 
-### Phase 3: GitLab CI/CD (1-2 weeks)
-
-#### `.gitlab-ci.yml` structure
-```yaml
-stages:
-  - build
-  - test
-  - deploy
-
-build_job:
-  stage: build
-  image: node:18
-  script:
-    - npm install
-    - npm run build
-  artifacts:
-    paths:
-      - dist/
-    expire_in: 1 hour
-
-test_job:
-  stage: test
-  image: node:18
-  script:
-    - npm test
-  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
-
-deploy_staging:
-  stage: deploy
-  script:
-    - kubectl apply -f k8s/staging/
-  environment:
-    name: staging
-    url: https://staging.example.com
-  only:
-    - main
-
-deploy_prod:
-  stage: deploy
-  script:
-    - kubectl apply -f k8s/prod/
-  environment:
-    name: production
-    url: https://example.com
-  when: manual  # Requires manual click to deploy to prod
-  only:
-    - main
+#### What is GitOps?
+```
+Traditional CI/CD:  CI pushs to production
+GitOps:            Git is the single source of truth → Argo CD puls from Git → sync to cluster
 ```
 
-#### Key GitLab CI features
-- **Runners**: shared, group, or specific runners
-- **Artifacts**: pass files between jobs
-- **Caching**: speed up jobs (node_modules, pip cache)
-- **Environments**: track deployments per environment
-- **Review Apps**: auto-deploy PR branches to temporary environments
-- **Container Registry**: built-in Docker registry
+#### Install Argo CD
+```bash
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-### Phase 4: GitHub Actions (1 week)
+# Access UI
+kubectl port-forward svc/argo-cd-server -n argocd 8080:443
+# Visit: https://localhost:8080 (username: admin, password: from secret)
+```
 
-#### Basic workflow file
+#### Application Manifest
 ```yaml
-name: CI
-on: [push, pull_request]
+# app-of-apps.yaml (Argo CD Application)
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/myorg/myrepo.git
+    targetRevision: main
+    path: k8s/overlays/production
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: production
+  syncPolicy:
+    automated:
+      prune: true        # Delete resources removed from Git
+      selfHeal: true   # Correct drift
+    syncOptions:
+      - CreateNamespace=true
+```
+
+#### Argo CD Best Practices
+```
+- Use "App of Apps" pattern (manage Argo CD apps via Git)
+- Enable RBAC (don't give everyone admin access)
+- Use Projects to isolate teams
+- Configure notifications (Slack/PagerDuty)
+- Regularly backup Argo CD state (etcd snapshot)
+```
+
+---
+
+## 🔧 Hands-On: Build a Complete Pipeline
+
+### Scenario: Node.js App → Docker → K8s
+
+#### Step 1: GitHub Actions (CI)
+```yaml
+# .github/workflows/ci-cd.yml
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
 
 jobs:
   test:
@@ -200,97 +414,193 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
-      - run: npm install
+      - run: npm ci
       - run: npm test
-  
-  build-and-push:
+      
+  build:
     needs: test
+    runs-on: ubuntu-latest
+    outputs:
+      image-tag: ${{ steps.meta.outputs.tags }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/metadata-action@v5
+        id: meta
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=sha
+            type=ref,event=branch
+      - uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          
+  update-helm:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          push: true
-          tags: myapp:${{ github.sha }}
+          repository: myorg/myrepo-helm
+          token: ${{ secrets.PAT }}
+      - name: Update image tag in Helm values
+        run: |
+          sed -i "s/tag: .*/tag: ${{ github.sha }}/" charts/myapp/values.yaml
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add charts/myapp/values.yaml
+          git commit -m "Update image tag to ${{ github.sha }}"
+          git push
 ```
 
-#### Key GitHub Actions concepts
-- **Workflow**: the YAML file (lives in `.github/workflows/`)
-- **Event**: what triggers the workflow (push, PR, schedule, manual)
-- **Job**: a set of steps, runs on a runner
-- **Step**: individual task (run command or use an action)
-- **Action**: reusable unit (can be from the Marketplace)
-- **Runner**: the VM that runs the job (GitHub-hosted or self-hosted)
-- **Secret**: encrypted environment variable
+#### Step 2: Argo CD (CD)
+- Argo CD watches `myrepo-helm` repo
+- When `values.yaml` changes, Argo CD auto-syncs to K8s cluster
 
-### Phase 5: Deployment Strategies (1 week)
+---
 
-| Strategy | How it works | Pros | Cons |
-|----------|--------------|------|------|
-| **Rolling** | Replace pods gradually | Zero downtime | Slow rollback |
-| **Blue-Green** | Two identical environments, switch traffic | Instant rollback | Double resource cost |
-| **Canary** | Route small % of traffic to new version | Low risk | Complex setup |
-| **Shadow** | Mirror traffic to new version, don't serve | Test with real traffic | Complex |
+## 🚨 Common Troubleshooting
 
-#### Implementing blue-green with K8s
+### Pipeline fails at "docker push" (authentication error)
+
+```bash
+# GitHub Actions: Use GITHUB_TOKEN (auto-provided)
+- name: Log in to GHCR
+  uses: docker/login-action@v3
+  with:
+    registry: ghcr.io
+    username: ${{ github.actor }}
+    password: ${{ secrets.GITHUB_TOKEN }}
+
+# GitLab CI: Use CI_JOB_TOKEN (auto-provided)
+# Or define CI_REGISTRY_USER / CI_REGISTRY_PASSWORD in Settings → CI/CD → Variables
+```
+
+### Tests pass locally but fail in CI
+
+```bash
+# Common causes:
+# 1. Node version mismatch
+# → Pin node-version in workflow
+
+# 2. Missing environment variables
+# → Add to GitHub Secrets, then reference in workflow
+
+# 3. Timing issues (async tests)
+# → Increase timeout: jest.setTimeout(10000)
+```
+
+### Deployment fails (K8s cluster unreachable)
+
+```bash
+# GitHub Actions: Use kubeconfig action
+- name: Set up kubectl
+  uses: azure/setup-kubectl@v3
+  
+- name: Deploy to K8s
+  run: |
+    echo "${{ secrets.KUBECONFIG }}" > kubeconfig
+    export KUBECONFIG=kubeconfig
+    kubectl apply -f k8s/
+```
+
+---
+
+## 🏭 Production Best Practices
+
+### 1. Secret Management
 ```yaml
-# Service points to "blue" by default
-# Deploy "green" with new version
-# Test green
-# Switch service selector to green
-# Keep blue running for quick rollback
+# ❌ DON'T: Hardcode secrets
+env:
+  API_KEY: "sk-abc123"
+
+# ✅ DO: Use vault/secrets manager
+env:
+  API_KEY: ${{ secrets.API_KEY }}
+
+# Even better: Use HashiCorp Vault / AWS Secrets Manager
+- name: Retrieve secret from Vault
+  uses: hashicorp/vault-action@v2
+  with:
+    url: https://vault.example.com
+    tken: ${{ secrets.VAULT_TOKEN }}
+    secrets: |
+      secret/data/api API_KEY;
 ```
 
-### Phase 6: Pipeline Security (1 week)
+### 2. Deployment Strategies
+```yaml
+# Blue-Green (zero-downtime)
+# 1. Deploy new version (green) alongside old (blue)
+# 2. Test green
+# 3. Switch load balancer to green
+# 4. Keep blue for rollback
 
-- **Never commit secrets**: use Vault, AWS Secrets Manager, or GitHub Secrets
-- **Pin action versions**: `actions/checkout@v4` not `@main`
-- **Supply chain security**: SBOM (Software Bill of Materials), sigstore/cosign
-- **Least privilege**: pipeline should only have permissions it needs
-- **Scan dependencies**: `npm audit`, Snyk, OWASP Dependency-Check
-- **Container scanning**: Trivy, Clair
-- **SAST/DAST**: SonarQube, OWASP ZAP
+# Canary (gradual rollout)
+# Argo CD: Use trafic weighting
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+spec:
+  strategy:
+    canary:
+      steps:
+        - setWeight: 20    # 20% traffic to new version
+        - pause: { duration: 30m }
+        - setWeight: 50
+        - pause: { duration: 30m }
+        - setWeight: 100
+```
+
+### 3. Pipeline Security (Supply Chain)
+```yaml
+# Generate SBOM (Software Bil of Materials)
+- name: Generate SBOM
+  uses: anchore/sbom-action@v0
+  with:
+    format: spdx-json
+
+# Scan for vulnerabilities
+- name: Scan image
+  uses: aquasecurity/trivy-action@0.11.0
+  with:
+    image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+    format: 'table'
+    exit-code: '1'   # Fail pipeline if vulnerabilities found
+```
 
 ---
 
-## 🔧 Hands-on Projects
+## 📊 Comparison: CI/CD Tools
 
-| Project | Difficulty | What you'll learn |
-|---------|-------------|-------------------|
-| **Set up Jenkins on K8s** | ⭐⭐⭐ | Jenkins operator, persistence, agents |
-| **Multi-stage pipeline with GitLab** | ⭐⭐⭐ | Environments, review apps, manual gates |
-| **GitHub Actions + Docker + K8s** | ⭐⭐⭐⭐ | Full automation from commit to prod |
-| **Canary deployment with Flagger** | ⭐⭐⭐⭐⭐ | Progressive delivery, metrics-based rollout |
-| **Pipeline security audit** | ⭐⭐⭐ | Secret scanning, supply chain security |
-
----
-
-## ⚠️ Common Pitfalls
-
-| Pitfall | Why it happens | How to avoid |
-|---------|----------------|---------------|
-| Long-running tests block pipeline | Tests are too slow or too many | Parallelize tests, run only affected tests |
-| Secrets in pipeline logs | Printing env vars for debugging | Never `echo $SECRET`, use masked variables |
-| "It works on my machine" | Inconsistent build environments | Use Docker for build steps (same image everywhere) |
-| Fragile pipelines | Too many manual steps, tight coupling | Make pipelines idempotent and self-contained |
-| No rollback plan | Assumes deployment always succeeds | Always have a rollback strategy (and test it!) |
-| Ignoring flaky tests | "It's just a flaky test, merge it" | Fix flaky tests immediately, they erode trust |
+| Tool | Best For | Pros | Cons |
+|------|----------|------|------|
+| **GitHub Actions** | GitHub-hosted projects | Tight integration, huge marketplace | Vendor lock-in |
+| **GitLab CI** | GitLab-hosted projects | Built-in, powerful, free CI minutes | Steep learning curve |
+| **Jenkins** | On-premise, complex pipelines | Extensible, mature | Hard to maintain, XML hell |
+| **Argo CD** | K8s GitOps | Declarative, Git as single source of truth | Requires K8s knowledge |
+| **CircleCI** | Fast builds | Speed, simplicity | Expensive at scale |
+| **Buildkite** | Custom runners | Flexible, hybrid cloud | Setup overhead |
 
 ---
 
-## ✅ Self-Check: Can you...
+## ✅ Self-Check Quiz
 
-- [ ] Write a `Jenkinsfile` that builds, tests, and deploys to K8s?
-- [ ] Set up a GitHub Actions workflow that triggers on PR and runs tests?
-- [ ] Explain the difference between rolling, blue-green, and canary deployments?
-- [ ] Secure a pipeline: where do you store secrets?
-- [ ] Set up a multi-stage pipeline with manual approval for production?
-- [ ] Measure DORA metrics for your team's pipeline?
+After learning, try to answer these:
 
-> 💡 **Next step**: After this module, move on to **09 · Monitoring & Observability** to close the loop: deploy → monitor → improve.
+- [ ] What's the difference between Continuous Delivery and Continuous Deployment?
+- [ ] How does GitHub Actions cache work? How to optimize it?
+- [ ] How do you secure secrets in CI/CD pipelines?
+- [ ] What's GitOps? How does Argo CD implement it?
+- [ ] How do you implement Blue-Green deployment?
+- [ ] What's the difference between `stage`, `step`, and `job` in Jenkins?
+- [ ] How do you troubleshoot a failed pipeline?
+- [ ] What's an SBOM? Why is it important?
+- [ ] How do you configure multi-environment deployments (staging/production)?
+- [ ] What's the "Detached HEAD" problem in CI/CD?
+
+---
+
+> CI/CD is the heart of modern DevOps. Master it, and you become the engineer who bridges development and production.
+> Next recommended: [08_Monitoring_Observability](../08_Monitoring_Observability/) — Learn to monitor what you deploy.
