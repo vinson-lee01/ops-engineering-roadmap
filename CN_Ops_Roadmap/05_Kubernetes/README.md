@@ -11,16 +11,19 @@
 
 - [ ] 理解 K8s 整体架构（Master/Worker、etcd、API Server、Scheduler、Controller）
 - [ ] 熟练操作 Pod/Deployment/Service/Ingress 等核心资源
-- [ ] 编写和调试 YAML 配置文件
+- [ ] 编写和调试 YAML 配置文件（手写，不依赖代码生成）
 - [ ] 使用 ConfigMap/Secret 管理配置和敏感信息
-- [ ] 掌握 Helm 包管理工具（添加仓库、安装、自定义 values）
+- [ ] 掌握 Helm 包管理工具（添加仓库、安装、自定义 values.yaml）
 - [ ] 了解 StatefulSet/DaemonSet/Job/CronJob 等高级控制器
 - [ ] 配置 PersistentVolume 和 PersistentVolumeClaim
 - [ ] 理解并实现服务发现和负载均衡
-- [ ] 掌握 Ingress 控制器（Nginx Ingress / Traefik）
+- [ ] 掌握 Ingress 控制器（Nginx Ingress / Traefik / Istio）
 - [ ] 了解 RBAC 权限控制机制
 - [ ] 会做集群维护：升级、备份（etcd）、节点管理
 - [ ] 能排查常见故障：Pod 起不来、网络不通、存储挂载失败
+- [ ] 理解网络模型：CNI 插件、Service IP、Pod IP、Ingress 转发
+- [ ] 会配置资源配额（ResourceQuota）和限额（LimitRange）
+- [ ] 了解 K8s 安全：Pod Security Standards、Network Policy
 
 **学完这个模块，你值 25K+。**
 
@@ -31,10 +34,12 @@
 | 教程 | 讲师 | 链接 | 播放量 | 推荐度 |
 |------|------|------|--------|---------|
 | K8s 教程由浅入深 | 尚硅谷 | [B站 BV1Qv41167ck](https://www.bilibili.com/video/BV1Qv41167ck) | 100万+ | ⭐⭐⭐⭐⭐ |
-| K8s 入门到精通 | 黑马程序员 | [B站 BV1cK4y1L7Tb](https://www.bilibili.com/video/BV1cK4y1L7Tb) | 50万+ | ⭐⭐⭐⭐ |
+| K8s 入门到精通 | 黑马程序员 | [B站 BV1cK4y1L7Tb](https://www.bilibili.com/video/BV1cK4y1L7Tb) | 50万+ | ⭐⭐⭐⭐⭐ |
 | K8s 实战 | 马哥 | [B站](https://space.bilibili.com/387633139) | 30万+ | ⭐⭐⭐⭐ |
 | 狂神说 K8s | 狂神 | [B站 BV1GT4y1A756](https://www.bilibili.com/video/BV1GT4y1A756) | 200万+ | ⭐⭐⭐⭐ |
 | Helm 包管理 | 阳阳羊 | [B站](https://www.bilibili.com/video/BV1SAR7Y7oj) | 10万+ | ⭐⭐⭐ |
+| K8s 网络管透 | 阿里云 | [B站](https://www.bilibili.com/video/BV1bK4y1a7tB) | 20万+ | ⭐⭐⭐⭐ |
+| CKA 认证备考 | 姿势喵 | [B站](https://www.bilibili.com/video/BV1vQ4y1P7yA) | 30万+ | ⭐⭐⭐⭐ |
 
 **学习顺序建议**：先看完「尚硅谷」打基础，再跟「狂神」做实战，最后用「Helm」学包管理。
 
@@ -49,6 +54,8 @@
 | 《深入解析 Kubernetes》 | 张磊 | 高级 | 阿里云 K8s 团队出品，原理讲得深 |
 | 《Helm 学习指南》 | O'Reilly | 高级 | Helm 专题，够用 |
 | 《Kubernetes 网络权威指南》 | 杜军 | 专家 | 网络专题，CNI/Service/Ingress 讲得细 |
+| 《Kubernetes 实战》 | 马永亮 | 中级 | 实战向，有具体集群搭建步骤 |
+| 《CKA 认证考试指南》 | Dario Reed | 中级 | 考证必备 |
 
 ---
 
@@ -63,6 +70,9 @@
 | helm/helm | https://github.com/helm/helm | Helm 官方仓库 |
 | 阿里云 K8s 最佳实践 | https://help.aliyun.com/product/85222.html | 国内云厂商实战经验 |
 | Play with K8s | https://labs.play-with-k8s.com/ | 在线实验平台 |
+| K8s the Hard Way | https://github.com/kelseyhightower/kubernetes-the-hard-way | ⭐32k，从零手动搭建 |
+| CNI 插件对比 | https://www.cni.dev/ | 网络插件选型参考 |
+| Istio 官方文档（中文） | https://istio.io/latest/zh/docs/ | Service Mesh 学习 |
 
 ---
 
@@ -70,140 +80,149 @@
 
 ### 第一阶段：K8s 架构和基础（1-2 周）
 
-- K8s 是什么，解决什么问题
+- K8s 是什么，解决什么问题（容器编排、自愈、弹性伸缩）
 - 整体架构：Master 节点组件 vs Worker 节点组件
-  - Master：API Server、etcd、Scheduler、Controller Manager
-  - Worker：kubelet、kube-proxy、Container Runtime
-- 安装方式对比：kubeadm vs 二进制 vs 云厂商托管
+  - Master：API Server（网关）、etcd（状态存储）、Scheduler（调度）、Controller Manager（控制循环）
+  - Worker：kubelet（Pod 管家）、kube-proxy（网络代理）、Container Runtime（容器运行时）
+- 安装方式对比：
+  - `kubeadm init`：官方推荐，适合生产
+  - 二进制部署：最理解原理，但费时
+  - 云厂商托管（EKS/GKE/AKS/ACK）：生产首选，省心
+  - minikube/kind：本地开发测试
 - 使用 minikube 搭建本地实验环境
-- kubectl 基础命令：
+  ```bash
+  minikube start --cpus=4 --memory=8192 --driver=docker
+  kubectl get nodes
   ```
-  kubectl get pods
-  kubectl describe pod <name>
-  kubectl logs <pod-name>
-  kubectl exec -it <pod-name> -- /bin/bash
-  kubectl apply -f xxx.yaml
-  kubectl delete -f xxx.yaml
+- kubectl 基础命令：
+  ```bash
+  kubectl get pods -A                          # 查看所有命名空间的 Pod
+  kubectl get pods -n kube-system              # 查看指定命名空间
+  kubectl describe pod <name>                  # 查看 Pod 详情（排错必用）
+  kubectl logs <pod-name>                      # 查看日志
+  kubectl logs <pod-name> -c <container-name> # 多容器 Pod 查看指定容器日志
+  kubectl exec -it <pod-name> -- /bin/bash   # 进入容器
+  kubectl apply -f xxx.yaml                   # 声明式部署
+  kubectl delete -f xxx.yaml                  # 删除资源
+  kubectl edit deployment <name>              # 在线编辑
+  kubectl scale deployment <name> --replicas=5  # 扩缩容
+  kubectl rollout status deployment <name>     # 查看滚动更新状态
+  kubectl rollout undo deployment <name>      # 回滚
+  kubectl port-forward <pod-name> 8080:80   # 端口转发（调试神器）
   ```
 
 ### 第二阶段：核心资源对象（2-3 周）
 
 #### Pod — K8s 的最小调度单元
-- Pod 的定义：一个或多个容器的集合
-- 为什么需要 Pod（vs 直接跑容器）
+- Pod 的定义：一个或多个容器的集合（共享网络/存储）
+- 为什么需要 Pod（vs 直接跑容器）：协同调度、共享卷、边车模式
 - 镜像拉取策略：`Always` / `IfNotPresent` / `Never`
 - 重启策略：`Always` / `OnFailure` / `Never`
-- 资源限制：`requests` vs `limits`
-- 健康检查：livenessProbe / readinessProbe / startupProbe
-- 初始化容器（initContainers）
+- 资源限制：`requests`（调度依据）vs `limits`（硬上限）
+  ```yaml
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "250m"
+    limits:
+      memory: "128Mi"
+      cpu: "500m"
+  ```
+- 健康检查：
+  - `livenessProbe`：存活探针（失败则重启容器）
+  - `readinessProbe`：就绪探针（失败则从 Service 摘流）
+  - `startupProbe`：启动探针（保护慢启动应用）
+- 初始化容器（initContainers）：主容器启动前执行，适合做初始化工作
 
 #### Deployment — 无状态应用部署
-- Deployment 的作用：声明式更新、滚动升级、回滚
+- Deployment 的作用：声明式更新、滚动升级、回滚、副本控制
 - 副本数控制（replicas）
-- 更新策略：RollingUpdate vs Recreate
-- 回滚操作：`kubectl rollout undo`
-- 暂停和恢复更新：`kubectl rollout pause`
+- 更新策略：
+  - `RollingUpdate`：滚动更新（默认，maxSurge/maxUnavailable 控制节奏）
+  - `Recreate`：先删再建（适合不能并行跑的旧应用）
+- 回滚操作：
+  ```bash
+  kubectl rollout history deployment <name>    # 查看历史版本
+  kubectl rollout undo deployment <name>       # 回滚到上一版
+  kubectl rollout undo deployment <name> --to-revision=2  # 回滚到指定版本
+  ```
+- 暂停/恢复滚动更新：
+  ```bash
+  kubectl rollout pause deployment <name>     # 暂停（调试用）
+  kubectl rollout resume deployment <name>    # 恢复
+  ```
 
 #### Service — 服务发现和负载均衡
-- Service 的几种类型：
-  - `ClusterIP`：集群内访问（默认）
-  - `NodePort`：通过节点 IP + 端口访问
+- Service 的四种类型：
+  - `ClusterIP`：默认，集群内访问
+  - `NodePort`：每个节点开放固定端口
   - `LoadBalancer`：云厂商负载均衡器
   - `ExternalName`：DNS CNAME 映射
-- Service 和 Pod 的关联：Labels 和 Selectors
-- Headless Service（`clusterIP: None`）
+- Service 与 Pod 的关联：通过 `selector` 标签选择器
+- Headless Service（clusterIP: None）：用于 StatefulSet 或者需要直接访问 Pod IP 的场景
+- DNS 解析规则：`<service>.<namespace>.svc.cluster.local`
 
 #### Ingress — HTTP/HTTPS 路由
-- 为什么需要 Ingress（vs Service NodePort）
-- Ingress 控制器：Nginx Ingress / Traefik / HAProxy
-- Ingress 规则配置：域名路由、路径匹配、TLS 终止
-- 实战：用 Ingress 暴露多个 Web 服务
-
-### 第三阶段：配置管理和存储（1 周）
-
-#### ConfigMap & Secret
-- ConfigMap：键值对配置，挂载为环境变量或文件
-- Secret：Base64 编码的敏感信息（密码、Token）
-- 使用场景对比：何时用 ConfigMap，何时用 Secret
-- 实战：把 MySQL 密码存到 Secret，挂载到 Pod
-
-#### 存储（Volume / PV / PVC）
-- Volume 类型：emptyDir、hostPath、nfs、persistentVolumeClaim
-- PV（PersistentVolume）：集群级别的存储资源
-- PVC（PersistentVolumeClaim）：用户对存储的请求
-- StorageClass：动态供应存储
-- 实战：给 MySQL 挂载持久化存储
-
-### 第四阶段：高级控制器（1-2 周）
-
-#### StatefulSet — 有状态应用
-- 和 Deployment 的区别：稳定的网络标识、稳定的存储
-- 适用场景：MySQL 主从、Redis Cluster、Kafka
-- Headless Service + StatefulSet 组合使用
-
-#### DaemonSet — 守护进程
-- 每个节点运行一个 Pod
-- 适用场景：日志收集（Filebeat）、监控代理（Node Exporter）
-
-#### Job & CronJob — 批处理
-- Job：一次性任务
-- CronJob：定时任务（类似 crontab）
-
-### 第五阶段：Helm 包管理（1 周）
-
-- Helm 是什么，解决什么问题（K8s 的 yum/apt）
-- Helm v3 架构（去掉了 Tiller）
-- 常用命令：
+- Ingress 的作用：7层负载均衡，域名路由，TLS 终止
+- Ingress Controller vs Ingress Resource：
+  - Ingress Controller：实际干活的反向代理（Nginx/Traefik/Istio）
+  - Ingress Resource：路由规则定义
+- Nginx Ingress 安装：
+  ```bash
+  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+  helm install ingress-nginx ingress-nginx/ingress-nginx
   ```
-  helm repo add bitnami https://charts.bitnami.com/
-  helm search repo mysql
-  helm install my-mysql bitnami/mysql
-  helm list
-  helm upgrade my-mysql bitnami/mysql --set auth.rootPassword=xxx
-  helm uninstall my-mysql
+- Ingress 示例：
+  ```yaml
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: example-ingress
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
+  spec:
+    tls:
+    - hosts:
+      - example.com
+      secretName: example-tls
+    rules:
+    - host: example.com
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: web-service
+              port:
+                number: 80
   ```
-- 自定义 values.yaml
-- 编写自己的 Helm Chart
-
-### 第六阶段：安全和维护（1 周）
-
-#### RBAC 权限控制
-- Role / ClusterRole / RoleBinding / ClusterRoleBinding
-- ServiceAccount：Pod 的身份
-- 实战：创建一个只能读取 Pod 的 ServiceAccount
-
-#### 集群维护
-- 备份 etcd：`ETCDCTL_API=3 etcdctl snapshot save`
-- 恢复 etcd：`etcdctl snapshot restore`
-- 升级 K8s 版本（kubeadm 方式）
-- 节点维护：cordon / drain / uncordon
 
 ---
 
-## 💻 实战 YAML 示例
-
-### 示例 1：最简单的 Pod
+## 🔧 实战：从零部署一个完整应用（Nginx + Redis + 配置）
 
 ```yaml
-# basic-pod.yaml
+# 1. ConfigMap（Nginx 配置）
 apiVersion: v1
-kind: Pod
+kind: ConfigMap
 metadata:
-  name: nginx-pod
-  labels:
-    app: nginx
-spec:
-  containers:
-  - name: nginx
-    image: nginx:1.25
-    ports:
-    - containerPort: 80
-```
+  name: nginx-conf
+data:
+  nginx.conf: |
+    server {
+        listen 80;
+        location / {
+            root /usr/share/nginx/html;
+            index index.html;
+        }
+        location /api {
+            proxy_pass http://redis-service:6379;
+        }
+    }
 
-### 示例 2：Deployment + Service
-
-```yaml
-# nginx-deployment.yaml
+---
+# 2. Deployment（Nginx）
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -223,11 +242,38 @@ spec:
         image: nginx:1.25
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: conf
+          mountPath: /etc/nginx/conf.d
+        - name: html
+          mountPath: /usr/share/nginx/html
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+      volumes:
+      - name: conf
+        configMap:
+          name: nginx-conf
+      - name: html
+        configMap:
+          name: nginx-html
+
 ---
+# 3. Service（Nginx）
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-svc
+  name: nginx-service
 spec:
   selector:
     app: nginx
@@ -235,182 +281,243 @@ spec:
   - port: 80
     targetPort: 80
   type: ClusterIP
-```
 
-### 示例 3：ConfigMap 挂载配置文件
+---
+# 4. Redis Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - name: data
+          mountPath: /data
+      volumes:
+      - name: data
+        emptyDir: {}
 
-```yaml
-# nginx-configmap.yaml
+---
+# 5. Redis Service
 apiVersion: v1
-kind: ConfigMap
+kind: Service
 metadata:
-  name: nginx-conf
-data:
-  nginx.conf: |
-    server {
-        listen 80;
-        location / {
-            root /usr/share/nginx/html;
-            index index.html;
-        }
-    }
----
-# 在 Pod 中挂载
+  name: redis-service
 spec:
-  containers:
-  - name: nginx
-    image: nginx
-    volumeMounts:
-    - name: conf
-      mountPath: /etc/nginx/conf.d
-  volumes:
-  - name: conf
-    configMap:
-      name: nginx-conf
+  selector:
+    app: redis
+  ports:
+  - port: 6379
+    targetPort: 6379
+  type: ClusterIP
 ```
 
-### 示例 4：Ingress 路由规则
+应用：
+```bash
+kubectl apply -f nginx-redis.yaml
+kubectl get all
+kubectl port-forward svc/nginx-service 8080:80
+# 浏览器访问 localhost:8080
+```
 
+---
+
+## 🚨 常见故障排查手册
+
+### Pod 起不来（Pending / CrashLoopBackOff / ImagePullBackOff）
+
+```bash
+# 1. 查看 Pod 状态和事件
+kubectl describe pod <pod-name> -n <namespace>
+# 重点看 Events 部分
+
+# 2. 常见的 Pending 原因
+# - 资源不足（ nodes have insufficient...）
+# - 节点选择器不匹配
+# - PVC 挂载失败
+
+# 3. 常见的 ImagePullBackOff 原因
+# - 镜像名写错
+# - 私有仓库没配置 imagePullSecrets
+# - 网络不通（节点无法访问镜像仓库）
+
+# 4. 查看容器日志
+kubectl logs <pod-name> -n <namespace>
+kubectl logs <pod-name> -c <container-name> -n <namespace>  # 多容器
+```
+
+### 网络不通（Service 无法访问 Pod / Pod 无法访问外网）
+
+```bash
+# 1. 检查 Service 的 Endpoints（最关键！）
+kubectl get endpoints <service-name> -n <namespace>
+# 如果 Endpoints 为空，说明 Service 的 selector 和 Pod 的 labels 不匹配
+
+# 2. 在 Pod 里测试网络
+kubectl exec -it <pod-name> -- nslookup kubernetes.default.svc.cluster.local
+kubectl exec -it <pod-name> -- ping <service-ip>
+kubectl exec -it <pod-name> -- curl <service-name>:<port>
+
+# 3. 检查 NetworkPolicy（是否被拦截）
+kubectl get networkpolicy -n <namespace>
+
+# 4. 检查 CNI 插件状态
+kubectl get pods -n kube-system | grep -E "calico|flannel|weave|cilium"
+```
+
+### 存储挂载失败（PVC Pending）
+
+```bash
+# 1. 检查 StorageClass 是否存在
+kubectl get sc
+
+# 2. 检查 PVC 状态
+kubectl get pvc -n <namespace>
+# Pending 说明没有可用的 PV 或者 StorageClass 配置错误
+
+# 3. 查看 PVC 事件
+kubectl describe pvc <pvc-name> -n <namespace>
+```
+
+---
+
+## 🏭 生产环境最佳实践
+
+### 资源配额和限额
 ```yaml
-# ingress.yaml
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+# ResourceQuota：命名空间级别资源总量限制
+apiVersion: v1
+kind: ResourceQuota
 metadata:
-  name: app-ingress
+  name: compute-quota
 spec:
-  ingressClassName: nginx
-  rules:
-  - host: app.example.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: app-svc
-            port:
-              number: 80
+  hard:
+    requests.cpu: "10"
+    requests.memory: 20Gi
+    limits.cpu: "20"
+    limits.memory: 40Gi
+    pods: "50"
+    services: "20"
+
+---
+# LimitRange：单个容器默认资源限制
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: default-limits
+spec:
+  limits:
+  - default:
+      cpu: "500m"
+      memory: "512Mi"
+    defaultRequest:
+      cpu: "100m"
+      memory: "128Mi"
+    type: Container
+```
+
+### Pod 中断预算（PDB）— 保证滚动更新时服务不中断
+```yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: nginx-pdb
+spec:
+  minAvailable: 2        # 至少保持 2 个 Pod 可用
+  selector:
+    matchLabels:
+      app: nginx
+```
+
+### 安全加固
+```yaml
+# 1. 不以 root 运行
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  readOnlyRootFilesystem: true
+
+# 2. 网络策略（只允许特定 Pod 访问）
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: api-allow
+spec:
+  podSelector:
+    matchLabels:
+      app: api
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: frontend
+    ports:
+    - protocol: TCP
+      port: 8080
 ```
 
 ---
 
-## 🧪 实战项目
+## 🎓 认证考试指南（CKA / CKAD）
 
-### 项目 1：部署 WordPress（LNMP on K8s）
+| 认证 | 侧重 | 备考建议 |
+|------|------|---------|
+| CKA (Certified Kubernetes Administrator) | 集群运维、故障排查、网络存储 | 重点练 `kubectl` 命令速度，会徒手写 YAML |
+| CKAD (Certified Kubernetes Application Developer) | 应用部署、ConfigMap/Secret、Ingress、HPA | 重点练 Helm、标签选择器、健康检查配置 |
+| CKS (Certified Kubernetes Security Specialist) | 安全加固、网络策略、镜像安全 | 重点练 Pod Security Standards、RBAC、Network Policy |
 
-**目标**：把传统 LNMP 应用迁移到 K8s
-
-**步骤**：
-1. 创建 MySQL Deployment + PVC（数据持久化）
-2. 把 MySQL 密码存到 Secret
-3. 创建 WordPress Deployment，连接 MySQL
-4. 创建 WordPress Service（ClusterIP）
-5. 配置 Ingress，通过域名访问
-6. 用 Helm 重新部署（用 bitnami 的 Chart）
-
-**验收标准**：浏览器访问 `wordpress.example.com`，能完成初始化并登录后台。
-
-### 项目 2：CI/CD 流水线（Jenkins + K8s）
-
-**目标**：代码提交后自动构建镜像、推送到仓库、部署到 K8s
-
-**步骤**：
-1. Jenkins 安装 K8s 插件
-2. 配置 Docker 仓库凭证
-3. 编写 Jenkinsfile：
-   - 拉取代码
-   - 构建 Docker 镜像
-   - 推送镜像到阿里云镜像仓库
-   - 部署到 K8s（kubectl apply）
-4. 配置 Webhook，实现自动触发
+**备考资源**：
+- [Killer Shell](https://killer.sh/) — 模拟考试环境（强烈推荐）
+- [CKA 备考笔记](https://github.com/stefanprodan/Kubernetes-CKA) — ⭐14k
+- [CKAD 练习题](https://github.com/dgkanatsio/Kubernetes-CKAD) — ⭐8k
 
 ---
 
-## 🔧 常见故障排查
+## 📊 进阶路线
 
-### 故障 1：Pod 一直 ContainerCreating
-
-**排查步骤**：
-```bash
-kubectl describe pod <pod-name>
-# 查看 Events 部分，常见原因：
-# - 镜像拉取失败（网络问题、镜像名写错）
-# - PV 挂载失败（PVC 没绑定）
-# - 节点资源不足（Insufficient cpu/memory）
+```
+K8s 基础
+  └── K8s 网络（CNI、Service、Ingress、Istio）
+        └── K8s 存储（PV/PVC/StorageClass/CSI）
+              └── Helm 包管理
+                    └── GitOps（Argo CD / Flux）
+                          └── Service Mesh（Istio / Linkerd）
+                                └── 可观测性（Prometheus + Grafana + Jaeger）
 ```
 
-**解决**：根据 Events 提示逐一排查。
-
-### 故障 2：Service 无法访问 Pod
-
-**排查步骤**：
-```bash
-# 1. 检查 Endpoints（Service 是否正确发现 Pod）
-kubectl get endpoints <service-name>
-
-# 2. 如果没有 Endpoints，检查 Label Selector 是否匹配
-kubectl get pods --show-labels
-kubectl get svc <name> -o yaml
-
-# 3. 进入 Pod 测试网络
-kubectl exec -it <pod-name> -- curl <service-ip>:<port>
-```
-
-### 故障 3：Ingress 返回 502
-
-**常见原因**：
-- 后端 Service 的 Port 名称和 Ingress 配置不匹配
-- Pod 没就绪（readinessProbe 失败）
-- 域名 DNS 没解析到 Ingress 控制器
+**推荐下一个模块**：[06_CI_CD](./06_CI_CD/) — 学会用 GitHub Actions / GitLab CI 自动化部署 K8s 应用。
 
 ---
 
-## 💼 面试高频题
+## ✅ 自测清单
 
-1. **K8s 的 Service 和 Ingress 有什么区别？**
-   - Service：L4（TCP/UDP）负载均衡，集群内访问
-   - Ingress：L7（HTTP/HTTPS）路由，支持域名和路径匹配，对外暴露
+学完之后，试试能不能回答这些问题：
 
-2. **Deployment 的滚动更新过程是怎样的？**
-   - 创建新 ReplicaSet → 逐步扩容新版本 Pod → 逐步缩容旧版本 Pod
-
-3. **PV 和 PVC 的关系是什么？**
-   - PV：集群的存储资源（管理员创建）
-   - PVC：用户对存储的请求（用户创建）
-   - 绑定后，Pod 通过 PVC 使用存储
-
-4. **livenessProbe 和 readinessProbe 的区别？**
-   - livenessProbe：容器是否"活着"，失败会重启 Pod
-   - readinessProbe：容器是否"准备好接收流量"，失败会从 Service Endpoints 移除
-
-5. **K8s 网络模型（CNI）了解吗？**
-   - 三层网络模型：Container ↔ Pod ↔ Service ↔ External
-   - 常用 CNI：Flannel（简单）、Calico（高性能、支持网络策略）
+- [ ] 说说 K8s 的架构，每个组件的作用是什么？
+- [ ] Pod 的 `requests` 和 `limits` 有什么区别？
+- [ ] Deployment 的滚动更新流程是怎样的？如何回滚？
+- [ ] Service 的 `ClusterIP` / `NodePort` / `LoadBalancer` 有什么区别？
+- [ ] Ingress 和 Service 有什么关系？
+- [ ] `livenessProbe` 和 `readinessProbe` 的区别？
+- [ ] PVC 绑定 PV 的流程是怎样的？
+- [ ] StatefulSet 和 Deployment 有什么区别？
+- [ ] RBAC 里的 Role / ClusterRole / RoleBinding / ClusterRoleBinding 是什么关系？
+- [ ] 如何排查 Pod 网络不通的问题？
 
 ---
 
-## 📈 进阶学习路径
-
-K8s 学完基础后，进阶方向：
-
-- **深入原理**：读 K8s 源码（Go 语言）、《深入解析 Kubernetes》
-- **服务网格**：学 Istio（流量管理、熔断、灰度发布）
-- **GitOps**：学 ArgoCD（K8s 的 CD 工具）
-- **运维实战**：多集群管理（Rancher / KubeFed）
-- **认证**：考 CKA（Certified Kubernetes Administrator）
-
----
-
-## 🔗 相关资源
-
-- [← 返回中文版首页](../README.md)
-- [CN 04 Docker 容器](../04_Container_Docker/)
-- [CN 06 CI/CD](../06_CI_CD/)
-- [CN 08 监控告警](../08_Monitoring/)
-- [实时发现：K8s 相关热门仓库](../../resources/trending.md)
-
----
-
-<p align="right">
-  <sub>vinson-lee · K8s 是绕不开的坎，但迈过去就值钱了</sub>
-</p>
+> 学完这个模块，去考个 CKA 认证，简历上写「熟悉 K8s 架构和运维」，薪资直接上一个台阶。
+> 下一步推荐：[06_CI_CD](./06_CI_CD/) — 把代码自动部署到 K8s 集群。
