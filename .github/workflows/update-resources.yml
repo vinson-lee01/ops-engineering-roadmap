@@ -2,7 +2,7 @@ name: 资料更新
 
 on:
   schedule:
-    - cron: '56 1 * * *'
+    - cron: '5 0 * * *'
   workflow_dispatch:
 
 permissions:
