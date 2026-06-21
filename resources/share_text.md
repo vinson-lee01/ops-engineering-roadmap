@@ -1,6 +1,6 @@
-# 📢 Share Text Generator — 2026-06-20
+# 📢 Share Text Generator — 2026-06-21
 
-> DevOps/SRE learning roadmap
+> <sub>Updated daily · <a href="./resources/trending_zh.md">View full CN list →</a> &nbsp;·&nbsp; <a href="./resources/tre
 
 --------------------------------------------------
 
@@ -8,7 +8,7 @@
 🐦 Twitter / X
 ==================================================
 
-🗺️ DevOps/SRE Learning Roadmap — updated 2026-06-20
+🗺️ DevOps/SRE Learning Roadmap — updated 2026-06-21
 
 ✅ 12 modules, Zero → Hero
 ✅ CN + EN, 500+ curated resources
@@ -164,3 +164,27 @@ Maintained by https://github.com/vinson-lee01
 - Star ⭐ to follow updates
 
 🔗 https://github.com/vinson-lee01/ops-engineering-roadmap
+
+
+==================================================
+💬 微信公众号
+==================================================
+
+**标题：** 运维工程师必备：从零到架构师的完整学习路线
+
+**正文：**
+
+作为一名在运维领域摸爬滚打多年的工程师，我深知知识体系化的重要性。
+
+今天分享一份我整理的完整 DevOps/SRE 学习路线：
+
+✨ **12 个核心模块**，从 Linux 基础到 SRE 高级实践
+✨ **500+ 精选资源**，涵盖书籍、视频、在线实验
+✨ **中英双语版本**，满足不同需求
+✨ **每日自动更新**，紧跟技术前沿
+
+适合：运维新人 | SRE 转岗 | 技术进阶
+
+📌 仓库地址：https://github.com/vinson-lee01/ops-engineering-roadmap
+
+如果觉得有用，欢迎 Star ⭐ 支持！

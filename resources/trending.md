@@ -1,22 +1,22 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-06-20 18:12 (Beijing Time)
+> 🕐 Updated: 2026-06-21 09:48 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **20**
-- 🔥 Top pick: [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) ⭐22.9w
+- 🆕 New today: **0**
+- 🔥 Top pick: (none today)
 
 ---
 
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **20**
-- 🔥 Top pick: [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) ⭐22.9w
+- 🆕 New today: **0**
+- 🔥 Top pick: (none today)
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-06-20 18:12 (Beijing Time)*  
+*Updated: 2026-06-21 09:48 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
