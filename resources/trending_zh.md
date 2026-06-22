@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-06-21 16:38 (Beijing Time)
+> Updated: 2026-06-22 13:04 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **144** | 🔥 Hot: **33**
 
 ---
@@ -7,7 +7,7 @@
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 22.9w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 23.0w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 12.3w | 1.3w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.3w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [netdata/netdata](https://github.com/netdata/netdata) | 7.9w | 6.5k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-06-21 16:38 (Beijing Time)*  
+*Updated: 2026-06-22 13:04 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
