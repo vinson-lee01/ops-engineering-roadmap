@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-06-23 15:56 (Beijing Time)
+> 🕐 Updated: 2026-06-24 12:06 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [prometheus/prom-client](https://github.com/prometheus/prom-client) ⭐3.5k
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-06-23 15:56 (Beijing Time)*  
+*Updated: 2026-06-24 12:06 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
