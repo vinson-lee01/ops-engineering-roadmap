@@ -143,7 +143,8 @@
     "mingongge/BestSRE": "2026-06-20T10:12:16.665599+00:00",
     "qinshihu/itops-agent-platform": "2026-06-20T10:12:16.665610+00:00",
     "Duke1616/ecmdb": "2026-06-20T10:12:16.665620+00:00",
-    "wovert/LinuxSRE": "2026-06-20T10:12:16.665631+00:00"
+    "wovert/LinuxSRE": "2026-06-20T10:12:16.665631+00:00",
+    "pranshuparmar/witr": "2026-06-26T04:13:21.321635+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -289,7 +290,8 @@
     "mingongge/BestSRE": 440,
     "qinshihu/itops-agent-platform": 220,
     "Duke1616/ecmdb": 138,
-    "wovert/LinuxSRE": 97
+    "wovert/LinuxSRE": 97,
+    "pranshuparmar/witr": 17978
   },
-  "updated": "2026-06-25T04:06:30.048517+00:00"
+  "updated": "2026-06-26T04:13:35.440110+00:00"
 }

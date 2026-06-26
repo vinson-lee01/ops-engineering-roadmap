@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-06-25 12:06 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **144** | 🔥 Hot: **33**
+> Updated: 2026-06-26 12:13 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **145** | 🔥 Hot: **33**
 
 ---
 
@@ -14,11 +14,20 @@
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.5w | 1.4w | Advanced | 生产监控核心组件 |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.2w | 7.0k | Advanced | 精选资源合集 |
 | [nektos/act](https://github.com/nektos/act) | 7.1w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
-| [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.6w | 6.8k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
+| [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.7w | 6.8k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [pranshuparmar/witr](https://github.com/pranshuparmar/witr) | 1.8w | 554 | Advanced | Why is this running? |
+
+---
+
+## 📂 By Category
+
+### DevOps 中文 (1 new)
+- **[pranshuparmar/witr](https://github.com/pranshuparmar/witr)** ⭐1.8w — Why is this running?
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-06-25 12:06 (Beijing Time)*  
+*Updated: 2026-06-26 12:13 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

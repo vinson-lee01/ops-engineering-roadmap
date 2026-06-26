@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-06-25 12:06 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **148** | 🔥 Hot: **51**
+> Updated: 2026-06-26 12:13 (Beijing Time)
+> 🆕 New today: **2** | 📦 Total tracked: **150** | 🔥 Hot: **51**
 
 ---
 
@@ -20,14 +20,18 @@
 ## 🆕 Newly Discovered
 | Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
 |------|---------|----------|-------|----------|
-| [prometheus/client_js](https://github.com/prometheus/client_js) | 3.5k | 400 | Advanced | Core monitoring component |
+| [pranshuparmar/witr](https://github.com/pranshuparmar/witr) | 1.8w | 554 | Advanced | Why is this running? |
+| [agamm/awesome-ai-sre](https://github.com/agamm/awesome-ai-sre) | 51 | 19 | Intermediate | Curated resource list |
 
 ---
 
 ## 📂 By Category
 
-### Monitoring (1 new)
-- **[prometheus/client_js](https://github.com/prometheus/client_js)** ⭐3.5k — Prometheus client for node.js
+### DevOps (1 new)
+- **[pranshuparmar/witr](https://github.com/pranshuparmar/witr)** ⭐1.8w — Why is this running?
+
+### SRE (1 new)
+- **[agamm/awesome-ai-sre](https://github.com/agamm/awesome-ai-sre)** ⭐51 — A curated list of 100+ AI-powered tools, platforms, and resources for Site Reliability Engineering (
 
 ---
 
@@ -45,5 +49,5 @@
 
 ---
 
-*Updated: 2026-06-25 12:06 (Beijing Time)*  
+*Updated: 2026-06-26 12:13 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

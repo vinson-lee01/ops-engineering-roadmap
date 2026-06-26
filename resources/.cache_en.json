@@ -147,7 +147,9 @@
     "Harikishanth/Incident-Triage-Environment": "2026-06-20T10:12:48.303775+00:00",
     "Saurabhkr952/dev-portfolio": "2026-06-23T04:03:43.832684+00:00",
     "prometheus/prom-client": "2026-06-24T04:06:24.936975+00:00",
-    "prometheus/client_js": "2026-06-25T04:06:39.292400+00:00"
+    "prometheus/client_js": "2026-06-25T04:06:39.292400+00:00",
+    "pranshuparmar/witr": "2026-06-26T04:13:38.392415+00:00",
+    "agamm/awesome-ai-sre": "2026-06-26T04:13:52.815032+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -297,7 +299,9 @@
     "Harikishanth/Incident-Triage-Environment": 52,
     "Saurabhkr952/dev-portfolio": 141,
     "prometheus/prom-client": 3470,
-    "prometheus/client_js": 3471
+    "prometheus/client_js": 3471,
+    "pranshuparmar/witr": 17978,
+    "agamm/awesome-ai-sre": 51
   },
-  "updated": "2026-06-25T04:06:48.420202+00:00"
+  "updated": "2026-06-26T04:13:52.815972+00:00"
 }

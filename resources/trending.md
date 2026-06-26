@@ -1,22 +1,22 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-06-25 12:06 (Beijing Time)
+> 🕐 Updated: 2026-06-26 12:13 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [pranshuparmar/witr](https://github.com/pranshuparmar/witr) ⭐1.8w
 
 ---
 
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **1**
-- 🔥 Top pick: [prometheus/client_js](https://github.com/prometheus/client_js) ⭐3.5k
+- 🆕 New today: **2**
+- 🔥 Top pick: [pranshuparmar/witr](https://github.com/pranshuparmar/witr) ⭐1.8w
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-06-25 12:06 (Beijing Time)*  
+*Updated: 2026-06-26 12:13 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
