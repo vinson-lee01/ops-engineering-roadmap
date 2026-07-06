@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-07-05 15:33 (Beijing Time)
+> Updated: 2026-07-06 12:06 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **145** | 🔥 Hot: **34**
 
 ---
@@ -8,9 +8,9 @@
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 23.2w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
-| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 12.8w | 1.3w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
+| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 12.9w | 1.3w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.3w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
-| [netdata/netdata](https://github.com/netdata/netdata) | 7.9w | 6.5k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
+| [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.5k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.5w | 1.4w | Advanced | 生产监控核心组件 |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.2w | 7.0k | Advanced | 精选资源合集 |
 | [nektos/act](https://github.com/nektos/act) | 7.1w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-07-05 15:33 (Beijing Time)*  
+*Updated: 2026-07-06 12:06 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
