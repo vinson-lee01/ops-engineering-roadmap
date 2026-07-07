@@ -1,14 +1,14 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-07-06 12:06 (Beijing Time)
+> 🕐 Updated: 2026-07-07 11:57 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [dstackai/dstack](https://github.com/dstackai/dstack) ⭐2.2k
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-07-06 12:06 (Beijing Time)*  
+*Updated: 2026-07-07 11:57 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

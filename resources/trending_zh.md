@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-07-06 12:06 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **145** | 🔥 Hot: **34**
+> Updated: 2026-07-07 11:57 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **146** | 🔥 Hot: **34**
 
 ---
 
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [dstackai/dstack](https://github.com/dstackai/dstack) | 2.2k | 236 | Intermediate | Vendor-agnostic orchestration for training, inference and agentic workloads acro |
+
+---
+
+## 📂 By Category
+
+### Docker K8s 中文 (1 new)
+- **[dstackai/dstack](https://github.com/dstackai/dstack)** ⭐2.2k — Vendor-agnostic orchestration for training, inference and agentic workloads across NVIDIA, AMD, TPU,
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-07-06 12:06 (Beijing Time)*  
+*Updated: 2026-07-07 11:57 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
