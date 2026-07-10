@@ -1,14 +1,14 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-07-10 11:52 (Beijing Time)
+> 🕐 Updated: 2026-07-10 15:42 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **1**
-- 🔥 Top pick: [vladkens/macmon](https://github.com/vladkens/macmon) ⭐1.7k
+- 🆕 New today: **0**
+- 🔥 Top pick: (none today)
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-07-10 11:52 (Beijing Time)*  
+*Updated: 2026-07-10 15:42 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

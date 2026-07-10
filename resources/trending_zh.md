@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-07-10 11:52 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **147** | 🔥 Hot: **34**
+> Updated: 2026-07-10 15:42 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **147** | 🔥 Hot: **34**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [vladkens/macmon](https://github.com/vladkens/macmon) | 1.7k | 69 | Intermediate | 🦀🌡️ Real-time system monitor for Apple Silicon Macs (M1–M5). No sudo. TUI, JSON/ |
-
----
-
-## 📂 By Category
-
-### 监控 中文 (1 new)
-- **[vladkens/macmon](https://github.com/vladkens/macmon)** ⭐1.7k — 🦀🌡️ Real-time system monitor for Apple Silicon Macs (M1–M5). No sudo. TUI, JSON/Prometheus metrics s
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-07-10 11:52 (Beijing Time)*  
+*Updated: 2026-07-10 15:42 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
