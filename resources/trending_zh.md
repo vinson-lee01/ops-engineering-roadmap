@@ -1,13 +1,13 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-07-09 15:52 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **146** | 🔥 Hot: **34**
+> Updated: 2026-07-10 11:52 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **147** | 🔥 Hot: **34**
 
 ---
 
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 23.2w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 23.3w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 12.9w | 1.3w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.3w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.5k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [vladkens/macmon](https://github.com/vladkens/macmon) | 1.7k | 69 | Intermediate | 🦀🌡️ Real-time system monitor for Apple Silicon Macs (M1–M5). No sudo. TUI, JSON/ |
+
+---
+
+## 📂 By Category
+
+### 监控 中文 (1 new)
+- **[vladkens/macmon](https://github.com/vladkens/macmon)** ⭐1.7k — 🦀🌡️ Real-time system monitor for Apple Silicon Macs (M1–M5). No sudo. TUI, JSON/Prometheus metrics s
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-07-09 15:52 (Beijing Time)*  
+*Updated: 2026-07-10 11:52 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
