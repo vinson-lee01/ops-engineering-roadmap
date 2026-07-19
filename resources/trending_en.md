@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-07-19 11:26 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **151** | 🔥 Hot: **51**
+> Updated: 2026-07-19 14:36 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **151** | 🔥 Hot: **51**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [floci-io/floci](https://github.com/floci-io/floci) | 1.7w | 1.7k | Advanced | Light, fluffy, and always free - The AWS Local Emulator alternative |
-
----
-
-## 📂 By Category
-
-### DevOps (1 new)
-- **[floci-io/floci](https://github.com/floci-io/floci)** ⭐1.7w — Light, fluffy, and always free - The AWS Local Emulator alternative
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-07-19 11:26 (Beijing Time)*  
+*Updated: 2026-07-19 14:36 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

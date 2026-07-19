@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-07-19 11:26 (Beijing Time)
-> 🆕 New today: **2** | 📦 Total tracked: **149** | 🔥 Hot: **34**
+> Updated: 2026-07-19 14:35 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **149** | 🔥 Hot: **34**
 
 ---
 
@@ -18,20 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [floci-io/floci](https://github.com/floci-io/floci) | 1.7w | 1.7k | Advanced | Light, fluffy, and always free - The AWS Local Emulator alternative |
-| [akto-api-security/akto](https://github.com/akto-api-security/akto) | 1.5k | 287 | Intermediate | Proactive, Open source API security → API discovery, API Security Posture, Testi |
-
----
-
-## 📂 By Category
-
-### CI/CD 中文 (1 new)
-- **[akto-api-security/akto](https://github.com/akto-api-security/akto)** ⭐1.5k — Proactive, Open source API security → API discovery, API Security Posture, Testing in CI/CD, Test Li
-
-### DevOps 中文 (1 new)
-- **[floci-io/floci](https://github.com/floci-io/floci)** ⭐1.7w — Light, fluffy, and always free - The AWS Local Emulator alternative
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -42,12 +29,12 @@
 - `Other`: 8 repos
 - `Java`: 6 repos
 - `Python`: 5 repos
-- `HTML`: 2 repos
+- `HTML`: 3 repos
 - `Shell`: 2 repos
-- `JavaScript`: 2 repos
 - `Lua`: 1 repos
+- `TypeScript`: 1 repos
 
 ---
 
-*Updated: 2026-07-19 11:26 (Beijing Time)*  
+*Updated: 2026-07-19 14:35 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
