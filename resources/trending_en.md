@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-07-18 14:10 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **150** | 🔥 Hot: **51**
+> Updated: 2026-07-19 11:26 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **151** | 🔥 Hot: **51**
 
 ---
 
@@ -13,12 +13,21 @@
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.3w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.5k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.4w | Advanced | Core monitoring component |
-| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.2w | 7.0k | Advanced | Curated resource list |
+| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.3w | 7.0k | Advanced | Curated resource list |
 | [nektos/act](https://github.com/nektos/act) | 7.1w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [floci-io/floci](https://github.com/floci-io/floci) | 1.7w | 1.7k | Advanced | Light, fluffy, and always free - The AWS Local Emulator alternative |
+
+---
+
+## 📂 By Category
+
+### DevOps (1 new)
+- **[floci-io/floci](https://github.com/floci-io/floci)** ⭐1.7w — Light, fluffy, and always free - The AWS Local Emulator alternative
 
 ---
 
@@ -28,13 +37,13 @@
 - `Go`: 26 repos
 - `Other`: 8 repos
 - `Python`: 4 repos
-- `Java`: 3 repos
-- `Lua`: 2 repos
+- `Java`: 4 repos
 - `TypeScript`: 2 repos
 - `Shell`: 2 repos
 - `JavaScript`: 2 repos
+- `HTML`: 1 repos
 
 ---
 
-*Updated: 2026-07-18 14:10 (Beijing Time)*  
+*Updated: 2026-07-19 11:26 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

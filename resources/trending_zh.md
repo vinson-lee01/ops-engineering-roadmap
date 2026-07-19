@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-07-18 14:09 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **147** | 🔥 Hot: **34**
+> Updated: 2026-07-19 11:26 (Beijing Time)
+> 🆕 New today: **2** | 📦 Total tracked: **149** | 🔥 Hot: **34**
 
 ---
 
@@ -12,13 +12,26 @@
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.3w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.5k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.4w | Advanced | 生产监控核心组件 |
-| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.2w | 7.0k | Advanced | 精选资源合集 |
+| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.3w | 7.0k | Advanced | 精选资源合集 |
 | [nektos/act](https://github.com/nektos/act) | 7.1w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
 | [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.7w | 6.9k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [floci-io/floci](https://github.com/floci-io/floci) | 1.7w | 1.7k | Advanced | Light, fluffy, and always free - The AWS Local Emulator alternative |
+| [akto-api-security/akto](https://github.com/akto-api-security/akto) | 1.5k | 287 | Intermediate | Proactive, Open source API security → API discovery, API Security Posture, Testi |
+
+---
+
+## 📂 By Category
+
+### CI/CD 中文 (1 new)
+- **[akto-api-security/akto](https://github.com/akto-api-security/akto)** ⭐1.5k — Proactive, Open source API security → API discovery, API Security Posture, Testing in CI/CD, Test Li
+
+### DevOps 中文 (1 new)
+- **[floci-io/floci](https://github.com/floci-io/floci)** ⭐1.7w — Light, fluffy, and always free - The AWS Local Emulator alternative
 
 ---
 
@@ -27,14 +40,14 @@
 **Language distribution (top 50):**
 - `Go`: 19 repos
 - `Other`: 8 repos
+- `Java`: 6 repos
 - `Python`: 5 repos
-- `Java`: 5 repos
 - `HTML`: 2 repos
-- `Lua`: 2 repos
 - `Shell`: 2 repos
 - `JavaScript`: 2 repos
+- `Lua`: 1 repos
 
 ---
 
-*Updated: 2026-07-18 14:09 (Beijing Time)*  
+*Updated: 2026-07-19 11:26 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

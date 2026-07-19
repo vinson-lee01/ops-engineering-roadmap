@@ -146,7 +146,9 @@
     "wovert/LinuxSRE": "2026-06-20T10:12:16.665631+00:00",
     "pranshuparmar/witr": "2026-06-26T04:13:21.321635+00:00",
     "dstackai/dstack": "2026-07-07T03:57:20.389478+00:00",
-    "vladkens/macmon": "2026-07-10T03:52:22.637172+00:00"
+    "vladkens/macmon": "2026-07-10T03:52:22.637172+00:00",
+    "floci-io/floci": "2026-07-19T03:26:21.498141+00:00",
+    "akto-api-security/akto": "2026-07-19T03:26:30.124712+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -295,7 +297,9 @@
     "wovert/LinuxSRE": 97,
     "pranshuparmar/witr": 17978,
     "dstackai/dstack": 2171,
-    "vladkens/macmon": 1722
+    "vladkens/macmon": 1722,
+    "floci-io/floci": 16886,
+    "akto-api-security/akto": 1492
   },
-  "updated": "2026-07-18T06:09:56.646570+00:00"
+  "updated": "2026-07-19T03:26:35.212343+00:00"
 }

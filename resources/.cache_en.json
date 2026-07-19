@@ -149,7 +149,8 @@
     "prometheus/prom-client": "2026-06-24T04:06:24.936975+00:00",
     "prometheus/client_js": "2026-06-25T04:06:39.292400+00:00",
     "pranshuparmar/witr": "2026-06-26T04:13:38.392415+00:00",
-    "agamm/awesome-ai-sre": "2026-06-26T04:13:52.815032+00:00"
+    "agamm/awesome-ai-sre": "2026-06-26T04:13:52.815032+00:00",
+    "floci-io/floci": "2026-07-19T03:26:37.985095+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -301,7 +302,8 @@
     "prometheus/prom-client": 3470,
     "prometheus/client_js": 3471,
     "pranshuparmar/witr": 17978,
-    "agamm/awesome-ai-sre": 51
+    "agamm/awesome-ai-sre": 51,
+    "floci-io/floci": 16886
   },
-  "updated": "2026-07-18T06:10:12.891897+00:00"
+  "updated": "2026-07-19T03:26:51.712932+00:00"
 }
