@@ -1,4 +1,4 @@
-# 📢 Share Text Generator — 2026-07-19
+# 📢 Share Text Generator — 2026-07-20
 
 > <sub>Updated daily · <a href="./resources/trending_zh.md">View full CN list →</a> &nbsp;·&nbsp; <a href="./resources/tre
 
@@ -8,7 +8,7 @@
 🐦 Twitter / X
 ==================================================
 
-🗺️ DevOps/SRE Learning Roadmap — updated 2026-07-19
+🗺️ DevOps/SRE Learning Roadmap — updated 2026-07-20
 
 ✅ 12 modules, Zero → Hero
 ✅ CN + EN, 500+ curated resources
