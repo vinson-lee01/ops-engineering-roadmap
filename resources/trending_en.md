@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-07-24 14:31 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **151** | 🔥 Hot: **51**
+> Updated: 2026-07-25 11:18 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **152** | 🔥 Hot: **51**
 
 ---
 
@@ -13,12 +13,21 @@
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.3w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.5k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.4w | Advanced | Core monitoring component |
-| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.3w | 7.0k | Advanced | Curated resource list |
+| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.3w | 7.1k | Advanced | Curated resource list |
 | [nektos/act](https://github.com/nektos/act) | 7.1w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [marialazara/laboratorio-devops](https://github.com/marialazara/laboratorio-devops) | 142 | 67 | Intermediate | Aprenda DevOps na prática através de 3 fases progressivas: containerização com D |
+
+---
+
+## 📂 By Category
+
+### CI/CD (1 new)
+- **[marialazara/laboratorio-devops](https://github.com/marialazara/laboratorio-devops)** ⭐142 — Aprenda DevOps na prática através de 3 fases progressivas: containerização com Docker, automação de 
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-07-24 14:31 (Beijing Time)*  
+*Updated: 2026-07-25 11:18 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
