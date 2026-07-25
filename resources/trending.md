@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-07-25 11:18 (Beijing Time)
+> 🕐 Updated: 2026-07-25 14:23 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **1**
-- 🔥 Top pick: [marialazara/laboratorio-devops](https://github.com/marialazara/laboratorio-devops) ⭐142
+- 🆕 New today: **0**
+- 🔥 Top pick: (none today)
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-07-25 11:18 (Beijing Time)*  
+*Updated: 2026-07-25 14:23 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
