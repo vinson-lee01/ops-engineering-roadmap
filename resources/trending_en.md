@@ -1,5 +1,5 @@
 # 🌍 Trending Repos
-> Updated: 2026-07-29 14:36 (Beijing Time)
+> Updated: 2026-07-30 10:48 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **152** | 🔥 Hot: **51**
 
 ---
@@ -11,7 +11,7 @@
 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.4w | 4.4w | Advanced | Container orchestration |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.1w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.3w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
-| [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.5k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
+| [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.6k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.4w | Advanced | Core monitoring component |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.3w | 7.1k | Advanced | Curated resource list |
 | [nektos/act](https://github.com/nektos/act) | 7.1w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-07-29 14:36 (Beijing Time)*  
+*Updated: 2026-07-30 10:48 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
