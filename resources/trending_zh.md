@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-08-02 14:38 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **149** | 🔥 Hot: **34**
+> Updated: 2026-08-03 11:32 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **150** | 🔥 Hot: **34**
 
 ---
 
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [CyberStrikeus/CyberStrike](https://github.com/CyberStrikeus/CyberStrike) | 1.5k | 246 | Intermediate | Open-source AI-augmented offensive security harness. 13+ autonomous agents, 150+ |
+
+---
+
+## 📂 By Category
+
+### CI/CD 中文 (1 new)
+- **[CyberStrikeus/CyberStrike](https://github.com/CyberStrikeus/CyberStrike)** ⭐1.5k — Open-source AI-augmented offensive security harness. 13+ autonomous agents, 150+ LLM providers, 5,30
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-08-02 14:38 (Beijing Time)*  
+*Updated: 2026-08-03 11:32 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
