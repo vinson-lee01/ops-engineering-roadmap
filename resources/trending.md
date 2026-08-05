@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-08-04 14:32 (Beijing Time)
+> 🕐 Updated: 2026-08-05 10:56 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [pro-deploy/aegil](https://github.com/pro-deploy/aegil) ⭐108
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-08-04 14:32 (Beijing Time)*  
+*Updated: 2026-08-05 10:56 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
