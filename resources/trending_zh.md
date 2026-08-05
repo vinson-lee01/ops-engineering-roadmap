@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-08-05 10:55 (Beijing Time)
+> Updated: 2026-08-05 14:33 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **150** | 🔥 Hot: **34**
 
 ---
@@ -10,8 +10,8 @@
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 23.7w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.1w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.4w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
-| [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.4w | Advanced | 生产监控核心组件 |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.6k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
+| [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.4w | Advanced | 生产监控核心组件 |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.3w | 7.1k | Advanced | 精选资源合集 |
 | [nektos/act](https://github.com/nektos/act) | 7.1w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
 | [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.7w | 7.0k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-08-05 10:55 (Beijing Time)*  
+*Updated: 2026-08-05 14:33 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
