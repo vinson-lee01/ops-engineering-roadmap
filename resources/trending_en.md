@@ -1,5 +1,5 @@
 # 🌍 Trending Repos
-> Updated: 2026-08-14 10:24 (Beijing Time)
+> Updated: 2026-08-14 13:41 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **153** | 🔥 Hot: **53**
 
 ---
@@ -8,7 +8,7 @@
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 23.8w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
-| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.4w | 4.4w | Advanced | Container orchestration |
+| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.5w | 4.4w | Advanced | Container orchestration |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.2w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.4w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.5w | Advanced | Core monitoring component |
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-08-14 10:24 (Beijing Time)*  
+*Updated: 2026-08-14 13:41 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
