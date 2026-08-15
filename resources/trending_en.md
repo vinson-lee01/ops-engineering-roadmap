@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-08-15 09:35 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **154** | 🔥 Hot: **53**
+> Updated: 2026-08-15 12:37 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **154** | 🔥 Hot: **53**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [robusta-dev/robusta](https://github.com/robusta-dev/robusta) | 3.1k | 321 | Advanced | Better Prometheus alerts for Kubernetes - smart grouping, AI enrichment, and aut |
-
----
-
-## 📂 By Category
-
-### Monitoring (1 new)
-- **[robusta-dev/robusta](https://github.com/robusta-dev/robusta)** ⭐3.1k — Better Prometheus alerts for Kubernetes - smart grouping, AI enrichment, and automatic remediation
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-08-15 09:35 (Beijing Time)*  
+*Updated: 2026-08-15 12:37 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
