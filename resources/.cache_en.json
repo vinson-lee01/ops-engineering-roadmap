@@ -152,7 +152,8 @@
     "agamm/awesome-ai-sre": "2026-06-26T04:13:52.815032+00:00",
     "floci-io/floci": "2026-07-19T03:26:37.985095+00:00",
     "marialazara/laboratorio-devops": "2026-07-25T03:18:22.219225+00:00",
-    "pro-deploy/aegil": "2026-08-05T02:56:16.524004+00:00"
+    "pro-deploy/aegil": "2026-08-05T02:56:16.524004+00:00",
+    "robusta-dev/robusta": "2026-08-15T01:35:42.825853+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -307,7 +308,8 @@
     "agamm/awesome-ai-sre": 51,
     "floci-io/floci": 16886,
     "marialazara/laboratorio-devops": 142,
-    "pro-deploy/aegil": 108
+    "pro-deploy/aegil": 108,
+    "robusta-dev/robusta": 3074
   },
-  "updated": "2026-08-14T05:41:47.566262+00:00"
+  "updated": "2026-08-15T01:35:51.805598+00:00"
 }

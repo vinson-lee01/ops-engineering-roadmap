@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-08-14 13:41 (Beijing Time)
+> 🕐 Updated: 2026-08-15 09:35 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [robusta-dev/robusta](https://github.com/robusta-dev/robusta) ⭐3.1k
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-08-14 13:41 (Beijing Time)*  
+*Updated: 2026-08-15 09:35 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
