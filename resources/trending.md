@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-08-17 12:50 (Beijing Time)
+> 🕐 Updated: 2026-08-18 09:36 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [HolmesGPT/holmesgpt](https://github.com/HolmesGPT/holmesgpt) ⭐3.1k
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-08-17 12:50 (Beijing Time)*  
+*Updated: 2026-08-18 09:36 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

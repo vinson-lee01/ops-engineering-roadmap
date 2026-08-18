@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-08-17 12:50 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **154** | 🔥 Hot: **53**
+> Updated: 2026-08-18 09:36 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **155** | 🔥 Hot: **53**
 
 ---
 
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [HolmesGPT/holmesgpt](https://github.com/HolmesGPT/holmesgpt) | 3.1k | 444 | Advanced | SRE Agent - CNCF Sandbox Project |
+
+---
+
+## 📂 By Category
+
+### Monitoring (1 new)
+- **[HolmesGPT/holmesgpt](https://github.com/HolmesGPT/holmesgpt)** ⭐3.1k — SRE Agent - CNCF Sandbox Project
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-08-17 12:50 (Beijing Time)*  
+*Updated: 2026-08-18 09:36 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

@@ -153,7 +153,8 @@
     "floci-io/floci": "2026-07-19T03:26:37.985095+00:00",
     "marialazara/laboratorio-devops": "2026-07-25T03:18:22.219225+00:00",
     "pro-deploy/aegil": "2026-08-05T02:56:16.524004+00:00",
-    "robusta-dev/robusta": "2026-08-15T01:35:42.825853+00:00"
+    "robusta-dev/robusta": "2026-08-15T01:35:42.825853+00:00",
+    "HolmesGPT/holmesgpt": "2026-08-18T01:36:04.922126+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -309,7 +310,8 @@
     "floci-io/floci": 16886,
     "marialazara/laboratorio-devops": 142,
     "pro-deploy/aegil": 108,
-    "robusta-dev/robusta": 3074
+    "robusta-dev/robusta": 3074,
+    "HolmesGPT/holmesgpt": 3077
   },
-  "updated": "2026-08-17T04:50:01.997044+00:00"
+  "updated": "2026-08-18T01:36:13.890661+00:00"
 }
