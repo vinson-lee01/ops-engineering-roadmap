@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-08-20 09:36 (Beijing Time)
+> Updated: 2026-08-20 12:41 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **150** | 🔥 Hot: **36**
 
 ---
@@ -14,7 +14,7 @@
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.6k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.3w | 7.1k | Advanced | 精选资源合集 |
 | [nektos/act](https://github.com/nektos/act) | 7.2w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
-| [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.7w | 7.0k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
+| [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.8w | 7.0k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
 
 
 ## 🆕 Newly Discovered
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-08-20 09:36 (Beijing Time)*  
+*Updated: 2026-08-20 12:41 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
