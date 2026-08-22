@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-08-22 09:35 (Beijing Time)
+> 🕐 Updated: 2026-08-22 12:38 (Beijing Time)
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-08-22 09:35 (Beijing Time)*  
+*Updated: 2026-08-22 12:38 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
