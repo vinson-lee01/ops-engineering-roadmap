@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-08-22 12:38 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **150** | 🔥 Hot: **36**
+> Updated: 2026-08-23 09:44 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **151** | 🔥 Hot: **36**
 
 ---
 
@@ -8,7 +8,7 @@
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.0w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
-| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.3w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
+| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.4w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.4w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.5w | Advanced | 生产监控核心组件 |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.6k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [ifindev/fullstack-next-cloudflare](https://github.com/ifindev/fullstack-next-cloudflare) | 1.4k | 221 | Intermediate | 🚀 Full-stack Next.js 15 + Cloudflare Workers template with D1 database, R2 stora |
+
+---
+
+## 📂 By Category
+
+### CI/CD 中文 (1 new)
+- **[ifindev/fullstack-next-cloudflare](https://github.com/ifindev/fullstack-next-cloudflare)** ⭐1.4k — 🚀 Full-stack Next.js 15 + Cloudflare Workers template with D1 database, R2 storage, Better Auth, and
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-08-22 12:38 (Beijing Time)*  
+*Updated: 2026-08-23 09:44 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
