@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-08-23 09:44 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **151** | 🔥 Hot: **36**
+> Updated: 2026-08-23 12:42 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **151** | 🔥 Hot: **36**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [ifindev/fullstack-next-cloudflare](https://github.com/ifindev/fullstack-next-cloudflare) | 1.4k | 221 | Intermediate | 🚀 Full-stack Next.js 15 + Cloudflare Workers template with D1 database, R2 stora |
-
----
-
-## 📂 By Category
-
-### CI/CD 中文 (1 new)
-- **[ifindev/fullstack-next-cloudflare](https://github.com/ifindev/fullstack-next-cloudflare)** ⭐1.4k — 🚀 Full-stack Next.js 15 + Cloudflare Workers template with D1 database, R2 storage, Better Auth, and
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-08-23 09:44 (Beijing Time)*  
+*Updated: 2026-08-23 12:42 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

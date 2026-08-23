@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-08-23 09:45 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **156** | 🔥 Hot: **53**
+> Updated: 2026-08-23 12:43 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **156** | 🔥 Hot: **53**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [MustacheCase/zanadir](https://github.com/MustacheCase/zanadir) | 165 | 6 | Intermediate | zanadir is an open-source CLI tool that analyzes GitHub repositories and suggest |
-
----
-
-## 📂 By Category
-
-### CI/CD (1 new)
-- **[MustacheCase/zanadir](https://github.com/MustacheCase/zanadir)** ⭐165 — zanadir is an open-source CLI tool that analyzes GitHub repositories and suggests open-source tools 
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-08-23 09:45 (Beijing Time)*  
+*Updated: 2026-08-23 12:43 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
