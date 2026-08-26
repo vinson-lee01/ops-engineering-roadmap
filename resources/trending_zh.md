@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-08-25 12:44 (Beijing Time)
+> Updated: 2026-08-26 09:42 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **151** | 🔥 Hot: **36**
 
 ---
@@ -14,7 +14,7 @@
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.6k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.4w | 7.1k | Advanced | 精选资源合集 |
 | [nektos/act](https://github.com/nektos/act) | 7.2w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
-| [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.8w | 7.0k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
+| [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.8w | 7.1k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
 
 
 ## 🆕 Newly Discovered
@@ -25,16 +25,16 @@
 ## 📊 This Week's Stats
 
 **Language distribution (top 50):**
-- `Go`: 19 repos
+- `Go`: 18 repos
 - `Other`: 8 repos
 - `Java`: 6 repos
 - `Python`: 5 repos
 - `HTML`: 3 repos
+- `Lua`: 2 repos
 - `Shell`: 2 repos
-- `Lua`: 1 repos
 - `TypeScript`: 1 repos
 
 ---
 
-*Updated: 2026-08-25 12:44 (Beijing Time)*  
+*Updated: 2026-08-26 09:42 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
