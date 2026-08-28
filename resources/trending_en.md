@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-08-27 16:38 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **156** | 🔥 Hot: **53**
+> Updated: 2026-08-28 18:51 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **157** | 🔥 Hot: **53**
 
 ---
 
@@ -9,7 +9,7 @@
 |------|---------|----------|-------|------|
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.1w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.5w | 4.4w | Advanced | Container orchestration |
-| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.5w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
+| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.6w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.4w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.6w | 1.5w | Advanced | Core monitoring component |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.0w | 6.6k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [scarolan/ansible-terraform](https://github.com/scarolan/ansible-terraform) | 401 | 207 | Intermediate | Infrastructure as Code |
+
+---
+
+## 📂 By Category
+
+### IaC (1 new)
+- **[scarolan/ansible-terraform](https://github.com/scarolan/ansible-terraform)** ⭐401 — Ansible and Terraform: Better Together
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-08-27 16:38 (Beijing Time)*  
+*Updated: 2026-08-28 18:51 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

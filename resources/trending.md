@@ -1,22 +1,22 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-08-27 16:38 (Beijing Time)
+> 🕐 Updated: 2026-08-28 18:51 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [scarolan/ansible-terraform](https://github.com/scarolan/ansible-terraform) ⭐401
 
 ---
 
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [scarolan/ansible-terraform](https://github.com/scarolan/ansible-terraform) ⭐401
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-08-27 16:38 (Beijing Time)*  
+*Updated: 2026-08-28 18:51 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
