@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-08-28 18:51 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **157** | 🔥 Hot: **53**
+> Updated: 2026-08-29 14:38 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **157** | 🔥 Hot: **53**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [scarolan/ansible-terraform](https://github.com/scarolan/ansible-terraform) | 401 | 207 | Intermediate | Infrastructure as Code |
-
----
-
-## 📂 By Category
-
-### IaC (1 new)
-- **[scarolan/ansible-terraform](https://github.com/scarolan/ansible-terraform)** ⭐401 — Ansible and Terraform: Better Together
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-08-28 18:51 (Beijing Time)*  
+*Updated: 2026-08-29 14:38 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
