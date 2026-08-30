@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-08-29 14:38 (Beijing Time)
+> Updated: 2026-08-30 12:50 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **152** | 🔥 Hot: **36**
 
 ---
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-08-29 14:38 (Beijing Time)*  
+*Updated: 2026-08-30 12:50 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
