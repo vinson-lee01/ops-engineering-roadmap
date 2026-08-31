@@ -1,14 +1,14 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-08-30 12:51 (Beijing Time)
+> 🕐 Updated: 2026-08-31 12:55 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [kubernetes-purgatory/kubernetes-mixin](https://github.com/kubernetes-purgatory/kubernetes-mixin) ⭐2.4k
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-08-30 12:51 (Beijing Time)*  
+*Updated: 2026-08-31 12:55 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
