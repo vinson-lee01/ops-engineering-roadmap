@@ -1,4 +1,4 @@
-# 📢 Share Text Generator — 2026-08-31
+# 📢 Share Text Generator — 2026-09-01
 
 > <sub>Updated daily · <a href="./resources/trending_zh.md">View full CN list →</a> &nbsp;·&nbsp; <a href="./resources/tre
 
@@ -8,12 +8,11 @@
 🐦 Twitter / X
 ==================================================
 
-🗺️ DevOps/SRE Learning Roadmap — updated 2026-08-31
+🗺️ DevOps/SRE Learning Roadmap — updated 2026-09-01
 
 ✅ 12 modules, Zero → Hero
 ✅ CN + EN, 500+ curated resources
 ✅ Trending repos updated daily
-✅ +1 new repos today
 
 #DevOps #SRE #Linux #Docker #Kubernetes #CloudNative #OpenSource
 
