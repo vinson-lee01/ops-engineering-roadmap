@@ -1,22 +1,22 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-09-03 16:49 (Beijing Time)
+> 🕐 Updated: 2026-09-04 11:57 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [cloudposse/atmos](https://github.com/cloudposse/atmos) ⭐1.4k
 
 ---
 
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [cloudposse/atmos](https://github.com/cloudposse/atmos) ⭐1.4k
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-09-03 16:49 (Beijing Time)*  
+*Updated: 2026-09-04 11:57 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

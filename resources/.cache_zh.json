@@ -152,7 +152,8 @@
     "CyberStrikeus/CyberStrike": "2026-08-03T03:31:56.493816+00:00",
     "ifindev/fullstack-next-cloudflare": "2026-08-23T01:44:40.003674+00:00",
     "scarolan/ansible-terraform": "2026-08-28T10:50:46.486587+00:00",
-    "kubernetes-purgatory/kubernetes-mixin": "2026-08-31T04:54:54.764612+00:00"
+    "kubernetes-purgatory/kubernetes-mixin": "2026-08-31T04:54:54.764612+00:00",
+    "cloudposse/atmos": "2026-09-04T03:57:25.343550+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -307,7 +308,8 @@
     "CyberStrikeus/CyberStrike": 1543,
     "ifindev/fullstack-next-cloudflare": 1401,
     "scarolan/ansible-terraform": 401,
-    "kubernetes-purgatory/kubernetes-mixin": 2440
+    "kubernetes-purgatory/kubernetes-mixin": 2440,
+    "cloudposse/atmos": 1369
   },
-  "updated": "2026-09-03T08:48:48.335941+00:00"
+  "updated": "2026-09-04T03:57:27.660878+00:00"
 }

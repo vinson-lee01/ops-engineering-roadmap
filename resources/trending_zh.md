@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-09-03 16:48 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **153** | 🔥 Hot: **36**
+> Updated: 2026-09-04 11:57 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **154** | 🔥 Hot: **36**
 
 ---
 
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [cloudposse/atmos](https://github.com/cloudposse/atmos) | 1.4k | 173 | Intermediate | Atmos is the open-source runtime for infrastructure — it builds, authenticates,  |
+
+---
+
+## 📂 By Category
+
+### IaC 中文 (1 new)
+- **[cloudposse/atmos](https://github.com/cloudposse/atmos)** ⭐1.4k — Atmos is the open-source runtime for infrastructure — it builds, authenticates, and ships Terraform,
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-09-03 16:48 (Beijing Time)*  
+*Updated: 2026-09-04 11:57 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

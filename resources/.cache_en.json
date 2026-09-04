@@ -156,7 +156,8 @@
     "robusta-dev/robusta": "2026-08-15T01:35:42.825853+00:00",
     "HolmesGPT/holmesgpt": "2026-08-18T01:36:04.922126+00:00",
     "MustacheCase/zanadir": "2026-08-23T01:44:58.818316+00:00",
-    "scarolan/ansible-terraform": "2026-08-28T10:51:01.279486+00:00"
+    "scarolan/ansible-terraform": "2026-08-28T10:51:01.279486+00:00",
+    "cloudposse/atmos": "2026-09-04T03:57:38.766702+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -315,7 +316,8 @@
     "robusta-dev/robusta": 3074,
     "HolmesGPT/holmesgpt": 3077,
     "MustacheCase/zanadir": 165,
-    "scarolan/ansible-terraform": 401
+    "scarolan/ansible-terraform": 401,
+    "cloudposse/atmos": 1369
   },
-  "updated": "2026-09-03T08:49:06.225146+00:00"
+  "updated": "2026-09-04T03:57:44.132870+00:00"
 }
