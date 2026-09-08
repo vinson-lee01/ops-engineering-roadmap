@@ -1,13 +1,13 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-09-07 17:11 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **154** | 🔥 Hot: **36**
+> Updated: 2026-09-08 12:00 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **155** | 🔥 Hot: **36**
 
 ---
 
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.2w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.3w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.7w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.4w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.7w | 1.5w | Advanced | 生产监控核心组件 |
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [kubernetes-sigs/kubernetes-mixin](https://github.com/kubernetes-sigs/kubernetes-mixin) | 2.4k | 643 | Intermediate | 容器编排核心工具 |
+
+---
+
+## 📂 By Category
+
+### 监控 中文 (1 new)
+- **[kubernetes-sigs/kubernetes-mixin](https://github.com/kubernetes-sigs/kubernetes-mixin)** ⭐2.4k —  A set of Grafana dashboards and Prometheus alerts for Kubernetes.
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-09-07 17:11 (Beijing Time)*  
+*Updated: 2026-09-08 12:00 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

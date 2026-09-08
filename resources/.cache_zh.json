@@ -153,7 +153,8 @@
     "ifindev/fullstack-next-cloudflare": "2026-08-23T01:44:40.003674+00:00",
     "scarolan/ansible-terraform": "2026-08-28T10:50:46.486587+00:00",
     "kubernetes-purgatory/kubernetes-mixin": "2026-08-31T04:54:54.764612+00:00",
-    "cloudposse/atmos": "2026-09-04T03:57:25.343550+00:00"
+    "cloudposse/atmos": "2026-09-04T03:57:25.343550+00:00",
+    "kubernetes-sigs/kubernetes-mixin": "2026-09-08T04:00:45.336038+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -309,7 +310,8 @@
     "ifindev/fullstack-next-cloudflare": 1401,
     "scarolan/ansible-terraform": 401,
     "kubernetes-purgatory/kubernetes-mixin": 2440,
-    "cloudposse/atmos": 1369
+    "cloudposse/atmos": 1369,
+    "kubernetes-sigs/kubernetes-mixin": 2443
   },
-  "updated": "2026-09-07T09:11:50.362985+00:00"
+  "updated": "2026-09-08T04:00:53.398924+00:00"
 }
