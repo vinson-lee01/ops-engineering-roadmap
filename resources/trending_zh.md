@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-09-08 12:00 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **155** | 🔥 Hot: **36**
+> Updated: 2026-09-08 16:47 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **155** | 🔥 Hot: **36**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [kubernetes-sigs/kubernetes-mixin](https://github.com/kubernetes-sigs/kubernetes-mixin) | 2.4k | 643 | Intermediate | 容器编排核心工具 |
-
----
-
-## 📂 By Category
-
-### 监控 中文 (1 new)
-- **[kubernetes-sigs/kubernetes-mixin](https://github.com/kubernetes-sigs/kubernetes-mixin)** ⭐2.4k —  A set of Grafana dashboards and Prometheus alerts for Kubernetes.
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-09-08 12:00 (Beijing Time)*  
+*Updated: 2026-09-08 16:47 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

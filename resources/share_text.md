@@ -13,7 +13,6 @@
 ✅ 12 modules, Zero → Hero
 ✅ CN + EN, 500+ curated resources
 ✅ Trending repos updated daily
-✅ +1 new repos today
 
 #DevOps #SRE #Linux #Docker #Kubernetes #CloudNative #OpenSource
 
