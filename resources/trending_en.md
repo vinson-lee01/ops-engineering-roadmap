@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-09-09 12:08 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **158** | 🔥 Hot: **53**
+> Updated: 2026-09-10 12:06 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **159** | 🔥 Hot: **53**
 
 ---
 
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [alanmosilva/sre-observability-course](https://github.com/alanmosilva/sre-observability-course) | 57 | 25 | Intermediate | Curso prático de Site Reliability Engineering e Observability |
+
+---
+
+## 📂 By Category
+
+### SRE (1 new)
+- **[alanmosilva/sre-observability-course](https://github.com/alanmosilva/sre-observability-course)** ⭐57 — Curso prático de Site Reliability Engineering e Observability
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-09-09 12:08 (Beijing Time)*  
+*Updated: 2026-09-10 12:06 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

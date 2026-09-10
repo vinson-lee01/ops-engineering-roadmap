@@ -157,7 +157,8 @@
     "HolmesGPT/holmesgpt": "2026-08-18T01:36:04.922126+00:00",
     "MustacheCase/zanadir": "2026-08-23T01:44:58.818316+00:00",
     "scarolan/ansible-terraform": "2026-08-28T10:51:01.279486+00:00",
-    "cloudposse/atmos": "2026-09-04T03:57:38.766702+00:00"
+    "cloudposse/atmos": "2026-09-04T03:57:38.766702+00:00",
+    "alanmosilva/sre-observability-course": "2026-09-10T04:06:06.264010+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -317,7 +318,8 @@
     "HolmesGPT/holmesgpt": 3077,
     "MustacheCase/zanadir": 165,
     "scarolan/ansible-terraform": 401,
-    "cloudposse/atmos": 1369
+    "cloudposse/atmos": 1369,
+    "alanmosilva/sre-observability-course": 57
   },
-  "updated": "2026-09-09T04:08:20.921611+00:00"
+  "updated": "2026-09-10T04:06:06.265045+00:00"
 }
