@@ -154,7 +154,8 @@
     "scarolan/ansible-terraform": "2026-08-28T10:50:46.486587+00:00",
     "kubernetes-purgatory/kubernetes-mixin": "2026-08-31T04:54:54.764612+00:00",
     "cloudposse/atmos": "2026-09-04T03:57:25.343550+00:00",
-    "kubernetes-sigs/kubernetes-mixin": "2026-09-08T04:00:45.336038+00:00"
+    "kubernetes-sigs/kubernetes-mixin": "2026-09-08T04:00:45.336038+00:00",
+    "Jwuthri/Tracely-ai": "2026-09-11T04:03:09.664025+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -311,7 +312,8 @@
     "scarolan/ansible-terraform": 401,
     "kubernetes-purgatory/kubernetes-mixin": 2440,
     "cloudposse/atmos": 1369,
-    "kubernetes-sigs/kubernetes-mixin": 2443
+    "kubernetes-sigs/kubernetes-mixin": 2443,
+    "Jwuthri/Tracely-ai": 1404
   },
-  "updated": "2026-09-10T04:05:48.886071+00:00"
+  "updated": "2026-09-11T04:03:15.027142+00:00"
 }
