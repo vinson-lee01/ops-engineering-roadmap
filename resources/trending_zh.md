@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-09-11 12:03 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **156** | 🔥 Hot: **36**
+> Updated: 2026-09-11 16:51 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **156** | 🔥 Hot: **36**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [Jwuthri/Tracely-ai](https://github.com/Jwuthri/Tracely-ai) | 1.4k | 175 | Intermediate | Trace-native CI/CD for AI agents — production failures become regression tests t |
-
----
-
-## 📂 By Category
-
-### CI/CD 中文 (1 new)
-- **[Jwuthri/Tracely-ai](https://github.com/Jwuthri/Tracely-ai)** ⭐1.4k — Trace-native CI/CD for AI agents — production failures become regression tests that block the PR. Au
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-09-11 12:03 (Beijing Time)*  
+*Updated: 2026-09-11 16:51 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

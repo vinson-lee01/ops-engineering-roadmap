@@ -1,14 +1,14 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-09-11 12:03 (Beijing Time)
+> 🕐 Updated: 2026-09-11 16:51 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **1**
-- 🔥 Top pick: [Jwuthri/Tracely-ai](https://github.com/Jwuthri/Tracely-ai) ⭐1.4k
+- 🆕 New today: **0**
+- 🔥 Top pick: (none today)
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-09-11 12:03 (Beijing Time)*  
+*Updated: 2026-09-11 16:51 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
