@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-09-15 12:23 (Beijing Time)
+> 🕐 Updated: 2026-09-16 12:18 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [sdogruyol/cryload](https://github.com/sdogruyol/cryload) ⭐216
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-09-15 12:23 (Beijing Time)*  
+*Updated: 2026-09-16 12:18 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

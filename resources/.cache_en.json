@@ -158,7 +158,8 @@
     "MustacheCase/zanadir": "2026-08-23T01:44:58.818316+00:00",
     "scarolan/ansible-terraform": "2026-08-28T10:51:01.279486+00:00",
     "cloudposse/atmos": "2026-09-04T03:57:38.766702+00:00",
-    "alanmosilva/sre-observability-course": "2026-09-10T04:06:06.264010+00:00"
+    "alanmosilva/sre-observability-course": "2026-09-10T04:06:06.264010+00:00",
+    "sdogruyol/cryload": "2026-09-16T04:18:47.570452+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -319,7 +320,8 @@
     "MustacheCase/zanadir": 165,
     "scarolan/ansible-terraform": 401,
     "cloudposse/atmos": 1369,
-    "alanmosilva/sre-observability-course": 57
+    "alanmosilva/sre-observability-course": 57,
+    "sdogruyol/cryload": 216
   },
-  "updated": "2026-09-15T04:23:21.549129+00:00"
+  "updated": "2026-09-16T04:18:50.071250+00:00"
 }

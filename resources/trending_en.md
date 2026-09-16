@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-09-15 12:23 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **159** | 🔥 Hot: **53**
+> Updated: 2026-09-16 12:18 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **160** | 🔥 Hot: **53**
 
 ---
 
@@ -9,7 +9,7 @@
 |------|---------|----------|-------|------|
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.4w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.8w | 4.4w | Advanced | Container orchestration |
-| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.7w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
+| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.8w | 1.4w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.4w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.7w | 1.5w | Advanced | Core monitoring component |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.1w | 6.6k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [sdogruyol/cryload](https://github.com/sdogruyol/cryload) | 216 | 18 | Intermediate | HTTP load testing for CI/CD — honest latency, CI thresholds, single binary, JSON |
+
+---
+
+## 📂 By Category
+
+### CI/CD (1 new)
+- **[sdogruyol/cryload](https://github.com/sdogruyol/cryload)** ⭐216 — HTTP load testing for CI/CD — honest latency, CI thresholds, single binary, JSON output
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-09-15 12:23 (Beijing Time)*  
+*Updated: 2026-09-16 12:18 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
