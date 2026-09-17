@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-09-16 12:18 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **160** | 🔥 Hot: **53**
+> Updated: 2026-09-17 12:25 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **160** | 🔥 Hot: **53**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [sdogruyol/cryload](https://github.com/sdogruyol/cryload) | 216 | 18 | Intermediate | HTTP load testing for CI/CD — honest latency, CI thresholds, single binary, JSON |
-
----
-
-## 📂 By Category
-
-### CI/CD (1 new)
-- **[sdogruyol/cryload](https://github.com/sdogruyol/cryload)** ⭐216 — HTTP load testing for CI/CD — honest latency, CI thresholds, single binary, JSON output
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-09-16 12:18 (Beijing Time)*  
+*Updated: 2026-09-17 12:25 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
