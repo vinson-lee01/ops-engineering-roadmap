@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-09-18 12:09 (Beijing Time)
+> Updated: 2026-09-19 12:05 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **156** | 🔥 Hot: **36**
 
 ---
@@ -7,7 +7,7 @@
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.4w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.5w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.8w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.5w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.7w | 1.5w | Advanced | 生产监控核心组件 |
@@ -25,16 +25,16 @@
 ## 📊 This Week's Stats
 
 **Language distribution (top 50):**
-- `Go`: 18 repos
+- `Go`: 19 repos
 - `Other`: 8 repos
 - `Java`: 6 repos
 - `Python`: 5 repos
 - `HTML`: 3 repos
 - `Lua`: 2 repos
-- `Shell`: 2 repos
 - `TypeScript`: 1 repos
+- `Shell`: 1 repos
 
 ---
 
-*Updated: 2026-09-18 12:09 (Beijing Time)*  
+*Updated: 2026-09-19 12:05 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
