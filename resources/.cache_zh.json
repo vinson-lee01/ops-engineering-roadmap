@@ -155,7 +155,8 @@
     "kubernetes-purgatory/kubernetes-mixin": "2026-08-31T04:54:54.764612+00:00",
     "cloudposse/atmos": "2026-09-04T03:57:25.343550+00:00",
     "kubernetes-sigs/kubernetes-mixin": "2026-09-08T04:00:45.336038+00:00",
-    "Jwuthri/Tracely-ai": "2026-09-11T04:03:09.664025+00:00"
+    "Jwuthri/Tracely-ai": "2026-09-11T04:03:09.664025+00:00",
+    "hybridops-tech/hybridops-core": "2026-09-21T04:22:56.405500+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -313,7 +314,8 @@
     "kubernetes-purgatory/kubernetes-mixin": 2440,
     "cloudposse/atmos": 1369,
     "kubernetes-sigs/kubernetes-mixin": 2443,
-    "Jwuthri/Tracely-ai": 1404
+    "Jwuthri/Tracely-ai": 1404,
+    "hybridops-tech/hybridops-core": 488
   },
-  "updated": "2026-09-20T04:24:58.460498+00:00"
+  "updated": "2026-09-21T04:22:58.929417+00:00"
 }

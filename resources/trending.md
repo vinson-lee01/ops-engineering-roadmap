@@ -1,22 +1,22 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-09-20 12:25 (Beijing Time)
+> 🕐 Updated: 2026-09-21 12:23 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [hybridops-tech/hybridops-core](https://github.com/hybridops-tech/hybridops-core) ⭐488
 
 ---
 
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [hybridops-tech/hybridops-core](https://github.com/hybridops-tech/hybridops-core) ⭐488
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-09-20 12:25 (Beijing Time)*  
+*Updated: 2026-09-21 12:23 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

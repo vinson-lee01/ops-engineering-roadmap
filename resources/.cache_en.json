@@ -159,7 +159,8 @@
     "scarolan/ansible-terraform": "2026-08-28T10:51:01.279486+00:00",
     "cloudposse/atmos": "2026-09-04T03:57:38.766702+00:00",
     "alanmosilva/sre-observability-course": "2026-09-10T04:06:06.264010+00:00",
-    "sdogruyol/cryload": "2026-09-16T04:18:47.570452+00:00"
+    "sdogruyol/cryload": "2026-09-16T04:18:47.570452+00:00",
+    "hybridops-tech/hybridops-core": "2026-09-21T04:23:10.650598+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -321,7 +322,8 @@
     "scarolan/ansible-terraform": 401,
     "cloudposse/atmos": 1369,
     "alanmosilva/sre-observability-course": 57,
-    "sdogruyol/cryload": 216
+    "sdogruyol/cryload": 216,
+    "hybridops-tech/hybridops-core": 488
   },
-  "updated": "2026-09-20T04:25:15.582551+00:00"
+  "updated": "2026-09-21T04:23:16.178068+00:00"
 }
