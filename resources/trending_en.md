@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-09-21 12:23 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **161** | 🔥 Hot: **53**
+> Updated: 2026-09-22 12:18 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **161** | 🔥 Hot: **53**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [hybridops-tech/hybridops-core](https://github.com/hybridops-tech/hybridops-core) | 488 | 343 | Intermediate | Community edition of HybridOps. A platform exploring contract-driven automation  |
-
----
-
-## 📂 By Category
-
-### IaC (1 new)
-- **[hybridops-tech/hybridops-core](https://github.com/hybridops-tech/hybridops-core)** ⭐488 — Community edition of HybridOps. A platform exploring contract-driven automation for hybrid infrastru
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-09-21 12:23 (Beijing Time)*  
+*Updated: 2026-09-22 12:18 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
