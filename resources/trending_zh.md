@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-09-22 12:18 (Beijing Time)
+> Updated: 2026-09-23 12:15 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **157** | 🔥 Hot: **36**
 
 ---
@@ -29,12 +29,12 @@
 - `Other`: 8 repos
 - `Java`: 6 repos
 - `Python`: 5 repos
-- `HTML`: 3 repos
+- `HTML`: 2 repos
 - `Lua`: 2 repos
 - `TypeScript`: 1 repos
 - `Shell`: 1 repos
 
 ---
 
-*Updated: 2026-09-22 12:18 (Beijing Time)*  
+*Updated: 2026-09-23 12:15 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
