@@ -1,24 +1,33 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-10-02 13:03 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **157** | 🔥 Hot: **36**
+> Updated: 2026-10-03 12:47 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **158** | 🔥 Hot: **36**
 
 ---
 
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.7w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.8w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.9w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.5w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.7w | 1.5w | Advanced | 生产监控核心组件 |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.1w | 6.6k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.4w | 7.2k | Advanced | 精选资源合集 |
-| [nektos/act](https://github.com/nektos/act) | 7.2w | 2.0k | Advanced | Run your GitHub Actions locally 🚀 |
+| [nektos/act](https://github.com/nektos/act) | 7.2w | 2.1k | Advanced | Run your GitHub Actions locally 🚀 |
 | [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.8w | 7.2k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
+|------|---------|----------|-------|----------|
+| [patrickchugh/terravision](https://github.com/patrickchugh/terravision) | 1.6k | 176 | Intermediate | Cloud architecture diagrams in both directions: AI prompt or JSON to diagram, di |
+
+---
+
+## 📂 By Category
+
+### CI/CD 中文 (1 new)
+- **[patrickchugh/terravision](https://github.com/patrickchugh/terravision)** ⭐1.6k — Cloud architecture diagrams in both directions: AI prompt or JSON to diagram, diagram to Terraform v
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-10-02 13:03 (Beijing Time)*  
+*Updated: 2026-10-03 12:47 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
