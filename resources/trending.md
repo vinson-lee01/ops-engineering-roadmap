@@ -1,14 +1,14 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-10-03 12:47 (Beijing Time)
+> 🕐 Updated: 2026-10-04 13:20 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **1**
-- 🔥 Top pick: [patrickchugh/terravision](https://github.com/patrickchugh/terravision) ⭐1.6k
+- 🆕 New today: **0**
+- 🔥 Top pick: (none today)
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-10-03 12:47 (Beijing Time)*  
+*Updated: 2026-10-04 13:20 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
