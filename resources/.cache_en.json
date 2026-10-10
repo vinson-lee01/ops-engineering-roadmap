@@ -160,7 +160,8 @@
     "cloudposse/atmos": "2026-09-04T03:57:38.766702+00:00",
     "alanmosilva/sre-observability-course": "2026-09-10T04:06:06.264010+00:00",
     "sdogruyol/cryload": "2026-09-16T04:18:47.570452+00:00",
-    "hybridops-tech/hybridops-core": "2026-09-21T04:23:10.650598+00:00"
+    "hybridops-tech/hybridops-core": "2026-09-21T04:23:10.650598+00:00",
+    "kelexine/tiny11-automated": "2026-10-10T05:19:55.973548+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -323,7 +324,8 @@
     "cloudposse/atmos": 1369,
     "alanmosilva/sre-observability-course": 57,
     "sdogruyol/cryload": 216,
-    "hybridops-tech/hybridops-core": 488
+    "hybridops-tech/hybridops-core": 488,
+    "kelexine/tiny11-automated": 166
   },
-  "updated": "2026-10-09T05:35:41.387080+00:00"
+  "updated": "2026-10-10T05:19:58.769537+00:00"
 }

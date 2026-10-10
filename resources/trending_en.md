@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-10-09 13:35 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **161** | 🔥 Hot: **53**
+> Updated: 2026-10-10 13:19 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **162** | 🔥 Hot: **53**
 
 ---
 
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [kelexine/tiny11-automated](https://github.com/kelexine/tiny11-automated) | 166 | 148 | Intermediate | Automated tools for creating streamlined Windows 11 images with CI/CD support. B |
+
+---
+
+## 📂 By Category
+
+### CI/CD (1 new)
+- **[kelexine/tiny11-automated](https://github.com/kelexine/tiny11-automated)** ⭐166 — Automated tools for creating streamlined Windows 11 images with CI/CD support. Builds Tiny11 and Tin
 
 ---
 
@@ -29,12 +38,12 @@
 - `Other`: 8 repos
 - `Python`: 4 repos
 - `Java`: 4 repos
+- `HTML`: 2 repos
 - `Lua`: 2 repos
 - `TypeScript`: 2 repos
-- `JavaScript`: 2 repos
-- `HTML`: 1 repos
+- `Shell`: 1 repos
 
 ---
 
-*Updated: 2026-10-09 13:35 (Beijing Time)*  
+*Updated: 2026-10-10 13:19 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
