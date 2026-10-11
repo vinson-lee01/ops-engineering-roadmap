@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-10-10 13:19 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **162** | 🔥 Hot: **53**
+> Updated: 2026-10-11 13:10 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **162** | 🔥 Hot: **53**
 
 ---
 
@@ -8,7 +8,7 @@
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.9w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
-| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.8w | 4.6w | Advanced | Container orchestration |
+| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.8w | 4.7w | Advanced | Container orchestration |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.9w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.5w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.7w | 1.5w | Advanced | Core monitoring component |
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [kelexine/tiny11-automated](https://github.com/kelexine/tiny11-automated) | 166 | 148 | Intermediate | Automated tools for creating streamlined Windows 11 images with CI/CD support. B |
-
----
-
-## 📂 By Category
-
-### CI/CD (1 new)
-- **[kelexine/tiny11-automated](https://github.com/kelexine/tiny11-automated)** ⭐166 — Automated tools for creating streamlined Windows 11 images with CI/CD support. Builds Tiny11 and Tin
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-10-10 13:19 (Beijing Time)*  
+*Updated: 2026-10-11 13:10 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
