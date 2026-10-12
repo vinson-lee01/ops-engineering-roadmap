@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-10-11 13:10 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **162** | 🔥 Hot: **53**
+> Updated: 2026-10-12 13:24 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **163** | 🔥 Hot: **53**
 
 ---
 
@@ -18,23 +18,32 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [Infisical/infisical](https://github.com/Infisical/infisical) | 3.0w | 2.3k | Advanced | Infisical is the open-source platform for securing secrets, certificates, access |
+
+---
+
+## 📂 By Category
+
+### Kubernetes (1 new)
+- **[Infisical/infisical](https://github.com/Infisical/infisical)** ⭐3.0w — Infisical is the open-source platform for securing secrets, certificates, access, and AI Agents.
 
 ---
 
 ## 📊 This Week's Stats
 
 **Language distribution (top 50):**
-- `Go`: 26 repos
+- `Go`: 25 repos
 - `Other`: 8 repos
 - `Python`: 4 repos
 - `Java`: 4 repos
+- `TypeScript`: 3 repos
 - `HTML`: 2 repos
 - `Lua`: 2 repos
-- `TypeScript`: 2 repos
 - `Shell`: 1 repos
 
 ---
 
-*Updated: 2026-10-11 13:10 (Beijing Time)*  
+*Updated: 2026-10-12 13:24 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
