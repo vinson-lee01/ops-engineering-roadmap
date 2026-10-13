@@ -1,13 +1,13 @@
 # 🌍 Trending Repos
-> Updated: 2026-10-12 13:24 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **163** | 🔥 Hot: **53**
+> Updated: 2026-10-13 14:22 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **163** | 🔥 Hot: **53**
 
 ---
 
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 24.9w | 1.4w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.0w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.8w | 4.7w | Advanced | Container orchestration |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 13.9w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.5w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [Infisical/infisical](https://github.com/Infisical/infisical) | 3.0w | 2.3k | Advanced | Infisical is the open-source platform for securing secrets, certificates, access |
-
----
-
-## 📂 By Category
-
-### Kubernetes (1 new)
-- **[Infisical/infisical](https://github.com/Infisical/infisical)** ⭐3.0w — Infisical is the open-source platform for securing secrets, certificates, access, and AI Agents.
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-10-12 13:24 (Beijing Time)*  
+*Updated: 2026-10-13 14:22 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

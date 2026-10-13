@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-10-12 13:24 (Beijing Time)
+> 🕐 Updated: 2026-10-13 14:22 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **1**
-- 🔥 Top pick: [Infisical/infisical](https://github.com/Infisical/infisical) ⭐3.0w
+- 🆕 New today: **0**
+- 🔥 Top pick: (none today)
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-10-12 13:24 (Beijing Time)*  
+*Updated: 2026-10-13 14:22 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
