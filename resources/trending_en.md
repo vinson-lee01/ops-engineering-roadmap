@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-10-13 14:22 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **163** | 🔥 Hot: **53**
+> Updated: 2026-10-14 12:23 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **164** | 🔥 Hot: **53**
 
 ---
 
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [ccfos/nightingale](https://github.com/ccfos/nightingale) | 1.3w | 1.8k | Advanced | Open-source, self-hosted alerting for metrics, logs, and databases. Includes a b |
+
+---
+
+## 📂 By Category
+
+### Monitoring (1 new)
+- **[ccfos/nightingale](https://github.com/ccfos/nightingale)** ⭐1.3w — Open-source, self-hosted alerting for metrics, logs, and databases. Includes a built-in AI agent and
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-10-13 14:22 (Beijing Time)*  
+*Updated: 2026-10-14 12:23 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

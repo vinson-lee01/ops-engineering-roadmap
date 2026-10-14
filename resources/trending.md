@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-10-13 14:22 (Beijing Time)
+> 🕐 Updated: 2026-10-14 12:23 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [ccfos/nightingale](https://github.com/ccfos/nightingale) ⭐1.3w
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-10-13 14:22 (Beijing Time)*  
+*Updated: 2026-10-14 12:23 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
