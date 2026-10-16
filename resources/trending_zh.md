@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-10-15 12:06 (Beijing Time)
+> Updated: 2026-10-16 12:01 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **158** | 🔥 Hot: **37**
 
 ---
@@ -26,9 +26,9 @@
 
 **Language distribution (top 50):**
 - `Go`: 19 repos
-- `Other`: 8 repos
-- `Java`: 6 repos
+- `Other`: 9 repos
 - `Python`: 5 repos
+- `Java`: 5 repos
 - `HTML`: 2 repos
 - `Lua`: 2 repos
 - `Shell`: 2 repos
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-10-15 12:06 (Beijing Time)*  
+*Updated: 2026-10-16 12:01 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
