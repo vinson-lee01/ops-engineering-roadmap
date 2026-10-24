@@ -157,7 +157,8 @@
     "kubernetes-sigs/kubernetes-mixin": "2026-09-08T04:00:45.336038+00:00",
     "Jwuthri/Tracely-ai": "2026-09-11T04:03:09.664025+00:00",
     "hybridops-tech/hybridops-core": "2026-09-21T04:22:56.405500+00:00",
-    "patrickchugh/terravision": "2026-10-03T04:47:16.374576+00:00"
+    "patrickchugh/terravision": "2026-10-03T04:47:16.374576+00:00",
+    "Rocky-true/vmware-to-kubernetes": "2026-10-24T04:05:39.237922+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -317,7 +318,8 @@
     "kubernetes-sigs/kubernetes-mixin": 2443,
     "Jwuthri/Tracely-ai": 1404,
     "hybridops-tech/hybridops-core": 488,
-    "patrickchugh/terravision": 1640
+    "patrickchugh/terravision": 1640,
+    "Rocky-true/vmware-to-kubernetes": 61
   },
-  "updated": "2026-10-23T04:14:21.940940+00:00"
+  "updated": "2026-10-24T04:05:39.239466+00:00"
 }
