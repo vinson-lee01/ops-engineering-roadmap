@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-10-24 12:05 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **159** | 🔥 Hot: **37**
+> Updated: 2026-10-25 12:07 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **159** | 🔥 Hot: **37**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [Rocky-true/vmware-to-kubernetes](https://github.com/Rocky-true/vmware-to-kubernetes) | 61 | 6 | Intermediate | 容器编排核心工具 |
-
----
-
-## 📂 By Category
-
-### SRE 中文 (1 new)
-- **[Rocky-true/vmware-to-kubernetes](https://github.com/Rocky-true/vmware-to-kubernetes)** ⭐61 — Kubernetes 自动化运维与迁移工具：阿里云 3 主 HA、Compose→K8s、Terraform、Kubekey、部署验证与故障排查。Kubernetes automation, migr
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-10-24 12:05 (Beijing Time)*  
+*Updated: 2026-10-25 12:07 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

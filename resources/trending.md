@@ -1,14 +1,14 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-10-24 12:05 (Beijing Time)
+> 🕐 Updated: 2026-10-25 12:08 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **1**
-- 🔥 Top pick: [Rocky-true/vmware-to-kubernetes](https://github.com/Rocky-true/vmware-to-kubernetes) ⭐61
+- 🆕 New today: **0**
+- 🔥 Top pick: (none today)
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-10-24 12:05 (Beijing Time)*  
+*Updated: 2026-10-25 12:08 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
