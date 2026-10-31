@@ -1,5 +1,5 @@
 # 🌍 Trending Repos
-> Updated: 2026-10-30 13:15 (Beijing Time)
+> Updated: 2026-10-31 12:58 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **164** | 🔥 Hot: **53**
 
 ---
@@ -7,10 +7,10 @@
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.4w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.5w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.9w | 4.6w | Advanced | Container orchestration |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.1w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
-| [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.5w | 2.0w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
+| [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.5w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.8w | 1.5w | Advanced | Core monitoring component |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.1w | 6.7k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.5w | 7.2k | Advanced | Curated resource list |
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-10-30 13:15 (Beijing Time)*  
+*Updated: 2026-10-31 12:58 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
