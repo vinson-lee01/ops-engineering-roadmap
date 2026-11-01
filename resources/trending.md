@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-10-31 12:58 (Beijing Time)
+> 🕐 Updated: 2026-11-01 13:28 (Beijing Time)
 
 ---
 
@@ -15,8 +15,8 @@
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [inno-devops-labs/DevOps-Core-Course](https://github.com/inno-devops-labs/DevOps-Core-Course) ⭐166
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-10-31 12:58 (Beijing Time)*  
+*Updated: 2026-11-01 13:28 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
