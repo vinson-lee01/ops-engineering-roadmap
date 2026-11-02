@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-11-01 13:28 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **165** | 🔥 Hot: **53**
+> Updated: 2026-11-02 13:27 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **165** | 🔥 Hot: **53**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [inno-devops-labs/DevOps-Core-Course](https://github.com/inno-devops-labs/DevOps-Core-Course) | 166 | 306 | Intermediate | 🚀 DevOps core course — 18 hands-on labs building a real service from Docker and  |
-
----
-
-## 📂 By Category
-
-### CI/CD (1 new)
-- **[inno-devops-labs/DevOps-Core-Course](https://github.com/inno-devops-labs/DevOps-Core-Course)** ⭐166 — 🚀 DevOps core course — 18 hands-on labs building a real service from Docker and CI/CD through Kubern
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-11-01 13:28 (Beijing Time)*  
+*Updated: 2026-11-02 13:27 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
