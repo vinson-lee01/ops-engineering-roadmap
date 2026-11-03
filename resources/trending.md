@@ -1,14 +1,14 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-11-02 13:27 (Beijing Time)
+> 🕐 Updated: 2026-11-03 14:06 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) ⭐1.3w
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-11-02 13:27 (Beijing Time)*  
+*Updated: 2026-11-03 14:06 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
