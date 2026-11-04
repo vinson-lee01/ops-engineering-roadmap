@@ -1,13 +1,13 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-11-03 14:06 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **160** | 🔥 Hot: **37**
+> Updated: 2026-11-04 13:44 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **160** | 🔥 Hot: **37**
 
 ---
 
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.5w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.6w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.2w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.6w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.8w | 1.5w | Advanced | 生产监控核心组件 |
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | 1.3w | 1.9k | Advanced | The open-source agent for CI/CD reliability. |
-
----
-
-## 📂 By Category
-
-### CI/CD 中文 (1 new)
-- **[Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre)** ⭐1.3w — The open-source agent for CI/CD reliability.
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-11-03 14:06 (Beijing Time)*  
+*Updated: 2026-11-04 13:44 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
