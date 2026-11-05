@@ -1,5 +1,5 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-11-04 13:44 (Beijing Time)
+> Updated: 2026-11-05 14:01 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **160** | 🔥 Hot: **37**
 
 ---
@@ -9,7 +9,7 @@
 |------|---------|----------|-------|------|
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.6w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.2w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
-| [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.6w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
+| [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.7w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.8w | 1.5w | Advanced | 生产监控核心组件 |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.1w | 6.7k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.5w | 7.2k | Advanced | 精选资源合集 |
@@ -36,5 +36,5 @@
 
 ---
 
-*Updated: 2026-11-04 13:44 (Beijing Time)*  
+*Updated: 2026-11-05 14:01 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
