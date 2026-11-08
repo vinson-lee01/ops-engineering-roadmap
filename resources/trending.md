@@ -1,22 +1,22 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-11-07 13:30 (Beijing Time)
+> 🕐 Updated: 2026-11-08 13:30 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [rishavnandi/ansible_homelab](https://github.com/rishavnandi/ansible_homelab) ⭐400
 
 ---
 
 ## 🌍 International (EN)
 
 - 📄 [Full list](./trending_en.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [rishavnandi/ansible_homelab](https://github.com/rishavnandi/ansible_homelab) ⭐400
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-11-07 13:30 (Beijing Time)*  
+*Updated: 2026-11-08 13:30 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

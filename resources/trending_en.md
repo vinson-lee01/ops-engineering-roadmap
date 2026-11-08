@@ -1,13 +1,13 @@
 # 🌍 Trending Repos
-> Updated: 2026-11-07 13:30 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **165** | 🔥 Hot: **53**
+> Updated: 2026-11-08 13:30 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **166** | 🔥 Hot: **53**
 
 ---
 
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.6w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.7w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.9w | 4.6w | Advanced | Container orchestration |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.2w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.7w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
@@ -18,7 +18,16 @@
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [rishavnandi/ansible_homelab](https://github.com/rishavnandi/ansible_homelab) | 400 | 39 | Intermediate | Infrastructure as Code |
+
+---
+
+## 📂 By Category
+
+### IaC (1 new)
+- **[rishavnandi/ansible_homelab](https://github.com/rishavnandi/ansible_homelab)** ⭐400 — Ansible playbooks to quickly setup a homelab.  The playbook will update the system, install Docker, 
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-11-07 13:30 (Beijing Time)*  
+*Updated: 2026-11-08 13:30 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

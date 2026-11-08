@@ -159,7 +159,8 @@
     "hybridops-tech/hybridops-core": "2026-09-21T04:22:56.405500+00:00",
     "patrickchugh/terravision": "2026-10-03T04:47:16.374576+00:00",
     "Rocky-true/vmware-to-kubernetes": "2026-10-24T04:05:39.237922+00:00",
-    "Tracer-Cloud/opensre": "2026-11-03T06:06:00.043923+00:00"
+    "Tracer-Cloud/opensre": "2026-11-03T06:06:00.043923+00:00",
+    "rishavnandi/ansible_homelab": "2026-11-08T05:30:11.553060+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -321,7 +322,8 @@
     "hybridops-tech/hybridops-core": 488,
     "patrickchugh/terravision": 1640,
     "Rocky-true/vmware-to-kubernetes": 61,
-    "Tracer-Cloud/opensre": 12672
+    "Tracer-Cloud/opensre": 12672,
+    "rishavnandi/ansible_homelab": 400
   },
-  "updated": "2026-11-07T05:29:47.861898+00:00"
+  "updated": "2026-11-08T05:30:14.028810+00:00"
 }

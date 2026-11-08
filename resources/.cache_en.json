@@ -164,7 +164,8 @@
     "kelexine/tiny11-automated": "2026-10-10T05:19:55.973548+00:00",
     "Infisical/infisical": "2026-10-12T05:24:21.777451+00:00",
     "ccfos/nightingale": "2026-10-14T04:23:43.136801+00:00",
-    "inno-devops-labs/DevOps-Core-Course": "2026-11-01T05:28:36.746570+00:00"
+    "inno-devops-labs/DevOps-Core-Course": "2026-11-01T05:28:36.746570+00:00",
+    "rishavnandi/ansible_homelab": "2026-11-08T05:30:25.405770+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -331,7 +332,8 @@
     "kelexine/tiny11-automated": 166,
     "Infisical/infisical": 29700,
     "ccfos/nightingale": 13341,
-    "inno-devops-labs/DevOps-Core-Course": 166
+    "inno-devops-labs/DevOps-Core-Course": 166,
+    "rishavnandi/ansible_homelab": 400
   },
-  "updated": "2026-11-07T05:30:04.834483+00:00"
+  "updated": "2026-11-08T05:30:30.962012+00:00"
 }
