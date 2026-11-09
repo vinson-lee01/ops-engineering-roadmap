@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-11-08 13:30 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **161** | 🔥 Hot: **37**
+> Updated: 2026-11-09 13:41 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **161** | 🔥 Hot: **37**
 
 ---
 
@@ -18,16 +18,7 @@
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [rishavnandi/ansible_homelab](https://github.com/rishavnandi/ansible_homelab) | 400 | 39 | Intermediate | 基础设施即代码 |
-
----
-
-## 📂 By Category
-
-### IaC 中文 (1 new)
-- **[rishavnandi/ansible_homelab](https://github.com/rishavnandi/ansible_homelab)** ⭐400 — Ansible playbooks to quickly setup a homelab.  The playbook will update the system, install Docker, 
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-11-08 13:30 (Beijing Time)*  
+*Updated: 2026-11-09 13:41 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
