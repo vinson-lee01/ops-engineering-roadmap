@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-11-17 15:27 (Beijing Time)
-> 🆕 New today: **0** | 📦 Total tracked: **166** | 🔥 Hot: **53**
+> Updated: 2026-11-18 14:51 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **167** | 🔥 Hot: **54**
 
 ---
 
@@ -12,13 +12,22 @@
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.3w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.7w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.8w | 1.5w | Advanced | Core monitoring component |
-| [netdata/netdata](https://github.com/netdata/netdata) | 8.1w | 6.7k | Advanced | The fastest path to AI-powered full stack observability, even for lean teams. |
+| [netdata/netdata](https://github.com/netdata/netdata) | 8.1w | 6.7k | Advanced | Full-stack observability · Metrics · Logs · Traces · Flows · Topology · Infrastr |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.6w | 7.3k | Advanced | Curated resource list |
 | [nektos/act](https://github.com/nektos/act) | 7.3w | 2.1k | Advanced | Run your GitHub Actions locally 🚀 |
 
 
 ## 🆕 Newly Discovered
-> No new repos today. Check back tomorrow!
+| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
+|------|---------|----------|-------|----------|
+| [goauthentik/authentik](https://github.com/goauthentik/authentik) | 2.6w | 2.1k | Advanced | The authentication glue you need. |
+
+---
+
+## 📂 By Category
+
+### Kubernetes (1 new)
+- **[goauthentik/authentik](https://github.com/goauthentik/authentik)** ⭐2.6w — The authentication glue you need.
 
 ---
 
@@ -36,5 +45,5 @@
 
 ---
 
-*Updated: 2026-11-17 15:27 (Beijing Time)*  
+*Updated: 2026-11-18 14:51 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
