@@ -1,6 +1,6 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-11-18 14:51 (Beijing Time)
+> 🕐 Updated: 2026-11-19 14:53 (Beijing Time)
 
 ---
 
@@ -16,7 +16,7 @@
 
 - 📄 [Full list](./trending_en.md)
 - 🆕 New today: **1**
-- 🔥 Top pick: [goauthentik/authentik](https://github.com/goauthentik/authentik) ⭐2.6w
+- 🔥 Top pick: [gogs/gogs](https://github.com/gogs/gogs) ⭐4.8w
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-11-18 14:51 (Beijing Time)*  
+*Updated: 2026-11-19 14:53 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

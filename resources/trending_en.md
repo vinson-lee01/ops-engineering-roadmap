@@ -1,13 +1,13 @@
 # 🌍 Trending Repos
-> Updated: 2026-11-18 14:51 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **167** | 🔥 Hot: **54**
+> Updated: 2026-11-19 14:53 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **168** | 🔥 Hot: **54**
 
 ---
 
 ## 🔥 Hot Picks (200k+ quality score)
 | Repo | ⭐ Stars | 🍴 Forks | Level | Note |
 |------|---------|----------|-------|------|
-| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 25.9w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
+| [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 26.0w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.9w | 4.5w | Advanced | Container orchestration |
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.3w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.7w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
@@ -20,14 +20,14 @@
 ## 🆕 Newly Discovered
 | Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
 |------|---------|----------|-------|----------|
-| [goauthentik/authentik](https://github.com/goauthentik/authentik) | 2.6w | 2.1k | Advanced | The authentication glue you need. |
+| [gogs/gogs](https://github.com/gogs/gogs) | 4.8w | 5.1k | Advanced | The painless way to host your own Git service |
 
 ---
 
 ## 📂 By Category
 
 ### Kubernetes (1 new)
-- **[goauthentik/authentik](https://github.com/goauthentik/authentik)** ⭐2.6w — The authentication glue you need.
+- **[gogs/gogs](https://github.com/gogs/gogs)** ⭐4.8w — The painless way to host your own Git service
 
 ---
 
@@ -45,5 +45,5 @@
 
 ---
 
-*Updated: 2026-11-18 14:51 (Beijing Time)*  
+*Updated: 2026-11-19 14:53 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
