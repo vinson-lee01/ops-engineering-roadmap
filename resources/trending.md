@@ -1,14 +1,14 @@
 # 📊 Resources Index
 
-> 🕐 Updated: 2026-11-19 14:53 (Beijing Time)
+> 🕐 Updated: 2026-11-20 14:42 (Beijing Time)
 
 ---
 
 ## 🇨🇳 Chinese Community (CN)
 
 - 📄 [Full list](./trending_zh.md)
-- 🆕 New today: **0**
-- 🔥 Top pick: (none today)
+- 🆕 New today: **1**
+- 🔥 Top pick: [getnora-io/nora](https://github.com/getnora-io/nora) ⭐403
 
 ---
 
@@ -16,7 +16,7 @@
 
 - 📄 [Full list](./trending_en.md)
 - 🆕 New today: **1**
-- 🔥 Top pick: [gogs/gogs](https://github.com/gogs/gogs) ⭐4.8w
+- 🔥 Top pick: [getnora-io/nora](https://github.com/getnora-io/nora) ⭐403
 
 ---
 
@@ -32,5 +32,5 @@
 
 ---
 
-*Updated: 2026-11-19 14:53 (Beijing Time)*  
+*Updated: 2026-11-20 14:42 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-11-19 14:53 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **168** | 🔥 Hot: **54**
+> Updated: 2026-11-20 14:42 (Beijing Time)
+> 🆕 New today: **1** | 📦 Total tracked: **169** | 🔥 Hot: **54**
 
 ---
 
@@ -12,7 +12,7 @@
 | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.3w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.7w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.8w | 1.5w | Advanced | Core monitoring component |
-| [netdata/netdata](https://github.com/netdata/netdata) | 8.1w | 6.7k | Advanced | Full-stack observability · Metrics · Logs · Traces · Flows · Topology · Infrastr |
+| [netdata/netdata](https://github.com/netdata/netdata) | 8.2w | 6.7k | Advanced | Full-stack observability · Metrics · Logs · Traces · Flows · Topology · Infrastr |
 | [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.6w | 7.3k | Advanced | Curated resource list |
 | [nektos/act](https://github.com/nektos/act) | 7.3w | 2.1k | Advanced | Run your GitHub Actions locally 🚀 |
 
@@ -20,14 +20,14 @@
 ## 🆕 Newly Discovered
 | Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
 |------|---------|----------|-------|----------|
-| [gogs/gogs](https://github.com/gogs/gogs) | 4.8w | 5.1k | Advanced | The painless way to host your own Git service |
+| [getnora-io/nora](https://github.com/getnora-io/nora) | 403 | 46 | Intermediate | Self-hosted artifact registry and pull-through cache in one binary. 18 formats:  |
 
 ---
 
 ## 📂 By Category
 
-### Kubernetes (1 new)
-- **[gogs/gogs](https://github.com/gogs/gogs)** ⭐4.8w — The painless way to host your own Git service
+### IaC (1 new)
+- **[getnora-io/nora](https://github.com/getnora-io/nora)** ⭐403 — Self-hosted artifact registry and pull-through cache in one binary. 18 formats: Docker/OCI, Maven, n
 
 ---
 
@@ -45,5 +45,5 @@
 
 ---
 
-*Updated: 2026-11-19 14:53 (Beijing Time)*  
+*Updated: 2026-11-20 14:42 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

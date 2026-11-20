@@ -167,7 +167,8 @@
     "inno-devops-labs/DevOps-Core-Course": "2026-11-01T05:28:36.746570+00:00",
     "rishavnandi/ansible_homelab": "2026-11-08T05:30:25.405770+00:00",
     "goauthentik/authentik": "2026-11-18T06:51:45.676831+00:00",
-    "gogs/gogs": "2026-11-19T06:52:54.834555+00:00"
+    "gogs/gogs": "2026-11-19T06:52:54.834555+00:00",
+    "getnora-io/nora": "2026-11-20T06:42:20.398579+00:00"
   },
   "star_history": {
     "trimstray/the-book-of-secret-knowledge": 229279,
@@ -337,7 +338,8 @@
     "inno-devops-labs/DevOps-Core-Course": 166,
     "rishavnandi/ansible_homelab": 400,
     "goauthentik/authentik": 26374,
-    "gogs/gogs": 47948
+    "gogs/gogs": 47948,
+    "getnora-io/nora": 403
   },
-  "updated": "2026-11-19T06:53:07.098012+00:00"
+  "updated": "2026-11-20T06:42:26.223619+00:00"
 }
