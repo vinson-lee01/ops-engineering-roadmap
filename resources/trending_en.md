@@ -1,6 +1,6 @@
 # 🌍 Trending Repos
-> Updated: 2026-11-20 14:42 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **169** | 🔥 Hot: **54**
+> Updated: 2026-11-21 14:35 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **169** | 🔥 Hot: **54**
 
 ---
 
@@ -13,21 +13,12 @@
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.7w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.8w | 1.5w | Advanced | Core monitoring component |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.2w | 6.7k | Advanced | Full-stack observability · Metrics · Logs · Traces · Flows · Topology · Infrastr |
-| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.6w | 7.3k | Advanced | Curated resource list |
+| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.6w | 7.2k | Advanced | Curated resource list |
 | [nektos/act](https://github.com/nektos/act) | 7.3w | 2.1k | Advanced | Run your GitHub Actions locally 🚀 |
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | Why recommended |
-|------|---------|----------|-------|----------|
-| [getnora-io/nora](https://github.com/getnora-io/nora) | 403 | 46 | Intermediate | Self-hosted artifact registry and pull-through cache in one binary. 18 formats:  |
-
----
-
-## 📂 By Category
-
-### IaC (1 new)
-- **[getnora-io/nora](https://github.com/getnora-io/nora)** ⭐403 — Self-hosted artifact registry and pull-through cache in one binary. 18 formats: Docker/OCI, Maven, n
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-11-20 14:42 (Beijing Time)*  
+*Updated: 2026-11-21 14:35 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*

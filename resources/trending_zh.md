@@ -1,6 +1,6 @@
 # 🇨🇳 Trending Repos
-> Updated: 2026-11-20 14:42 (Beijing Time)
-> 🆕 New today: **1** | 📦 Total tracked: **162** | 🔥 Hot: **37**
+> Updated: 2026-11-21 14:35 (Beijing Time)
+> 🆕 New today: **0** | 📦 Total tracked: **162** | 🔥 Hot: **37**
 
 ---
 
@@ -12,22 +12,13 @@
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.7w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.8w | 1.5w | Advanced | 生产监控核心组件 |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.2w | 6.7k | Advanced | Full-stack observability · Metrics · Logs · Traces · Flows · Topology · Infrastr |
-| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.6w | 7.3k | Advanced | 精选资源合集 |
+| [binhnguyennus/awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) | 7.6w | 7.2k | Advanced | 精选资源合集 |
 | [nektos/act](https://github.com/nektos/act) | 7.3w | 2.1k | Advanced | Run your GitHub Actions locally 🚀 |
 | [go-gitea/gitea](https://github.com/go-gitea/gitea) | 5.9w | 7.4k | Advanced | Git with a cup of tea! Painless self-hosted all-in-one software development serv |
 
 
 ## 🆕 Newly Discovered
-| Repo | ⭐ Stars | 🍴 Forks | Level | 推荐理由 |
-|------|---------|----------|-------|----------|
-| [getnora-io/nora](https://github.com/getnora-io/nora) | 403 | 46 | Intermediate | Self-hosted artifact registry and pull-through cache in one binary. 18 formats:  |
-
----
-
-## 📂 By Category
-
-### IaC 中文 (1 new)
-- **[getnora-io/nora](https://github.com/getnora-io/nora)** ⭐403 — Self-hosted artifact registry and pull-through cache in one binary. 18 formats: Docker/OCI, Maven, n
+> No new repos today. Check back tomorrow!
 
 ---
 
@@ -45,5 +36,5 @@
 
 ---
 
-*Updated: 2026-11-20 14:42 (Beijing Time)*  
+*Updated: 2026-11-21 14:35 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
