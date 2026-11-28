@@ -1,5 +1,5 @@
 # 🌍 Trending Repos
-> Updated: 2026-11-27 15:45 (Beijing Time)
+> Updated: 2026-11-28 15:14 (Beijing Time)
 > 🆕 New today: **0** | 📦 Total tracked: **169** | 🔥 Hot: **54**
 
 ---
@@ -9,7 +9,7 @@
 |------|---------|----------|-------|------|
 | [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 26.2w | 1.5w | Basic | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, |
 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 12.9w | 4.5w | Advanced | Container orchestration |
-| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.4w | 1.5w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
+| [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 14.4w | 1.6w | Advanced | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo |
 | [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) | 8.7w | 2.1w | Advanced | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes,  |
 | [grafana/grafana](https://github.com/grafana/grafana) | 7.8w | 1.5w | Advanced | Core monitoring component |
 | [netdata/netdata](https://github.com/netdata/netdata) | 8.2w | 6.7k | Advanced | Full-stack observability · Metrics · Logs · Traces · Flows · Topology · Infrastr |
@@ -25,16 +25,16 @@
 ## 📊 This Week's Stats
 
 **Language distribution (top 50):**
-- `Go`: 24 repos
+- `Go`: 25 repos
 - `Other`: 8 repos
 - `Python`: 4 repos
 - `Java`: 4 repos
 - `TypeScript`: 3 repos
 - `HTML`: 2 repos
 - `Lua`: 2 repos
-- `Shell`: 2 repos
+- `Shell`: 1 repos
 
 ---
 
-*Updated: 2026-11-27 15:45 (Beijing Time)*  
+*Updated: 2026-11-28 15:14 (Beijing Time)*  
 *Maintained by [vinson-lee](https://github.com/vinson-lee01)*
